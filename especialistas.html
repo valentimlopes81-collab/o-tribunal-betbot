@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Os Especialistas — O Tribunal da Pátria</title>
+<meta name="description" content="Os sete agentes especialistas do Tribunal da Pátria, cada um focado numa única fonte de sinal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html"><h1>O Tribunal da Pátria</h1></a>
+        <span class="tag">Apostas simuladas de futebol</span>
+      </div>
+    </div>
+    <nav class="sitenav" id="sitenav"></nav>
+  </header>
+
+  <div class="page-head">
+    <div class="crumb">Os Especialistas</div>
+    <h1>Sete vozes, sete obsessões</h1>
+    <p class="lead">Cada Especialista olha para o mesmo jogo, mas só vê uma fatia dele. Nenhum decide sozinho — cada um entrega
+      a sua opinião aos cinco Jurados, que a ponderam de forma diferente (ver <a href="tribunal.html">O Tribunal</a>).</p>
+  </div>
+
+  <section>
+    <div class="card-grid">
+
+      <div class="person-card">
+        <div class="role">Estatísticas</div>
+        <h3>Pêro Escobar</h3>
+        <span class="badge live">Em funções</span>
+        <p class="desc">O mais antigo da casa. Embrulha o modelo matemático Poisson/Dixon-Coles que serve de base a tudo o resto —
+          calcula a probabilidade de cada resultado a partir do histórico de golos marcados e sofridos por cada equipa.
+          É o ponto de partida sobre o qual os outros seis ajustam.</p>
+        <p class="quote">"Os números não mentem — mas também não contam a história toda."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Forma Recente</div>
+        <h3>Gil Eanes</h3>
+        <span class="badge live">Em funções</span>
+        <p class="desc">Compara os últimos cinco jogos de cada equipa com a média da época inteira. Quando uma equipa está
+          claramente melhor ou pior do que o seu registo habitual sugere, ajusta a probabilidade do modelo estatístico
+          para refletir esse momento de forma.</p>
+        <p class="quote">"Importa onde a equipa está agora, não onde estava em agosto."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Casa / Fora</div>
+        <h3>Nuno Álvares Pereira</h3>
+        <span class="badge live">Em funções</span>
+        <p class="desc">Algumas equipas têm um padrão de casa/fora muito mais acentuado do que a média da liga já prevê.
+          Deteta essas equipas — fortalezas em casa, ou frágeis fora — e corrige a probabilidade quando há jogos
+          históricos suficientes para confirmar o padrão.</p>
+        <p class="quote">"Há equipas que só ganham a batalha no seu próprio terreno."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Fadiga / Calendário</div>
+        <h3>Fernão de Magalhães</h3>
+        <span class="badge live">Em funções</span>
+        <p class="desc">Vigia o calendário: equipas a jogar com menos de quatro dias de descanso desde o jogo anterior
+          tipicamente perdem intensidade ofensiva. Penaliza ligeiramente a probabilidade de vitória de uma equipa fatigada.</p>
+        <p class="quote">"Uma volta ao mundo cansa — uma segunda-feira a seguir a uma quinta-feira europeia, também."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Árbitro</div>
+        <h3>Proença</h3>
+        <span class="badge soon">Por ligar</span>
+        <p class="desc">Vai avaliar o rigor do árbitro de cada jogo — cartões, grandes penalidades e faltas assinaladas
+          por jogo, comparados com a média da liga — para ajustar mercados sensíveis a disciplina (cartões, cantos, BTTS).
+          Falta ligar a fonte de dados estatísticos por árbitro.</p>
+        <p class="quote">"Ainda não apito — mas quando apitar, vai notar-se."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Lesões / Ausências</div>
+        <h3>Varandas</h3>
+        <span class="badge soon">Por ligar</span>
+        <p class="desc">Vai avaliar as ausências confirmadas de cada equipa — e a importância de quem falta, por minutos
+          jogados e golos marcados na época — para inclinar a probabilidade a favor do adversário quando as baixas pesam.
+          Falta ligar uma fonte de dados de lesões e suspensões.</p>
+        <p class="quote">"Um plantel sem os seus titulares já não é o mesmo plantel."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Notícias / Moral</div>
+        <h3>Góis</h3>
+        <span class="badge soon">Por ligar</span>
+        <p class="desc">Diferente de todos os outros: em vez de cálculo sobre dados históricos, vai pesquisar a imprensa
+          antes de cada jogo — crises internas, mudanças de treinador, pressão, rumores de balneário — e devolver um
+          veredito em português com a sua própria justificação. Falta ligar o acesso a pesquisa web.</p>
+        <p class="quote">"O que se diz nos corredores do balneário, às vezes vale mais do que uma estatística."</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Como pesam na decisão</h2>
+    <p>Nenhum Especialista tem a palavra final. Cada um dá o seu parecer e um grau de confiança; são os cinco
+      <a href="tribunal.html">Jurados</a> que decidem, cada um à sua maneira, quanto peso dar a cada voz.
+      Quando um Especialista ainda está "por ligar", o Tribunal delibera apenas com os que já estão em funções —
+      e assinala isso de forma transparente em cada aposta registada.</p>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado. Veja como estes pareceres se tornam num veredito em <a href="como-funciona.html">Como Funciona</a>.
+  </footer>
+</div>
+
+<script src="assets/common.js"></script>
+<script>renderNav('especialistas.html');</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossário — O Tribunal da Pátria</title>
+<meta name="description" content="Termos de apostas desportivas e do Tribunal da Pátria, explicados em português simples.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html"><h1>O Tribunal da Pátria</h1></a>
+        <span class="tag">Apostas simuladas de futebol</span>
+      </div>
+    </div>
+    <nav class="sitenav" id="sitenav"></nav>
+  </header>
+
+  <div class="page-head">
+    <div class="crumb">Glossário</div>
+    <h1>Os termos usados neste site</h1>
+    <p class="lead">Sem jargão desnecessário — mas alguns termos de apostas e de estatística aparecem em quase
+      todas as páginas, por isso aqui ficam explicados de uma vez.</p>
+  </div>
+
+  <section>
+    <dl class="glossary">
+      <dt>Odd</dt>
+      <dd>O valor que uma casa de apostas paga por cada euro apostado, se o resultado acontecer. Uma odd de 2,00
+        significa que uma aposta de 10€ paga 20€ se ganhar (lucro de 10€).</dd>
+
+      <dt>Probabilidade implícita</dt>
+      <dd>A probabilidade que a odd do mercado está, na prática, a atribuir a esse resultado — o inverso da odd
+        (1 ÷ odd). Uma odd de 2,00 implica uma probabilidade de 50%.</dd>
+
+      <dt>Oráculo</dt>
+      <dd>A probabilidade final que o Tribunal atribui a um resultado, depois de todos os Especialistas e Jurados
+        opinarem e o Presidente agregar tudo. É este número que se compara com a probabilidade implícita do mercado.</dd>
+
+      <dt>Margem (edge)</dt>
+      <dd>A diferença entre o Oráculo e a probabilidade implícita da odd. Uma margem positiva significa que o
+        Tribunal acha a odd mais generosa do que devia ser — é aí que está o "valor" de uma aposta.</dd>
+
+      <dt>Valor (value bet)</dt>
+      <dd>Uma aposta em que a margem é suficientemente positiva, e a confiança do Tribunal suficientemente alta,
+        para o sistema decidir registá-la. Não é garantia de ganhar — é uma aposta de que, a longo prazo e repetida
+        muitas vezes, esse tipo de margem dá lucro.</dd>
+
+      <dt>Stake</dt>
+      <dd>O valor simulado apostado em cada jogo — fixo em 10€ neste sistema, para que todas as apostas sejam
+        diretamente comparáveis entre si.</dd>
+
+      <dt>ROI (retorno sobre o investimento)</dt>
+      <dd>O lucro acumulado a dividir pelo total apostado, em percentagem. Um ROI de 5% significa que, por cada
+        100€ apostados ao longo do tempo, o sistema teria lucrado 5€.</dd>
+
+      <dt>Tribunal placar</dt>
+      <dd>O resultado da votação dos cinco Jurados numa aposta — por exemplo "5-0" (todos a favor) ou "3-1"
+        (maioria a favor, um contra, um neutro). Ver <a href="tribunal.html">O Tribunal</a>.</dd>
+
+      <dt>1X2</dt>
+      <dd>O mercado mais simples: vitória da equipa da casa (1), empate (X) ou vitória da equipa visitante (2).</dd>
+
+      <dt>Over/Under</dt>
+      <dd>Aposta sobre se o número total de golos do jogo fica acima ("over") ou abaixo ("under") de uma linha —
+        por exemplo, Over 2,5 golos.</dd>
+
+      <dt>Ambas Marcam (BTTS)</dt>
+      <dd>Aposta sobre se as duas equipas marcam pelo menos um golo cada uma durante o jogo.</dd>
+
+      <dt>Modelo Poisson/Dixon-Coles</dt>
+      <dd>O modelo estatístico que calcula a probabilidade de cada resultado a partir dos golos marcados e
+        sofridos por cada equipa. Explicado em detalhe na <a href="metodologia.html">Metodologia</a>.</dd>
+
+      <dt>Fase preliminar / final</dt>
+      <dd>Uma aposta começa como "preliminar" quando é preparada com antecedência (normalmente na véspera do jogo).
+        Mais perto do pontapé de saída, o sistema revê-a com odds e informação mais frescas e promove-a a "final"
+        — ou cancela-a, se o valor tiver desaparecido entretanto.</dd>
+
+      <dt>Aposta cancelada</dt>
+      <dd>Uma aposta que deixou de fazer sentido numa revisão posterior (ou que foi registada por engano durante
+        uma correção do sistema) é cancelada — fica guardada internamente para auditoria, mas não aparece em
+        nenhuma página pública.</dd>
+    </dl>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado. Para o percurso completo de uma aposta, veja <a href="como-funciona.html">Como Funciona</a>.
+  </footer>
+</div>
+
+<script src="assets/common.js"></script>
+<script>renderNav('glossario.html');</script>
+</body>
+</html>

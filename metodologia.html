@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metodologia — O Tribunal da Pátria</title>
+<meta name="description" content="O modelo estatístico Poisson/Dixon-Coles por trás das probabilidades do Tribunal da Pátria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html"><h1>O Tribunal da Pátria</h1></a>
+        <span class="tag">Apostas simuladas de futebol</span>
+      </div>
+    </div>
+    <nav class="sitenav" id="sitenav"></nav>
+  </header>
+
+  <div class="page-head">
+    <div class="crumb">Metodologia</div>
+    <h1>O modelo por baixo do Oráculo</h1>
+    <p class="lead">A base de tudo é um modelo estatístico clássico em apostas desportivas: Poisson bivariado com o
+      ajuste de Dixon-Coles. Esta página explica, em termos simples, o que ele faz e onde entra a camada dos
+      Especialistas e Jurados.</p>
+  </div>
+
+  <section>
+    <h2 class="section-title">Força de ataque e defesa</h2>
+    <p>Para cada equipa, o modelo estima duas forças a partir do histórico recente de golos: uma força de ataque
+      (quantos golos marca, acima ou abaixo da média da liga) e uma força de defesa (quantos golos sofre, acima ou
+      abaixo da média). Jogos mais antigos pesam menos do que jogos recentes — o modelo usa um decaimento temporal,
+      para que uma série de resultados de há seis meses não valha o mesmo que a forma atual.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Golos esperados</h2>
+    <p>Cruzando a força de ataque de uma equipa com a força de defesa da equipa adversária — e um fator de
+      vantagem de jogar em casa — o modelo calcula quantos golos cada equipa deverá marcar nesse jogo em concreto
+      (os "golos esperados", ou λ). É a partir destes dois números que tudo o resto se constrói.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Distribuição de Poisson</h2>
+    <p>Com os golos esperados de cada equipa, o modelo usa a distribuição de Poisson para calcular a probabilidade
+      de cada marcador exato possível — 0-0, 1-0, 2-1, 3-2, e por aí fora. É um pressuposto comum em modelos de
+      futebol: o número de golos que uma equipa marca num jogo comporta-se, em boa aproximação, como um processo
+      de Poisson.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">O ajuste de Dixon-Coles</h2>
+    <p>A distribuição de Poisson simples, usada sem correções, costuma errar sistematicamente em resultados de
+      poucos golos — sobrestima ou subestima ligeiramente marcadores como 0-0, 1-0, 0-1 e 1-1 face ao que se observa
+      na realidade. O ajuste proposto por Dixon e Coles (1997) corrige exatamente essa correlação nos resultados
+      baixos, com um parâmetro (ρ, "rho") estimado a partir dos próprios dados da liga.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Da matriz de resultados às probabilidades de mercado</h2>
+    <p>Combinando os dois golos esperados com o ajuste de Dixon-Coles, o modelo constrói uma matriz completa de
+      probabilidades — a chance de cada marcador exato, de 0-0 a vários golos de cada lado. Somando as células certas
+      dessa matriz, chega-se às probabilidades para qualquer mercado: 1X2, Over/Under, Ambas Marcam, e por aí fora.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Onde entram os Especialistas e os Jurados</h2>
+    <p>Esta probabilidade do modelo estatístico puro é só o ponto de partida — é o que o Especialista Pêro Escobar
+      representa. Os restantes Especialistas ajustam essa estimativa com sinais que o modelo não vê diretamente
+      (forma recente, calendário, padrão casa/fora, e eventualmente árbitro, lesões e notícias). Os Jurados ponderam
+      esses ajustes de forma diferente entre si, e o Presidente agrega tudo no veredito final. Ver
+      <a href="como-funciona.html">Como Funciona</a> para o percurso completo.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Limitações, com honestidade</h2>
+    <p>É um modelo relativamente simples, estimado por médias ponderadas em vez de uma otimização completa por
+      máxima verosimilhança — uma escolha deliberada de simplicidade e transparência em vez de sofisticação
+      estatística máxima. Como qualquer modelo, assume que o passado recente é informativo sobre o futuro próximo,
+      o que nem sempre se verifica (mudanças de treinador, transferências, lesões súbitas). É precisamente para
+      compensar esse tipo de falha que existe a camada de Especialistas e Jurados por cima do modelo puro.</p>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado. Termos técnicos explicados no <a href="glossario.html">Glossário</a>.
+  </footer>
+</div>
+
+<script src="assets/common.js"></script>
+<script>renderNav('metodologia.html');</script>
+</body>
+</html>
