@@ -148,7 +148,6 @@
       <button data-filter="pending">Pendentes</button>
       <button data-filter="won">Ganhas</button>
       <button data-filter="lost">Perdidas</button>
-      <button data-filter="cancelado">Canceladas</button>
     </div>
     <div class="bets" id="bets"></div>
   </section>
@@ -327,7 +326,10 @@ fetch('./data/snapshot.json', {cache:'no-store'})
     document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
     renderStats(data.bankroll);
     renderChart(data.bankroll_history);
-    ALL_BETS = data.bets || [];
+    // Apostas canceladas (valor que desapareceu na revisão, ou resíduo de uma
+    // corrida corrigida entretanto) não interessam ao público — só ficam na
+    // base de dados para auditoria interna.
+    ALL_BETS = (data.bets || []).filter(b => b.status !== 'cancelado');
     renderBets();
   })
   .catch(err => {
