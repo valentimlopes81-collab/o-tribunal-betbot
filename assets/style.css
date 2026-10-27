@@ -161,7 +161,7 @@ svg#bankroll-chart{width:100%;height:260px;display:block;overflow:visible;}
 .reasoning.motivo-cancelado li::before{color:var(--red);}
 
 /* ---------------- card grids (especialistas / tribunal) ---------------- */
-.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);}
 .person-card{background:var(--ink);padding:22px 20px;display:flex;flex-direction:column;gap:10px;}
 .person-card .role{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--brass);}
 .person-card h3{font-family:'Fraunces',serif;font-weight:500;font-style:italic;font-size:21px;margin:0;}
