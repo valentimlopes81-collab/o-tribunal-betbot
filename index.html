@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Tribunal — Apostas simuladas de futebol</title>
+<meta name="description" content="Um júri de agentes de IA analisa jogos de futebol e regista apostas simuladas sempre que encontra valor real nas odds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d1413;
+    --ink-2:#121c1a;
+    --paper:#ece7d9;
+    --paper-dim:#bdb7a4;
+    --pitch:#3c7a5a;
+    --pitch-bright:#5fae80;
+    --brass:#c79a5b;
+    --red:#b24f41;
+    --line: rgba(236,231,217,0.14);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Source Sans 3', system-ui, sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px;}
+  a{color:inherit;}
+  code, .mono{font-family:'IBM Plex Mono', monospace;}
+
+  header.top{border-bottom:1px solid var(--line);padding:28px 0 22px;}
+  .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;}
+  .brand h1{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(28px,4vw,38px);
+    margin:0;letter-spacing:0.3px;
+  }
+  .brand .tag{color:var(--paper-dim);font-size:14px;}
+  .updated{margin-top:8px;color:var(--paper-dim);font-size:13px;}
+  .updated .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pitch-bright);margin-right:6px;}
+
+  section{padding:32px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  h2.section-title{
+    font-family:'Fraunces', serif; font-weight:500; font-size:13px;
+    text-transform:uppercase; letter-spacing:0.14em; color:var(--paper-dim);
+    margin:0 0 18px;
+  }
+
+  /* --- stat tiles --- */
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .stat{background:var(--ink);padding:18px 16px;}
+  .stat .label{font-size:12px;color:var(--paper-dim);text-transform:uppercase;letter-spacing:0.08em;}
+  .stat .value{font-family:'Fraunces',serif;font-weight:500;font-size:26px;margin-top:6px;}
+  .stat .delta{font-family:'IBM Plex Mono',monospace;font-size:13px;margin-top:4px;}
+  .pos{color:var(--pitch-bright);} .neg{color:var(--red);} .neu{color:var(--brass);}
+  @media (max-width:820px){.stats{grid-template-columns:repeat(2,1fr);}}
+
+  /* --- chart --- */
+  .chart-box{position:relative;}
+  svg#bankroll-chart{width:100%;height:260px;display:block;overflow:visible;}
+  .chart-empty{color:var(--paper-dim);font-size:14px;padding:40px 0;text-align:center;}
+  .tooltip{
+    position:absolute;pointer-events:none;background:var(--ink-2);border:1px solid var(--line);
+    padding:6px 10px;font-family:'IBM Plex Mono',monospace;font-size:12px;border-radius:2px;
+    transform:translate(-50%,-115%);white-space:nowrap;opacity:0;transition:opacity .1s;
+  }
+
+  /* --- filters --- */
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
+  .filters button{
+    background:transparent;border:1px solid var(--line);color:var(--paper-dim);
+    font-family:'Source Sans 3',sans-serif;font-size:13px;padding:7px 14px;cursor:pointer;
+    border-radius:2px;transition:all .12s;
+  }
+  .filters button:hover{color:var(--paper);border-color:var(--paper-dim);}
+  .filters button.active{background:var(--paper);color:var(--ink);border-color:var(--paper);font-weight:600;}
+
+  /* --- bet cards --- */
+  .bets{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);}
+  .bet{background:var(--ink);padding:18px 20px;cursor:pointer;}
+  .bet-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;}
+  .bet-match{font-family:'Fraunces',serif;font-weight:500;font-size:17px;}
+  .bet-league{color:var(--paper-dim);font-size:12px;margin-top:3px;}
+  .bet-status{
+    display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;
+    text-transform:uppercase;letter-spacing:0.05em;padding:4px 10px;border-radius:2px;white-space:nowrap;
+  }
+  .bet-status.won{color:var(--pitch-bright);border:1px solid var(--pitch);}
+  .bet-status.lost{color:var(--red);border:1px solid var(--red);}
+  .bet-status.pending{color:var(--brass);border:1px solid var(--brass);}
+  .bet-status.cancelado{color:var(--paper-dim);border:1px solid var(--line);}
+  .bet-status .ico{font-size:10px;}
+
+  .bet-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:12px;font-size:13px;}
+  .bet-meta .m-label{color:var(--paper-dim);display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;}
+  .bet-meta .m-value{font-family:'IBM Plex Mono',monospace;margin-top:2px;}
+
+  .bet-details{display:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);}
+  .bet.open .bet-details{display:block;}
+  .tribunal-row{display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap;}
+  .placar{font-family:'IBM Plex Mono',monospace;font-size:13px;background:var(--ink-2);padding:3px 9px;border-radius:2px;}
+  .agentes{font-size:12px;color:var(--paper-dim);}
+  .agentes b{color:var(--paper);font-weight:500;}
+  .reasoning{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:7px;}
+  .reasoning li{font-size:13.5px;color:var(--paper-dim);padding-left:16px;position:relative;}
+  .reasoning li::before{content:"—";position:absolute;left:0;color:var(--paper-dim);}
+  .reasoning.motivo-cancelado li{color:var(--red);}
+  .reasoning.motivo-cancelado li::before{color:var(--red);}
+
+  footer{padding:28px 0 60px;color:var(--paper-dim);font-size:12.5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>O Tribunal</h1>
+      <span class="tag">Apostas simuladas de futebol</span>
+    </div>
+    <div class="updated"><span class="dot"></span><span id="updated-text">a carregar…</span></div>
+  </header>
+
+  <section>
+    <h2 class="section-title">Estado da banca</h2>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Evolução da banca</h2>
+    <div class="chart-box">
+      <svg id="bankroll-chart" viewBox="0 0 1000 260" preserveAspectRatio="none"></svg>
+      <div class="tooltip" id="chart-tooltip"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Apostas</h2>
+    <div class="filters" id="filters">
+      <button data-filter="all" class="active">Todas</button>
+      <button data-filter="pending">Pendentes</button>
+      <button data-filter="won">Ganhas</button>
+      <button data-filter="lost">Perdidas</button>
+      <button data-filter="cancelado">Canceladas</button>
+    </div>
+    <div class="bets" id="bets"></div>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado. Modelo Poisson/Dixon-Coles + "Tribunal" de agentes de IA.
+    Odds via SharpAPI, jogos via football-data.org.
+  </footer>
+</div>
+
+<script>
+const MARKET_LABELS = {"1x2":"1X2", "over_under":"Over/Under", "btts":"Ambas Marcam", "double_chance":"Dupla Hipótese", "asian_handicap":"Handicap Asiático", "correct_score":"Resultado Exato"};
+const SELECTION_LABELS = {"home":"Casa", "draw":"Empate", "away":"Fora", "over":"Mais de", "under":"Menos de", "yes":"Sim", "no":"Não"};
+const STATUS_LABELS = {"won":"Ganhou","lost":"Perdeu","pending":"Pendente","cancelado":"Cancelada","void":"Anulada"};
+const STATUS_ICON = {"won":"●","lost":"●","pending":"●","cancelado":"●","void":"●"};
+const AGENTE_LABELS = {
+  "estatisticas":"Estatísticas", "forma_recente":"Forma Recente", "casa_fora":"Casa/Fora",
+  "fadiga_calendario":"Fadiga/Calendário", "arbitro":"Árbitro", "noticias_moral":"Notícias/Moral", "lesoes":"Lesões"
+};
+
+function fmtEUR(v){ return (v<0?"-":"") + Math.abs(v).toFixed(2).replace(".",",") + " €"; }
+function fmtPct(v){ return (v>=0?"+":"") + v.toFixed(1) + "%"; }
+function fmtDate(iso){
+  try{
+    const d = new Date(iso);
+    return d.toLocaleString('pt-PT', {day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  }catch(e){ return iso; }
+}
+function safeParseList(raw){
+  if(!raw) return [];
+  if(Array.isArray(raw)) return raw;
+  try{ return JSON.parse(raw); }catch(e){ return []; }
+}
+
+function renderStats(bk){
+  const el = document.getElementById('stats');
+  const tiles = [
+    {label:"Banca atual", value: fmtEUR(bk.current), delta: fmtEUR(bk.profit), cls: bk.profit>0?'pos':(bk.profit<0?'neg':'neu')},
+    {label:"Apostas liquidadas", value: bk.settled_count, delta: `${bk.won_count} ganhas · ${bk.lost_count} perdidas`, cls:'neu'},
+    {label:"Taxa de acerto", value: bk.win_rate_pct.toFixed(1)+"%", delta:"", cls:''},
+    {label:"ROI", value: fmtPct(bk.roi_pct), delta:"", cls: bk.roi_pct>0?'pos':(bk.roi_pct<0?'neg':'neu')},
+    {label:"Pendentes", value: bk.pending_count, delta:"", cls:''},
+  ];
+  el.innerHTML = tiles.map(t => `
+    <div class="stat">
+      <div class="label">${t.label}</div>
+      <div class="value">${t.value}</div>
+      ${t.delta ? `<div class="delta ${t.cls}">${t.delta}</div>` : ''}
+    </div>`).join('');
+}
+
+function renderChart(history){
+  const svg = document.getElementById('bankroll-chart');
+  const tooltip = document.getElementById('chart-tooltip');
+  if(!history || history.length < 2){
+    svg.outerHTML = '<div class="chart-empty">Ainda sem histórico suficiente — volta depois da primeira liquidação.</div>';
+    return;
+  }
+  const W=1000, H=260, padL=50, padR=10, padT=16, padB=28;
+  const vals = history.map(h=>h.balance);
+  const min = Math.min(...vals), max = Math.max(...vals);
+  const span = (max-min) || 1;
+  const x = i => padL + (i/(history.length-1)) * (W-padL-padR);
+  const y = v => padT + (1 - (v-min)/span) * (H-padT-padB);
+
+  let path = history.map((h,i)=> `${i===0?'M':'L'} ${x(i).toFixed(1)} ${y(h.balance).toFixed(1)}`).join(' ');
+  let area = path + ` L ${x(history.length-1).toFixed(1)} ${H-padB} L ${x(0).toFixed(1)} ${H-padB} Z`;
+
+  // gridlines (3 horizontal)
+  let grid = '';
+  for(let g=0; g<=2; g++){
+    const gv = min + span*g/2;
+    const gy = y(gv);
+    grid += `<line x1="${padL}" y1="${gy.toFixed(1)}" x2="${W-padR}" y2="${gy.toFixed(1)}" stroke="var(--line)" stroke-width="1"/>`;
+    grid += `<text x="${padL-8}" y="${(gy+4).toFixed(1)}" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--paper-dim)">${gv.toFixed(0)}€</text>`;
+  }
+
+  const dots = history.map((h,i)=> `<circle class="pt" data-i="${i}" cx="${x(i).toFixed(1)}" cy="${y(h.balance).toFixed(1)}" r="9" fill="transparent"/>`).join('');
+
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="fillgrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="var(--pitch-bright)" stop-opacity="0.22"/>
+        <stop offset="100%" stop-color="var(--pitch-bright)" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    ${grid}
+    <path d="${area}" fill="url(#fillgrad)" stroke="none"/>
+    <path d="${path}" fill="none" stroke="var(--pitch-bright)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="${x(history.length-1).toFixed(1)}" cy="${y(history[history.length-1].balance).toFixed(1)}" r="4" fill="var(--pitch-bright)"/>
+    ${dots}
+  `;
+
+  svg.querySelectorAll('.pt').forEach(c=>{
+    c.addEventListener('mouseenter', e=>{
+      const i = +c.dataset.i;
+      const h = history[i];
+      const rect = svg.getBoundingClientRect();
+      const px = rect.left + (x(i)/W)*rect.width;
+      const py = rect.top + (y(h.balance)/H)*rect.height;
+      tooltip.style.left = (px - rect.left) + 'px';
+      tooltip.style.top = (py - rect.top) + 'px';
+      tooltip.textContent = `${h.date} · ${fmtEUR(h.balance)}`;
+      tooltip.style.opacity = 1;
+    });
+    c.addEventListener('mouseleave', ()=> tooltip.style.opacity = 0);
+  });
+}
+
+let ALL_BETS = [];
+let CURRENT_FILTER = 'all';
+
+function renderBets(){
+  const el = document.getElementById('bets');
+  const filtered = CURRENT_FILTER==='all' ? ALL_BETS : ALL_BETS.filter(b=>b.status===CURRENT_FILTER);
+  if(filtered.length===0){
+    el.innerHTML = '<div class="chart-empty">Sem apostas nesta categoria.</div>';
+    return;
+  }
+  el.innerHTML = filtered.map(b=>{
+    const marketLabel = MARKET_LABELS[b.market] || b.market;
+    const selLabel = SELECTION_LABELS[b.selection] || b.selection;
+    const lineStr = (b.line!==null && b.line!==undefined) ? ` ${b.line}` : '';
+    const disponiveis = safeParseList(b.agentes_disponiveis);
+    const indisponiveis = safeParseList(b.agentes_indisponiveis);
+    const reasoning = safeParseList(b.reasoning);
+    const oraculo = b.final_probability!=null ? (b.final_probability*100).toFixed(1)+'%' : '—';
+    const confianca = b.confidence!=null ? (b.confidence*100).toFixed(0)+'%' : '—';
+    const margem = (b.edge!=null) ? fmtPct(b.edge*100) : '—';
+
+    return `
+    <div class="bet" data-id="${b.id}">
+      <div class="bet-head">
+        <div>
+          <div class="bet-match">${b.home_team} vs ${b.away_team}</div>
+          <div class="bet-league">${b.league} · ${fmtDate(b.kickoff_utc)}</div>
+        </div>
+        <div class="bet-status ${b.status}"><span class="ico">${STATUS_ICON[b.status]||'●'}</span>${STATUS_LABELS[b.status]||b.status}</div>
+      </div>
+      <div class="bet-meta">
+        <div><span class="m-label">Mercado</span><span class="m-value">${marketLabel} / ${selLabel}${lineStr}</span></div>
+        <div><span class="m-label">Odd</span><span class="m-value">${b.market_odds}</span></div>
+        <div><span class="m-label">Oráculo</span><span class="m-value">${oraculo}</span></div>
+        <div><span class="m-label">Margem</span><span class="m-value">${margem}</span></div>
+        <div><span class="m-label">Confiança</span><span class="m-value">${confianca}</span></div>
+        <div><span class="m-label">Casa de apostas</span><span class="m-value">${b.bookmaker||'—'}</span></div>
+        <div><span class="m-label">Stake</span><span class="m-value">${fmtEUR(b.stake)}</span></div>
+      </div>
+      <div class="bet-details">
+        <div class="tribunal-row">
+          <span class="placar">Tribunal ${b.tribunal_placar||'—'}</span>
+          <span class="agentes"><b>Ouviram:</b> ${disponiveis.map(a=>AGENTE_LABELS[a]||a).join(', ')||'—'}</span>
+        </div>
+        ${indisponiveis.length ? `<div class="agentes"><b>Por ligar:</b> ${indisponiveis.map(a=>AGENTE_LABELS[a]||a).join(', ')}</div>` : ''}
+        ${reasoning.length ? `<ul class="reasoning ${b.status==='cancelado' ? 'motivo-cancelado' : ''}">${reasoning.map(r=>`<li>${r}</li>`).join('')}</ul>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+
+  el.querySelectorAll('.bet').forEach(card=>{
+    card.addEventListener('click', ()=> card.classList.toggle('open'));
+  });
+}
+
+document.getElementById('filters').addEventListener('click', e=>{
+  if(e.target.tagName!=='BUTTON') return;
+  document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('active'));
+  e.target.classList.add('active');
+  CURRENT_FILTER = e.target.dataset.filter;
+  renderBets();
+});
+
+fetch('./data/snapshot.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
+    renderStats(data.bankroll);
+    renderChart(data.bankroll_history);
+    ALL_BETS = data.bets || [];
+    renderBets();
+  })
+  .catch(err => {
+    document.getElementById('updated-text').textContent = 'Erro a carregar dados.';
+    console.error(err);
+  });
+</script>
+</body>
+</html>
