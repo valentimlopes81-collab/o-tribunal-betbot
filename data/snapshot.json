@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T23:41:20.735545+00:00",
+  "generated_at": "2026-10-27T23:42:26.197821+00:00",
   "bankroll": {
     "current": 1000.0,
     "starting": 1000.0,
@@ -55,6 +55,17 @@
       "staked": 0.0,
       "profit": 0.0,
       "created_at": "2026-10-27 23:40:06"
+    },
+    {
+      "id": 5,
+      "date": "2026-10-27",
+      "balance": 1000.0,
+      "bets_placed": 0,
+      "bets_won": 0,
+      "bets_lost": 0,
+      "staked": 0.0,
+      "profit": 0.0,
+      "created_at": "2026-10-27 23:41:37"
     }
   ],
   "jurados_ranking": [],
