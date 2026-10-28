@@ -10,6 +10,7 @@ const SITE_PAGES = [
   {href: "especialistas.html",  label: "Os Especialistas"},
   {href: "tribunal.html",       label: "O Tribunal"},
   {href: "historico.html",      label: "Histórico"},
+  {href: "construtor.html",     label: "Construtor de Múltiplas"},
   {href: "ranking.html",        label: "Ranking dos Jurados"},
   {href: "metodologia.html",    label: "Metodologia"},
   {href: "glossario.html",      label: "Glossário"},

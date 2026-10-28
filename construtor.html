@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Construtor de Múltiplas — O Tribunal da Pátria</title>
+<meta name="description" content="Constrói a tua própria múltipla a partir de TODOS os candidatos que o Tribunal analisou hoje — não só os que se tornaram apostas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html"><h1>O Tribunal da Pátria</h1></a>
+        <span class="tag">Apostas simuladas de futebol</span>
+      </div>
+      <div class="updated"><span class="dot"></span><span id="updated-text">a carregar…</span></div>
+      <div class="sport-toggle" id="sport-toggle"></div>
+    </div>
+    <nav class="sitenav" id="sitenav"></nav>
+  </header>
+
+  <div class="page-head">
+    <div class="crumb">Construtor de Múltiplas</div>
+    <h1>Constrói a tua múltipla, ao contrário</h1>
+    <p class="lead">Em vez de escolher jogo a jogo, diz o que procuras — odd total, número de jogos, perfil de risco —
+      e o construtor monta combinações a partir de <b>todos</b> os candidatos que o Tribunal analisou hoje e nos
+      próximos dias, não só os que passaram o limiar e se tornaram apostas reais. Tudo calculado no teu browser,
+      sobre dados já publicados — nenhuma combinação aqui é registada como aposta.</p>
+  </div>
+
+  <section>
+    <h2 class="section-title">Critérios</h2>
+    <form id="criterios" class="builder-form">
+      <div class="field">
+        <label>Nº de jogos (pernas)</label>
+        <input type="number" id="f-pernas" min="2" max="6" value="3">
+      </div>
+      <div class="field">
+        <label>Odd total — de</label>
+        <input type="number" id="f-odd-min" min="1.1" step="0.1" value="3">
+      </div>
+      <div class="field">
+        <label>até</label>
+        <input type="number" id="f-odd-max" min="1.1" step="0.1" value="10">
+      </div>
+      <div class="field">
+        <label>Odd por jogo — de</label>
+        <input type="number" id="f-perna-min" min="1.01" step="0.05" value="1.3">
+      </div>
+      <div class="field">
+        <label>até</label>
+        <input type="number" id="f-perna-max" min="1.01" step="0.05" value="4">
+      </div>
+      <div class="field">
+        <label>Perfil de risco</label>
+        <select id="f-risco">
+          <option value="conservador">Conservador (maior confiança do Tribunal)</option>
+          <option value="equilibrado" selected>Equilibrado</option>
+          <option value="agressivo">Agressivo (aceita menor confiança)</option>
+        </select>
+      </div>
+      <div class="field field-wide">
+        <label>Mercados a incluir</label>
+        <div id="f-mercados" class="market-checks"></div>
+      </div>
+      <div class="field field-wide">
+        <button type="submit" class="btn-primary">Gerar combinações</button>
+      </div>
+    </form>
+    <p class="risk-note" id="pool-note"></p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Combinações encontradas</h2>
+    <div id="combos-resultado" class="combos-list"></div>
+  </section>
+
+  <section id="editor-section" style="display:none;">
+    <h2 class="section-title">A tua múltipla</h2>
+    <div id="combo-editor"></div>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado, e nenhuma combinação aqui gerada é registada como aposta do
+    Tribunal. As odds e probabilidades vêm dos candidatos já analisados e publicados; combinações antigas desaparecem
+    quando o jogo começa. Veja as apostas reais do Tribunal em <a href="index.html">Hoje</a>.
+  </footer>
+</div>
+
+<script src="assets/common.js"></script>
+<script>
+renderNav('construtor.html');
+renderSportToggle('futebol');
+
+const MARKET_LABELS = {"1x2":"1X2", "over_under":"Over/Under", "btts":"Ambas Marcam", "asian_handicap":"Handicap Asiático"};
+const SELECTION_LABELS = {"home":"Casa", "draw":"Empate", "away":"Fora", "over":"Mais de", "under":"Menos de", "yes":"Sim", "no":"Não"};
+const RISCO_CONF_MIN = {conservador: 0.5, equilibrado: 0.3, agressivo: 0.12};
+
+let CANDIDATOS = [];
+let COMBO_ATUAL = null;   // {legs: [...], oddTotal, probTotal, evPct}
+let POOL_ATUAL = [];      // pool elegível usado para gerar o combo atual (para o swap)
+
+function renderMercadoChecks(){
+  const el = document.getElementById('f-mercados');
+  const presentes = [...new Set(CANDIDATOS.map(c=>c.market))];
+  el.innerHTML = presentes.map(m => `
+    <label class="market-check"><input type="checkbox" value="${m}" checked> ${MARKET_LABELS[m]||m}</label>
+  `).join('') || '<span class="risk-note">Sem candidatos disponíveis.</span>';
+}
+
+function amostraAleatoria(n, k){
+  const idx = [];
+  let tentativas = 0;
+  while(idx.length < k && tentativas < k*50){
+    const r = Math.floor(Math.random()*n);
+    if(!idx.includes(r)) idx.push(r);
+    tentativas++;
+  }
+  return idx;
+}
+
+function legProb(c){ return c.final_probability != null ? c.final_probability : (c.model_prob || 0.5); }
+
+function construirPool(opts){
+  const elegiveis = CANDIDATOS.filter(c =>
+    opts.mercados.has(c.market) &&
+    c.market_odds >= opts.pernaMin && c.market_odds <= opts.pernaMax &&
+    (c.confidence == null || c.confidence >= opts.confMin)
+  );
+  // no máximo uma perna por jogo — fica a de maior margem (edge)
+  const porJogo = {};
+  elegiveis.forEach(c => {
+    const atual = porJogo[c.fixture_id];
+    if(!atual || (c.edge||0) > (atual.edge||0)) porJogo[c.fixture_id] = c;
+  });
+  return Object.values(porJogo);
+}
+
+function gerarCombos(pool, opts){
+  if(pool.length < opts.pernas) return [];
+  const tentativas = 5000;
+  const vistos = new Set();
+  const encontrados = [];
+  for(let t=0; t<tentativas && encontrados.length < 400; t++){
+    const idx = amostraAleatoria(pool.length, opts.pernas);
+    if(idx.length < opts.pernas) continue;
+    const chave = idx.slice().sort((a,b)=>a-b).join(',');
+    if(vistos.has(chave)) continue;
+    vistos.add(chave);
+    const legs = idx.map(i => pool[i]);
+    const oddTotal = legs.reduce((p,l) => p * l.market_odds, 1);
+    if(oddTotal < opts.oddMin || oddTotal > opts.oddMax) continue;
+    const probTotal = legs.reduce((p,l) => p * legProb(l), 1);
+    const evPct = (probTotal * oddTotal - 1) * 100;
+    encontrados.push({legs, oddTotal, probTotal, evPct});
+  }
+  encontrados.sort((a,b) => b.evPct - a.evPct);
+  return encontrados.slice(0,5);
+}
+
+function lerOpcoes(){
+  const mercados = new Set([...document.querySelectorAll('#f-mercados input:checked')].map(i=>i.value));
+  return {
+    pernas: Math.max(2, Math.min(6, parseInt(document.getElementById('f-pernas').value) || 3)),
+    oddMin: parseFloat(document.getElementById('f-odd-min').value) || 1.1,
+    oddMax: parseFloat(document.getElementById('f-odd-max').value) || 999,
+    pernaMin: parseFloat(document.getElementById('f-perna-min').value) || 1.01,
+    pernaMax: parseFloat(document.getElementById('f-perna-max').value) || 999,
+    confMin: RISCO_CONF_MIN[document.getElementById('f-risco').value] ?? 0.2,
+    mercados,
+  };
+}
+
+function cardCombo(combo, i){
+  const linhas = combo.legs.map(l => `${l.home_team} vs ${l.away_team} · ${MARKET_LABELS[l.market]||l.market}/${SELECTION_LABELS[l.selection]||l.selection}${l.line!=null?' '+l.line:''} @ ${l.market_odds}`).join('<br>');
+  const evCls = combo.evPct > 0.5 ? 'pos' : (combo.evPct < -0.5 ? 'neg' : 'neu');
+  return `
+    <div class="combo-card" data-i="${i}">
+      <div class="combo-card-odds">Odd total <b>${combo.oddTotal.toFixed(2)}</b></div>
+      <div class="combo-card-legs">${linhas}</div>
+      <div class="combo-card-meta">
+        <span>Probabilidade combinada: ${(combo.probTotal*100).toFixed(1)}%</span>
+        <span class="${evCls}">EV ${fmtPct(combo.evPct)}</span>
+      </div>
+      <button type="button" class="btn-secondary usar-combo" data-i="${i}">Usar esta combinação</button>
+    </div>`;
+}
+
+let ULTIMOS_COMBOS = [];
+
+function renderResultados(combos, pool){
+  ULTIMOS_COMBOS = combos;
+  POOL_ATUAL = pool;
+  const el = document.getElementById('combos-resultado');
+  if(combos.length === 0){
+    el.innerHTML = '<div class="chart-empty">Nenhuma combinação encontrada com estes critérios — tenta alargar a gama de odds ou baixar o perfil de risco.</div>';
+    return;
+  }
+  el.innerHTML = combos.map((c,i)=>cardCombo(c,i)).join('');
+  el.querySelectorAll('.usar-combo').forEach(btn=>{
+    btn.addEventListener('click', ()=> carregarEditor(ULTIMOS_COMBOS[+btn.dataset.i]));
+  });
+}
+
+function recalcularCombo(){
+  COMBO_ATUAL.oddTotal = COMBO_ATUAL.legs.reduce((p,l)=>p*l.market_odds, 1);
+  COMBO_ATUAL.probTotal = COMBO_ATUAL.legs.reduce((p,l)=>p*legProb(l), 1);
+  COMBO_ATUAL.evPct = (COMBO_ATUAL.probTotal * COMBO_ATUAL.oddTotal - 1) * 100;
+}
+
+function carregarEditor(combo){
+  COMBO_ATUAL = {legs: combo.legs.slice(), oddTotal: combo.oddTotal, probTotal: combo.probTotal, evPct: combo.evPct};
+  document.getElementById('editor-section').style.display = '';
+  renderEditor();
+  document.getElementById('editor-section').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function renderEditor(){
+  const el = document.getElementById('combo-editor');
+  const evCls = COMBO_ATUAL.evPct > 0.5 ? 'pos' : (COMBO_ATUAL.evPct < -0.5 ? 'neg' : 'neu');
+  const linhas = COMBO_ATUAL.legs.map((l,i) => `
+    <div class="editor-leg" data-i="${i}">
+      <div class="editor-leg-info">
+        <div class="bet-match">${l.home_team} vs ${l.away_team}</div>
+        <div class="bet-league">${l.league} · ${MARKET_LABELS[l.market]||l.market} / ${SELECTION_LABELS[l.selection]||l.selection}${l.line!=null?' '+l.line:''} @ ${l.market_odds}</div>
+      </div>
+      <button type="button" class="btn-secondary swap-leg" data-i="${i}">Trocar</button>
+    </div>`).join('');
+  el.innerHTML = `
+    ${linhas}
+    <div class="editor-stats">
+      <div><span class="m-label">Odd total</span><span class="m-value">${COMBO_ATUAL.oddTotal.toFixed(2)}</span></div>
+      <div><span class="m-label">Probabilidade combinada</span><span class="m-value">${(COMBO_ATUAL.probTotal*100).toFixed(1)}%</span></div>
+      <div><span class="m-label">EV</span><span class="m-value ${evCls}">${fmtPct(COMBO_ATUAL.evPct)}</span></div>
+    </div>
+    <p class="risk-note">"Trocar" substitui essa perna por outro candidato elegível (do mesmo filtro, jogo diferente) e recalcula tudo — experimenta à vontade, nada aqui fica registado.</p>
+  `;
+  el.querySelectorAll('.swap-leg').forEach(btn=>{
+    btn.addEventListener('click', ()=> trocarPerna(+btn.dataset.i));
+  });
+}
+
+function trocarPerna(i){
+  const usados = new Set(COMBO_ATUAL.legs.map(l => l.fixture_id));
+  usados.delete(COMBO_ATUAL.legs[i].fixture_id);
+  const alternativas = POOL_ATUAL.filter(c => !usados.has(c.fixture_id) && c.fixture_id !== COMBO_ATUAL.legs[i].fixture_id);
+  if(alternativas.length === 0){
+    alert('Não há alternativas elegíveis sem repetir jogo já usado nesta múltipla.');
+    return;
+  }
+  const escolha = alternativas[Math.floor(Math.random()*alternativas.length)];
+  COMBO_ATUAL.legs[i] = escolha;
+  recalcularCombo();
+  renderEditor();
+}
+
+document.getElementById('criterios').addEventListener('submit', e => {
+  e.preventDefault();
+  const opts = lerOpcoes();
+  const pool = construirPool(opts);
+  document.getElementById('pool-note').textContent = `${pool.length} candidato(s) elegível(eis) (um por jogo) com estes filtros.`;
+  const combos = gerarCombos(pool, opts);
+  renderResultados(combos, pool);
+});
+
+fetch('./data/candidatos.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
+    CANDIDATOS = data.candidatos || [];
+    renderMercadoChecks();
+    document.getElementById('pool-note').textContent = CANDIDATOS.length
+      ? `${CANDIDATOS.length} candidato(s) disponível(eis) nos próximos dias. Define os critérios e gera combinações.`
+      : 'Ainda sem candidatos publicados — volta depois da próxima corrida do bot.';
+  })
+  .catch(err => {
+    document.getElementById('updated-text').textContent = 'Erro a carregar dados.';
+    document.getElementById('pool-note').textContent = 'Ainda sem candidatos publicados — volta depois da próxima corrida do bot.';
+    console.error(err);
+  });
+</script>
+</body>
+</html>

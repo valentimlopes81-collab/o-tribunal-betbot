@@ -196,6 +196,39 @@ svg#bankroll-chart{width:100%;height:260px;display:block;overflow:visible;}
 .mc-stats .m-value{font-family:'IBM Plex Mono',monospace;font-size:14px;}
 .mc-caption{font-size:11px;color:var(--paper-dim);text-align:center;max-width:320px;line-height:1.4;}
 
+/* ---------------- Construtor Inverso de Múltiplas ---------------- */
+.builder-form{display:flex;flex-wrap:wrap;gap:16px 20px;align-items:flex-end;}
+.builder-form .field{display:flex;flex-direction:column;gap:6px;}
+.builder-form .field-wide{flex:1 1 100%;}
+.builder-form label{font-size:11px;color:var(--paper-dim);text-transform:uppercase;letter-spacing:0.06em;}
+.builder-form input[type="number"]{width:90px;background:var(--ink-2);border:1px solid var(--line);color:var(--paper);
+  padding:8px 10px;border-radius:2px;font-family:'IBM Plex Mono',monospace;font-size:13px;}
+.builder-form select{background:var(--ink-2);border:1px solid var(--line);color:var(--paper);padding:8px 10px;
+  border-radius:2px;font-size:13px;min-width:260px;}
+.market-checks{display:flex;flex-wrap:wrap;gap:12px;}
+.market-check{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--paper-dim);text-transform:none;letter-spacing:0;}
+.btn-primary{background:var(--brass);color:var(--ink);border:none;padding:10px 20px;border-radius:999px;
+  font-size:13.5px;font-weight:600;cursor:pointer;}
+.btn-primary:hover{opacity:0.9;}
+.btn-secondary{background:transparent;border:1px solid var(--line);color:var(--paper-dim);padding:7px 14px;
+  border-radius:999px;font-size:12.5px;cursor:pointer;}
+.btn-secondary:hover{color:var(--paper);border-color:var(--paper-dim);}
+
+.combos-list{display:flex;flex-direction:column;gap:2px;background:var(--line);border:1px solid var(--line);}
+.combo-card{background:var(--ink);padding:16px 18px;display:flex;flex-direction:column;gap:8px;}
+.combo-card-odds{font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--brass);}
+.combo-card-legs{font-size:13px;color:var(--paper-dim);line-height:1.6;}
+.combo-card-meta{display:flex;gap:18px;font-size:12.5px;color:var(--paper-dim);}
+.combo-card .btn-secondary{align-self:flex-start;}
+
+#combo-editor{background:var(--ink);border:1px solid var(--line);padding:18px 20px;}
+.editor-leg{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;
+  border-bottom:1px solid var(--line);}
+.editor-leg:last-of-type{border-bottom:none;}
+.editor-stats{display:flex;gap:28px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);}
+.editor-stats .m-label{color:var(--paper-dim);display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;}
+.editor-stats .m-value{font-family:'IBM Plex Mono',monospace;font-size:15px;}
+
 /* ---------------- card grids (especialistas / tribunal) ---------------- */
 .card-grid{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line);}
 .person-card{background:var(--ink);padding:22px 20px;display:flex;flex-direction:column;gap:10px;flex:1 1 260px;min-width:260px;}
