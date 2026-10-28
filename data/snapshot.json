@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T23:42:26.197821+00:00",
+  "generated_at": "2026-10-28T12:01:55.641115+00:00",
   "bankroll": {
     "current": 1000.0,
     "starting": 1000.0,
@@ -9,7 +9,7 @@
     "settled_count": 0,
     "won_count": 0,
     "lost_count": 0,
-    "pending_count": 6
+    "pending_count": 7
   },
   "bankroll_history": [
     {
@@ -66,10 +66,56 @@
       "staked": 0.0,
       "profit": 0.0,
       "created_at": "2026-10-27 23:41:37"
+    },
+    {
+      "id": 6,
+      "date": "2026-10-28",
+      "balance": 1000.0,
+      "bets_placed": 0,
+      "bets_won": 0,
+      "bets_lost": 0,
+      "staked": 0.0,
+      "profit": 0.0,
+      "created_at": "2026-10-28 12:00:28"
     }
   ],
   "jurados_ranking": [],
+  "ultima_corrida": {
+    "last_attempt_at": "2026-10-28T10:59:56.914775+00:00",
+    "ok": true,
+    "error": null
+  },
   "bets": [
+    {
+      "id": 24,
+      "fixture_id": 558554,
+      "league": "Serie A (Itália)",
+      "home_team": "AC Monza",
+      "away_team": "SSC Napoli",
+      "kickoff_utc": "2026-10-28T19:45:00Z",
+      "market": "1x2",
+      "selection": "home",
+      "line": null,
+      "model_prob": 0.3607685292087875,
+      "market_odds": 4.2,
+      "implied_prob": 0.23809523809523808,
+      "edge": 0.12267329111354941,
+      "bookmaker": "draftkings",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-10-28 12:01:51",
+      "final_probability": 0.3607685292087875,
+      "confidence": 0.4007953594678477,
+      "tribunal_placar": "5-0",
+      "agentes_disponiveis": "[\"estatisticas\", \"forma_recente\", \"fadiga_calendario\", \"noticias_moral\"]",
+      "agentes_indisponiveis": "[\"casa_fora\", \"arbitro\", \"lesoes\"]",
+      "reasoning": "[\"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 4 especialista(s) (estatisticas, forma_recente, fadiga_calendario, noticias_moral) e cheguei a 35.8% (vs 23.8% do mercado).\", \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 4 especialista(s) (estatisticas, forma_recente, fadiga_calendario, noticias_moral) e cheguei a 36.2% (vs 23.8% do mercado).\", \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 4 especialista(s) (estatisticas, forma_recente, fadiga_calendario, noticias_moral) e cheguei a 36.2% (vs 23.8% do mercado).\", \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 4 especialista(s) (estatisticas, forma_recente, fadiga_calendario, noticias_moral) e cheguei a 36.1% (vs 23.8% do mercado).\", \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 4 especialista(s) (estatisticas, forma_recente, fadiga_calendario, noticias_moral) e cheguei a 36.2% (vs 23.8% do mercado).\"]",
+      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"probabilidade\": 0.3386118462674507, \"confianca\": 0.462, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 33.9% de probabilidade para esta seleção, face a 23.8% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": true, \"probabilidade\": 0.3666118462674507, \"confianca\": 0.45, \"veredito\": \"favoravel\", \"justificacao\": \"Momentum recente (últimos 5 jogos vs média da época): AC Monza +0.57 | SSC Napoli +0.22 golos/jogo.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Poucos jogos em casa/fora registados para esta equipa esta época.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"probabilidade\": 0.3786118462674507, \"confianca\": 0.3, \"veredito\": \"favoravel\", \"justificacao\": \"Fadiga detetada: SSC Napoli jogou há só 3 dias.\"}, {\"agente\": \"arbitro\", \"disponivel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Árbitro ainda não anunciado ou jogo não encontrado na API-Football.\"}, {\"agente\": \"lesoes\", \"disponivel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Jogo não encontrado na API-Football — sem dados de ausências.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"probabilidade\": 0.3686118462674507, \"confianca\": 0.25, \"veredito\": \"favoravel\", \"justificacao\": \"Sinais nas notícias: 0 palavra(s)-chave sobre AC Monza, 2 sobre SSC Napoli (contagem simples, sem leitura de contexto).\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.35775601444587346, \"confianca\": 0.4685500000000001, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 4 especialista(s) (estatisticas, forma_recente, fadiga_calendario, noticias_moral) e cheguei a 35.8% (vs 23.8% do mercado).\", \"pesos\": {\"estatisticas\": 0.739, \"forma_recente\": 0.585, \"fadiga_calendario\": 0.3, \"noticias_moral\": 0.25}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.3620493462674507, \"confianca\": 0.34240000000000004, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 4 especialista(s) (estatisticas, forma_recente, fadiga_calendario, noticias_moral) e cheguei a 36.2% (vs 23.8% do mercado).\", \"pesos\": {\"estatisticas\": 0.37, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.3, \"noticias_moral\": 0.25}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.3622470819994606, \"confianca\": 0.403, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 4 especialista(s) (estatisticas, forma_recente, fadiga_calendario, noticias_moral) e cheguei a 36.2% (vs 23.8% do mercado).\", \"pesos\": {\"estatisticas\": 0.462, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.45, \"noticias_moral\": 0.25}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.3617967777743, \"confianca\": 0.438, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 4 especialista(s) (estatisticas, forma_recente, fadiga_calendario, noticias_moral) e cheguei a 36.2% (vs 23.8% do mercado).\", \"pesos\": {\"estatisticas\": 0.462, \"forma_recente\": 0.54, \"fadiga_calendario\": 0.3, \"noticias_moral\": 0.45}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.3605680706176559, \"confianca\": 0.3655, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 4 especialista(s) (estatisticas, forma_recente, fadiga_calendario, noticias_moral) e cheguei a 36.1% (vs 23.8% do mercado).\", \"pesos\": {\"estatisticas\": 0.462, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.3, \"noticias_moral\": 0.25}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.3607685292087875, \"confianca\": 0.4007953594678477, \"desacordo_entre_jurados\": 0.0045, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
+      "fase": "preliminar",
+      "revisado_em": null
+    },
     {
       "id": 23,
       "fixture_id": 558554,
