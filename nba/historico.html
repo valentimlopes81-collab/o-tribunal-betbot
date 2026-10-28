@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Histórico — O Tribunal da Pátria</title>
+<meta name="description" content="Ledger completo de apostas simuladas de NBA já liquidadas pelo Tribunal da Pátria, com filtros por mercado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html"><h1>O Tribunal da Pátria</h1></a>
+        <span class="tag">Apostas simuladas de basquetebol (NBA)</span>
+      </div>
+      <div class="updated"><span class="dot"></span><span id="updated-text">a carregar…</span></div>
+      <div class="sport-toggle" id="sport-toggle"></div>
+    </div>
+    <nav class="sitenav" id="sitenav"></nav>
+  </header>
+  <div class="status-banner" id="status-banner"></div>
+
+  <div class="page-head">
+    <div class="crumb">Histórico</div>
+    <h1>Todas as apostas já liquidadas</h1>
+    <p class="lead">O ledger completo — só apostas já resolvidas (ganhas ou perdidas). Apostas pendentes ficam na
+      <a href="index.html">página de hoje</a>; apostas canceladas (resíduo de correções internas) não aparecem aqui nem lá.</p>
+  </div>
+
+  <section>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Filtrar</h2>
+    <div class="filters" id="filters">
+      <button data-filter="all" class="active">Todas</button>
+      <button data-filter="won">Ganhas</button>
+      <button data-filter="lost">Perdidas</button>
+      <select id="league-filter"><option value="">Todas as ligas</option></select>
+      <select id="market-filter"><option value="">Todos os mercados</option></select>
+    </div>
+    <div class="bets" id="bets"></div>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado. Quer saber qual Jurado acerta mais? Veja o <a href="ranking.html">Ranking dos Jurados</a>.
+  </footer>
+</div>
+
+<script src="../assets/common.js"></script>
+<script>
+renderNav('historico.html');
+renderSportToggle('nba');
+
+const MARKET_LABELS = {"1x2":"Moneyline", "over_under":"Over/Under", "asian_handicap":"Handicap de Pontos"};
+const SELECTION_LABELS = {"home":"Casa", "away":"Fora", "over":"Mais de", "under":"Menos de"};
+const STATUS_LABELS = {"won":"Ganhou","lost":"Perdeu"};
+const STATUS_ICON = {"won":"●","lost":"●"};
+const AGENTE_LABELS = {
+  "estatisticas_nba":"Dean Oliver", "forma_recente_nba":"Red Auerbach", "casa_fora_nba":"Jerry West",
+  "fadiga_calendario_nba":"Pat Riley", "arbitro_nba":"Dick Bavetta", "lesoes_nba":"Dr. James Andrews",
+  "noticias_moral_nba":"Stephen A. Smith"
+};
+
+let ALL_BETS = [];
+let STATUS_FILTER = 'all';
+let LEAGUE_FILTER = '';
+let MARKET_FILTER = '';
+
+function renderStats(settled){
+  const won = settled.filter(b=>b.status==='won');
+  const lost = settled.filter(b=>b.status==='lost');
+  const totalStaked = settled.reduce((s,b)=>s+b.stake,0);
+  const totalReturn = settled.reduce((s,b)=>s+(b.payout||0),0);
+  const profit = totalReturn - totalStaked;
+  const winRate = settled.length ? (won.length/settled.length*100) : 0;
+  const el = document.getElementById('stats');
+  const tiles = [
+    {label:"Apostas liquidadas", end: settled.length, fmt: v=>Math.round(v).toString()},
+    {label:"Ganhas", end: won.length, fmt: v=>Math.round(v).toString()},
+    {label:"Perdidas", end: lost.length, fmt: v=>Math.round(v).toString()},
+    {label:"Taxa de acerto", end: winRate, fmt: v=>v.toFixed(1)+"%"},
+    {label:"Resultado líquido", end: profit, fmt: v=>fmtEUR(v)},
+  ];
+  el.innerHTML = tiles.map((t,i)=>`
+    <div class="stat">
+      <div class="label">${t.label}</div>
+      <div class="value" id="hstat-${i}">${t.fmt(0)}</div>
+    </div>`).join('');
+  tiles.forEach((t,i)=>animateCount(document.getElementById(`hstat-${i}`), t.end, t.fmt, 800));
+}
+
+function populateDropdowns(settled){
+  const leagues = [...new Set(settled.map(b=>b.league))].sort();
+  const markets = [...new Set(settled.map(b=>b.market))].sort();
+  const leagueSel = document.getElementById('league-filter');
+  const marketSel = document.getElementById('market-filter');
+  leagues.forEach(l=>{
+    const o = document.createElement('option'); o.value=l; o.textContent=l; leagueSel.appendChild(o);
+  });
+  markets.forEach(m=>{
+    const o = document.createElement('option'); o.value=m; o.textContent=MARKET_LABELS[m]||m; marketSel.appendChild(o);
+  });
+}
+
+function renderBets(){
+  const el = document.getElementById('bets');
+  let filtered = ALL_BETS;
+  if(STATUS_FILTER!=='all') filtered = filtered.filter(b=>b.status===STATUS_FILTER);
+  if(LEAGUE_FILTER) filtered = filtered.filter(b=>b.league===LEAGUE_FILTER);
+  if(MARKET_FILTER) filtered = filtered.filter(b=>b.market===MARKET_FILTER);
+
+  if(filtered.length===0){
+    el.innerHTML = '<div class="chart-empty">Sem apostas nesta seleção.</div>';
+    return;
+  }
+  el.innerHTML = filtered.map(b=>{
+    const marketLabel = MARKET_LABELS[b.market] || b.market;
+    const selLabel = SELECTION_LABELS[b.selection] || b.selection;
+    const lineStr = (b.line!==null && b.line!==undefined) ? ` ${b.line}` : '';
+    const disponiveis = safeParseList(b.agentes_disponiveis);
+    const reasoning = safeParseList(b.reasoning);
+    const oraculo = b.final_probability!=null ? (b.final_probability*100).toFixed(1)+'%' : '—';
+    const margem = (b.edge!=null) ? fmtPct(b.edge*100) : '—';
+    const glowCls = isRecentWin(b) ? ' win-glow' : '';
+
+    return `
+    <div class="bet${glowCls}" data-id="${b.id}">
+      <div class="bet-head">
+        <div>
+          <div class="bet-match">${b.home_team} vs ${b.away_team}</div>
+          <div class="bet-league">${b.league} · ${fmtDate(b.kickoff_utc)}</div>
+        </div>
+        <div class="bet-status ${b.status}"><span class="ico">${STATUS_ICON[b.status]}</span>${STATUS_LABELS[b.status]}</div>
+      </div>
+      <div class="bet-meta">
+        <div><span class="m-label">Mercado</span><span class="m-value">${marketLabel} / ${selLabel}${lineStr}</span></div>
+        <div><span class="m-label">Odd</span><span class="m-value">${b.market_odds}</span></div>
+        <div><span class="m-label">Oráculo</span><span class="m-value">${oraculo}</span></div>
+        <div><span class="m-label">Margem</span><span class="m-value">${margem}</span></div>
+        <div><span class="m-label">Stake</span><span class="m-value">${fmtEUR(b.stake)}</span></div>
+        <div><span class="m-label">Resultado</span><span class="m-value">${b.payout!=null?fmtEUR(b.payout - b.stake):'—'}</span></div>
+      </div>
+      <div class="bet-details">
+        <div class="tribunal-row">
+          <span class="placar">Tribunal ${b.tribunal_placar||'—'}</span>
+          <span class="agentes"><b>Ouviram:</b> ${disponiveis.map(a=>AGENTE_LABELS[a]||a).join(', ')||'—'}</span>
+        </div>
+        ${reasoning.length ? `<ul class="reasoning">${reasoning.map(r=>`<li>${r}</li>`).join('')}</ul>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+
+  el.querySelectorAll('.bet').forEach(card=>{
+    card.addEventListener('click', ()=>{
+      const wasOpen = card.classList.contains('open');
+      card.classList.toggle('open');
+      if(!wasOpen){
+        const placarEl = card.querySelector('.placar');
+        if(placarEl) animatePlacarReveal(placarEl);
+      }
+    });
+  });
+}
+
+document.getElementById('filters').addEventListener('click', e=>{
+  if(e.target.tagName!=='BUTTON') return;
+  document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('active'));
+  e.target.classList.add('active');
+  STATUS_FILTER = e.target.dataset.filter;
+  renderBets();
+});
+document.getElementById('league-filter').addEventListener('change', e=>{ LEAGUE_FILTER = e.target.value; renderBets(); });
+document.getElementById('market-filter').addEventListener('change', e=>{ MARKET_FILTER = e.target.value; renderBets(); });
+
+fetch('../data/snapshot_nba.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
+    renderStatusBanner(data);
+    const settled = (data.bets || []).filter(b => b.status === 'won' || b.status === 'lost')
+      .sort((a,b) => new Date(b.settled_at||b.kickoff_utc) - new Date(a.settled_at||a.kickoff_utc));
+    ALL_BETS = settled;
+    renderStats(settled);
+    populateDropdowns(settled);
+    renderBets();
+  })
+  .catch(err => {
+    document.getElementById('updated-text').textContent = 'Erro a carregar dados.';
+    console.error(err);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Tribunal da Pátria — Apostas simuladas de basquetebol (NBA)</title>
+<meta name="description" content="Um júri de agentes de IA analisa jogos da NBA e regista apostas simuladas sempre que encontra valor real nas odds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html"><h1>O Tribunal da Pátria</h1></a>
+        <span class="tag">Apostas simuladas de basquetebol (NBA)</span>
+      </div>
+      <div class="updated"><span class="dot"></span><span id="updated-text">a carregar…</span></div>
+      <div class="sport-toggle" id="sport-toggle"></div>
+    </div>
+    <nav class="sitenav" id="sitenav"></nav>
+  </header>
+  <div class="status-banner" id="status-banner"></div>
+
+  <section>
+    <h2 class="section-title">Estado da banca</h2>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Evolução da banca</h2>
+    <div class="chart-box">
+      <svg id="bankroll-chart" viewBox="0 0 1000 260" preserveAspectRatio="none"></svg>
+      <div class="tooltip" id="chart-tooltip"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Apostas</h2>
+    <div class="filters" id="filters">
+      <button data-filter="all" class="active">Todas</button>
+      <button data-filter="pending">Pendentes</button>
+      <button data-filter="won">Ganhas</button>
+      <button data-filter="lost">Perdidas</button>
+    </div>
+    <div class="bets" id="bets"></div>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado. Modelo normal de pontos esperados + "Tribunal" de agentes de IA.
+    Odds via SharpAPI, jogos via balldontlie.io. Quer perceber o sistema? Veja <a href="como-funciona.html">Como Funciona</a>.
+  </footer>
+</div>
+
+<script src="../assets/common.js"></script>
+<script>
+renderNav('index.html');
+renderSportToggle('nba');
+
+const MARKET_LABELS = {"1x2":"Moneyline", "over_under":"Over/Under", "asian_handicap":"Handicap de Pontos"};
+const SELECTION_LABELS = {"home":"Casa", "away":"Fora", "over":"Mais de", "under":"Menos de"};
+const STATUS_LABELS = {"won":"Ganhou","lost":"Perdeu","pending":"Pendente","cancelado":"Cancelada","void":"Anulada"};
+const STATUS_ICON = {"won":"●","lost":"●","pending":"●","cancelado":"●","void":"●"};
+const AGENTE_LABELS = {
+  "estatisticas_nba":"Dean Oliver", "forma_recente_nba":"Red Auerbach", "casa_fora_nba":"Jerry West",
+  "fadiga_calendario_nba":"Pat Riley", "arbitro_nba":"Dick Bavetta", "lesoes_nba":"Dr. James Andrews",
+  "noticias_moral_nba":"Stephen A. Smith"
+};
+
+function renderStats(bk){
+  const el = document.getElementById('stats');
+  const tiles = [
+    {label:"Banca atual", end: bk.current, fmt: v=>fmtEUR(v), delta: fmtEUR(bk.profit), cls: bk.profit>0?'pos':(bk.profit<0?'neg':'neu')},
+    {label:"Apostas liquidadas", end: bk.settled_count, fmt: v=>Math.round(v).toString(), delta: `${bk.won_count} ganhas · ${bk.lost_count} perdidas`, cls:'neu'},
+    {label:"Taxa de acerto", end: bk.win_rate_pct, fmt: v=>v.toFixed(1)+"%", delta:"", cls:''},
+    {label:"ROI", end: bk.roi_pct, fmt: v=>fmtPct(v), delta:"", cls: bk.roi_pct>0?'pos':(bk.roi_pct<0?'neg':'neu')},
+    {label:"Pendentes", end: bk.pending_count, fmt: v=>Math.round(v).toString(), delta:"", cls:''},
+  ];
+  el.innerHTML = tiles.map((t,i) => `
+    <div class="stat">
+      <div class="label">${t.label}</div>
+      <div class="value" id="stat-val-${i}">${t.fmt(0)}</div>
+      ${t.delta ? `<div class="delta ${t.cls}">${t.delta}</div>` : ''}
+    </div>`).join('');
+  tiles.forEach((t,i) => animateCount(document.getElementById(`stat-val-${i}`), t.end, t.fmt, 850));
+}
+
+function renderChart(history){
+  const svg = document.getElementById('bankroll-chart');
+  const tooltip = document.getElementById('chart-tooltip');
+  if(!history || history.length < 2){
+    svg.outerHTML = '<div class="chart-empty">Ainda sem histórico suficiente — volta depois da primeira liquidação.</div>';
+    return;
+  }
+  const W=1000, H=260, padL=50, padR=10, padT=16, padB=28;
+  const vals = history.map(h=>h.balance);
+  const min = Math.min(...vals), max = Math.max(...vals);
+  const span = (max-min) || 1;
+  const x = i => padL + (i/(history.length-1)) * (W-padL-padR);
+  const y = v => padT + (1 - (v-min)/span) * (H-padT-padB);
+
+  let path = history.map((h,i)=> `${i===0?'M':'L'} ${x(i).toFixed(1)} ${y(h.balance).toFixed(1)}`).join(' ');
+  let area = path + ` L ${x(history.length-1).toFixed(1)} ${H-padB} L ${x(0).toFixed(1)} ${H-padB} Z`;
+
+  let grid = '';
+  for(let g=0; g<=2; g++){
+    const gv = min + span*g/2;
+    const gy = y(gv);
+    grid += `<line x1="${padL}" y1="${gy.toFixed(1)}" x2="${W-padR}" y2="${gy.toFixed(1)}" stroke="var(--line)" stroke-width="1"/>`;
+    grid += `<text x="${padL-8}" y="${(gy+4).toFixed(1)}" text-anchor="end" font-family="IBM Plex Mono" font-size="11" fill="var(--paper-dim)">${gv.toFixed(0)}€</text>`;
+  }
+
+  const dots = history.map((h,i)=> `<circle class="pt" data-i="${i}" cx="${x(i).toFixed(1)}" cy="${y(h.balance).toFixed(1)}" r="9" fill="transparent"/>`).join('');
+
+  const pathLen = 2000;
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="fillgrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="var(--pitch-bright)" stop-opacity="0.22"/>
+        <stop offset="100%" stop-color="var(--pitch-bright)" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    ${grid}
+    <path d="${area}" fill="url(#fillgrad)" stroke="none"/>
+    <path id="bankroll-line" d="${path}" fill="none" stroke="var(--pitch-bright)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+      stroke-dasharray="${pathLen}" stroke-dashoffset="${pathLen}"/>
+    <circle cx="${x(history.length-1).toFixed(1)}" cy="${y(history[history.length-1].balance).toFixed(1)}" r="4" fill="var(--pitch-bright)"/>
+    ${dots}
+  `;
+
+  const linePath = document.getElementById('bankroll-line');
+  const realLen = linePath.getTotalLength();
+  linePath.style.strokeDasharray = realLen;
+  linePath.style.strokeDashoffset = realLen;
+  linePath.style.transition = 'stroke-dashoffset 1.1s cubic-bezier(.2,.8,.2,1)';
+  requestAnimationFrame(() => { linePath.style.strokeDashoffset = 0; });
+
+  svg.querySelectorAll('.pt').forEach(c=>{
+    c.addEventListener('mouseenter', e=>{
+      const i = +c.dataset.i;
+      const h = history[i];
+      const rect = svg.getBoundingClientRect();
+      const px = rect.left + (x(i)/W)*rect.width;
+      const py = rect.top + (y(h.balance)/H)*rect.height;
+      tooltip.style.left = (px - rect.left) + 'px';
+      tooltip.style.top = (py - rect.top) + 'px';
+      tooltip.textContent = `${h.date} · ${fmtEUR(h.balance)}`;
+      tooltip.style.opacity = 1;
+    });
+    c.addEventListener('mouseleave', ()=> tooltip.style.opacity = 0);
+  });
+}
+
+let ALL_BETS = [];
+let CURRENT_FILTER = 'all';
+
+function renderBets(){
+  const el = document.getElementById('bets');
+  const filtered = CURRENT_FILTER==='all' ? ALL_BETS : ALL_BETS.filter(b=>b.status===CURRENT_FILTER);
+  if(filtered.length===0){
+    el.innerHTML = '<div class="chart-empty">Sem apostas nesta categoria.</div>';
+    return;
+  }
+  el.innerHTML = filtered.map(b=>{
+    const marketLabel = MARKET_LABELS[b.market] || b.market;
+    const selLabel = SELECTION_LABELS[b.selection] || b.selection;
+    const lineStr = (b.line!==null && b.line!==undefined) ? ` ${b.line}` : '';
+    const disponiveis = safeParseList(b.agentes_disponiveis);
+    const indisponiveis = safeParseList(b.agentes_indisponiveis);
+    const reasoning = safeParseList(b.reasoning);
+    const oraculo = b.final_probability!=null ? (b.final_probability*100).toFixed(1)+'%' : '—';
+    const confianca = b.confidence!=null ? (b.confidence*100).toFixed(0)+'%' : '—';
+    const margem = (b.edge!=null) ? fmtPct(b.edge*100) : '—';
+    const glowCls = isRecentWin(b) ? ' win-glow' : '';
+
+    return `
+    <div class="bet${glowCls}" data-id="${b.id}">
+      <div class="bet-head">
+        <div>
+          <div class="bet-match">${b.home_team} vs ${b.away_team}</div>
+          <div class="bet-league">${b.league} · ${fmtDate(b.kickoff_utc)}</div>
+        </div>
+        <div class="bet-status ${b.status}"><span class="ico">${STATUS_ICON[b.status]||'●'}</span>${STATUS_LABELS[b.status]||b.status}</div>
+      </div>
+      <div class="bet-meta">
+        <div><span class="m-label">Mercado</span><span class="m-value">${marketLabel} / ${selLabel}${lineStr}</span></div>
+        <div><span class="m-label">Odd</span><span class="m-value">${b.market_odds}</span></div>
+        <div><span class="m-label">Oráculo</span><span class="m-value">${oraculo}</span></div>
+        <div><span class="m-label">Margem</span><span class="m-value">${margem}</span></div>
+        <div><span class="m-label">Confiança</span><span class="m-value">${confianca}</span></div>
+        <div><span class="m-label">Casa de apostas</span><span class="m-value">${b.bookmaker||'—'}</span></div>
+        <div><span class="m-label">Stake</span><span class="m-value">${fmtEUR(b.stake)}</span></div>
+      </div>
+      <div class="bet-details">
+        <div class="tribunal-row">
+          <span class="placar">Tribunal ${b.tribunal_placar||'—'}</span>
+          <span class="agentes"><b>Ouviram:</b> ${disponiveis.map(a=>AGENTE_LABELS[a]||a).join(', ')||'—'}</span>
+        </div>
+        ${indisponiveis.length ? `<div class="agentes"><b>Por ligar:</b> ${indisponiveis.map(a=>AGENTE_LABELS[a]||a).join(', ')}</div>` : ''}
+        ${reasoning.length ? `<ul class="reasoning ${b.status==='cancelado' ? 'motivo-cancelado' : ''}">${reasoning.map(r=>`<li>${r}</li>`).join('')}</ul>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+
+  el.querySelectorAll('.bet').forEach(card=>{
+    card.addEventListener('click', ()=>{
+      const wasOpen = card.classList.contains('open');
+      card.classList.toggle('open');
+      if(!wasOpen){
+        const placarEl = card.querySelector('.placar');
+        if(placarEl) animatePlacarReveal(placarEl);
+      }
+    });
+  });
+}
+
+document.getElementById('filters').addEventListener('click', e=>{
+  if(e.target.tagName!=='BUTTON') return;
+  document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('active'));
+  e.target.classList.add('active');
+  CURRENT_FILTER = e.target.dataset.filter;
+  renderBets();
+});
+
+fetch('../data/snapshot_nba.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
+    renderStatusBanner(data);
+    renderStats(data.bankroll);
+    renderChart(data.bankroll_history);
+    // Apostas canceladas (valor que desapareceu na revisão, ou resíduo de uma
+    // corrida corrigida entretanto) não interessam ao público — só ficam na
+    // base de dados para auditoria interna.
+    ALL_BETS = (data.bets || []).filter(b => b.status !== 'cancelado');
+    renderBets();
+  })
+  .catch(err => {
+    document.getElementById('updated-text').textContent = 'Erro a carregar dados.';
+    console.error(err);
+  });
+</script>
+</body>
+</html>

@@ -15,12 +15,33 @@ const SITE_PAGES = [
   {href: "glossario.html",      label: "Glossário"},
 ];
 
-function renderNav(activeHref){
+// Mesmas páginas, mesma ordem — as páginas da NBA vivem na pasta nba/ e
+// usam exatamente os mesmos nomes de ficheiro, só com conteúdo diferente.
+const SITE_PAGES_NBA = SITE_PAGES;
+
+function renderNav(activeHref, pages){
   const navEl = document.getElementById('sitenav');
   if(!navEl) return;
-  navEl.innerHTML = SITE_PAGES.map(p =>
+  pages = pages || SITE_PAGES;
+  navEl.innerHTML = pages.map(p =>
     `<a href="${p.href}" class="${p.href===activeHref ? 'active' : ''}">${p.label}</a>`
   ).join('');
+}
+
+// Alterna entre a secção de Futebol (raiz do site) e a secção de NBA (pasta nba/).
+// current: 'futebol' | 'nba'. As páginas da NBA chamam isto com a mesma
+// página ativa (mesmo nome de ficheiro) para que o toggle troque de secção
+// sem trocar de separador dentro da secção.
+function renderSportToggle(current){
+  const el = document.getElementById('sport-toggle');
+  if(!el) return;
+  const isNba = current === 'nba';
+  const futebolHref = isNba ? '../index.html' : 'index.html';
+  const nbaHref = isNba ? 'index.html' : 'nba/index.html';
+  el.innerHTML = `
+    <a href="${futebolHref}" class="${!isNba ? 'active' : ''}">⚽ Futebol</a>
+    <a href="${nbaHref}" class="${isNba ? 'active' : ''}">🏀 NBA</a>
+  `;
 }
 
 function fmtEUR(v){ return (v<0?"-":"") + Math.abs(v).toFixed(2).replace(".",",") + " €"; }

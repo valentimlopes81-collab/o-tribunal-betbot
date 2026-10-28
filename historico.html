@@ -19,6 +19,7 @@
         <span class="tag">Apostas simuladas de futebol</span>
       </div>
       <div class="updated"><span class="dot"></span><span id="updated-text">a carregar…</span></div>
+      <div class="sport-toggle" id="sport-toggle"></div>
     </div>
     <nav class="sitenav" id="sitenav"></nav>
   </header>
@@ -55,6 +56,7 @@
 <script src="assets/common.js"></script>
 <script>
 renderNav('historico.html');
+renderSportToggle('futebol');
 
 const MARKET_LABELS = {"1x2":"1X2", "over_under":"Over/Under", "btts":"Ambas Marcam", "double_chance":"Dupla Hipótese", "asian_handicap":"Handicap Asiático", "correct_score":"Resultado Exato"};
 const SELECTION_LABELS = {"home":"Casa", "draw":"Empate", "away":"Fora", "over":"Mais de", "under":"Menos de", "yes":"Sim", "no":"Não"};

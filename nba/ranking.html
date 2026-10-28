@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ranking dos Jurados — O Tribunal da Pátria</title>
+<meta name="description" content="Qual dos cinco Jurados do Tribunal da Pátria acerta mais, calculado a partir das apostas já liquidadas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html"><h1>O Tribunal da Pátria</h1></a>
+        <span class="tag">Apostas simuladas de basquetebol (NBA)</span>
+      </div>
+      <div class="updated"><span class="dot"></span><span id="updated-text">a carregar…</span></div>
+      <div class="sport-toggle" id="sport-toggle"></div>
+    </div>
+    <nav class="sitenav" id="sitenav"></nav>
+  </header>
+  <div class="status-banner" id="status-banner"></div>
+
+  <div class="page-head">
+    <div class="crumb">Ranking dos Jurados</div>
+    <h1>Quem acerta mais?</h1>
+    <p class="lead">Calculado a partir de todas as apostas já liquidadas. Um voto de um Jurado conta como acerto quando
+      votou <span class="mono">favorável</span> e a aposta ganhou, ou quando votou <span class="mono">desfavorável</span>
+      e a aposta perdeu — ou seja, quando discordar do resto do Tribunal acabou por ser a leitura certa. Votos
+      <span class="mono">neutros</span> (abstenções) não contam nem a favor nem contra.</p>
+  </div>
+
+  <section id="ranking-section">
+    <h2 class="section-title">Classificação</h2>
+    <div id="ranking-body"></div>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado. Conheça as personalidades por trás destes números em <a href="tribunal.html">O Tribunal</a>.
+  </footer>
+</div>
+
+<script src="../assets/common.js"></script>
+<script>
+renderNav('ranking.html');
+renderSportToggle('nba');
+
+function renderRanking(ranking){
+  const section = document.getElementById('ranking-body');
+  const withVotes = (ranking || []).filter(r => r.precisao_pct !== null);
+
+  if(withVotes.length === 0){
+    section.innerHTML = '<div class="chart-empty">Ainda sem apostas liquidadas suficientes para calcular um ranking — volta depois de alguns jogos terminarem.</div>';
+    return;
+  }
+
+  const maxPrecisao = Math.max(...withVotes.map(r => r.precisao_pct), 1);
+
+  section.innerHTML = `
+    <table class="ranking">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Jurado</th>
+          <th>Precisão</th>
+          <th></th>
+          <th>Acertos</th>
+          <th>Erros</th>
+          <th>Abstenções</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${withVotes.map((r,i) => `
+          <tr>
+            <td class="rank-num">${i+1}</td>
+            <td class="juror-name">${r.jurado}</td>
+            <td class="mono" id="rank-pct-${i}">0%</td>
+            <td><div class="bar-track"><div class="bar-fill" data-target="${(r.precisao_pct/maxPrecisao*100).toFixed(1)}%"></div></div></td>
+            <td class="mono pos">${r.acertos}</td>
+            <td class="mono neg">${r.erros}</td>
+            <td class="mono">${r.abstencoes}</td>
+          </tr>`).join('')}
+      </tbody>
+    </table>
+  `;
+  withVotes.forEach((r,i) => animateCount(document.getElementById(`rank-pct-${i}`), r.precisao_pct, v=>v.toFixed(1)+'%', 900));
+  animateBars(section);
+}
+
+fetch('../data/snapshot_nba.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
+    renderStatusBanner(data);
+    renderRanking(data.jurados_ranking || []);
+  })
+  .catch(err => {
+    document.getElementById('updated-text').textContent = 'Erro a carregar dados.';
+    console.error(err);
+  });
+</script>
+</body>
+</html>

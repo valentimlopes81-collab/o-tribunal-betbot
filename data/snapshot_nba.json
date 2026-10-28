@@ -1,0 +1,19 @@
+{
+  "sport": "nba",
+  "generated_at": "2026-10-28T16:10:45.643096+00:00",
+  "bankroll": {
+    "current": 1000.0,
+    "starting": 1000.0,
+    "profit": 0.0,
+    "roi_pct": 0.0,
+    "win_rate_pct": 0.0,
+    "settled_count": 0,
+    "won_count": 0,
+    "lost_count": 0,
+    "pending_count": 0
+  },
+  "bankroll_history": [],
+  "jurados_ranking": [],
+  "ultima_corrida": null,
+  "bets": []
+}

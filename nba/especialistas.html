@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Os Especialistas — O Tribunal da Pátria</title>
+<meta name="description" content="Os sete agentes especialistas do Tribunal da Pátria na NBA, cada um focado numa única fonte de sinal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html"><h1>O Tribunal da Pátria</h1></a>
+        <span class="tag">Apostas simuladas de basquetebol (NBA)</span>
+      </div>
+      <div class="sport-toggle" id="sport-toggle"></div>
+    </div>
+    <nav class="sitenav" id="sitenav"></nav>
+  </header>
+
+  <div class="page-head">
+    <div class="crumb">Os Especialistas</div>
+    <h1>Sete vozes, sete obsessões</h1>
+    <p class="lead">Cada Especialista olha para o mesmo jogo, mas só vê uma fatia dele. Nenhum decide sozinho — cada um entrega
+      a sua opinião aos cinco Jurados, que a ponderam de forma diferente (ver <a href="tribunal.html">O Tribunal</a>).</p>
+  </div>
+
+  <section>
+    <div class="card-grid">
+
+      <div class="person-card">
+        <div class="role">Estatísticas</div>
+        <h3>Dean Oliver</h3>
+        <span class="badge live">Em funções</span>
+        <p class="desc">O pai da sabermetria do basquetebol. Embrulha o modelo normal de pontos esperados que serve de
+          base a tudo o resto — calcula a probabilidade de cada resultado a partir do histórico de pontos marcados e
+          sofridos por cada equipa. É o ponto de partida sobre o qual os outros seis ajustam.</p>
+        <p class="quote">"Os números não mentem — mas também não contam a história toda."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Forma Recente</div>
+        <h3>Red Auerbach</h3>
+        <span class="badge live">Em funções</span>
+        <p class="desc">Compara os últimos cinco jogos de cada equipa com a média de pontos da época inteira. Quando uma
+          equipa está claramente melhor ou pior do que o seu registo habitual sugere, ajusta a probabilidade do modelo
+          estatístico para refletir esse momento de forma.</p>
+        <p class="quote">"Importa a equipa que está em quadra agora, não a de novembro."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Casa / Fora</div>
+        <h3>Jerry West</h3>
+        <span class="badge live">Em funções</span>
+        <p class="desc">A vantagem de jogar em casa já é, por si, maior na NBA do que no futebol europeu — mas algumas
+          equipas têm um padrão muito mais acentuado do que a média da liga já prevê. Deteta essas equipas e corrige a
+          probabilidade quando há jogos históricos suficientes esta época para confirmar o padrão.</p>
+        <p class="quote">"Há equipas que só parecem a sua melhor versão em casa."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Fadiga / Calendário</div>
+        <h3>Pat Riley</h3>
+        <span class="badge live">Em funções</span>
+        <p class="desc">Vigia o calendário: jogar em "back-to-back" (dois jogos em noites consecutivas) é um dos efeitos
+          mais bem documentados e consistentes no basquetebol profissional — mais forte do que o equivalente no
+          futebol. Penaliza a probabilidade de vitória, e reduz as expectativas de pontuação, de uma equipa fatigada.</p>
+        <p class="quote">"Não há descanso para os cansados — literalmente, no calendário da NBA."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Árbitro</div>
+        <h3>Dick Bavetta</h3>
+        <span class="badge soon">Por ligar</span>
+        <p class="desc">Ainda não há fonte gratuita e fiável de equipas de arbitragem por jogo da NBA (a balldontlie.io,
+          a nossa fonte principal, não tem isto no plano gratuito). Fica "por ligar" até se encontrar uma fonte
+          zero-custo, tal como aconteceu com o Proença no futebol antes de se ligar a API-Football.</p>
+        <p class="quote">"Ainda nem sei quem apita esta noite."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Lesões / Ausências</div>
+        <h3>Dr. James Andrews</h3>
+        <span class="badge soon">Por ligar</span>
+        <p class="desc">Na NBA, a ausência de uma estrela pesa muito mais do que no futebol (cinco titulares, não
+          onze) — mas ainda não há fonte gratuita e fiável de relatórios de lesões diários da NBA. Fica "por ligar"
+          até se encontrar uma fonte zero-custo, tal como aconteceu com o Varandas no futebol.</p>
+        <p class="quote">"Sem o relatório de lesões de hoje, estou a trabalhar às cegas."</p>
+      </div>
+
+      <div class="person-card">
+        <div class="role">Notícias / Moral</div>
+        <h3>Stephen A. Smith</h3>
+        <span class="badge live">Em funções</span>
+        <p class="desc">Diferente de todos os outros: em vez de cálculo sobre dados históricos, pesquisa a imprensa
+          desportiva americana antes de cada jogo — procura por palavras-chave de crise (bancos, suspensões, rumores
+          de troca, tensão de balneário) ou de boa fase (sequências de vitórias, forma de MVP) nas notícias recentes
+          de cada equipa, e ajusta ligeiramente a probabilidade consoante o que encontra. Com honestidade: é contagem
+          de palavras-chave, não verdadeira compreensão do texto — por isso o ajuste que aplica é sempre pequeno.</p>
+        <p class="quote">"Isto é o que estou a ouvir nos bastidores agora mesmo."</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Como pesam na decisão</h2>
+    <p>Nenhum Especialista tem a palavra final. Cada um dá o seu parecer e um grau de confiança; são os cinco
+      <a href="tribunal.html">Jurados</a> que decidem, cada um à sua maneira, quanto peso dar a cada voz.
+      Quando um Especialista ainda está "por ligar", o Tribunal delibera apenas com os que já estão em funções —
+      e assinala isso de forma transparente em cada aposta registada.</p>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado. Veja como estes pareceres se tornam num veredito em <a href="como-funciona.html">Como Funciona</a>.
+  </footer>
+</div>
+
+<script src="../assets/common.js"></script>
+<script>renderNav('especialistas.html');
+renderSportToggle('nba');</script>
+</body>
+</html>
