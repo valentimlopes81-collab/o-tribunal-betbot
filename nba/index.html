@@ -39,6 +39,12 @@
   </section>
 
   <section>
+    <h2 class="section-title">Simulação de risco (stress test da banca)</h2>
+    <div class="stats" id="risk-stats"></div>
+    <p class="risk-note" id="risk-note"></p>
+  </section>
+
+  <section>
     <h2 class="section-title">Apostas</h2>
     <div class="filters" id="filters">
       <button data-filter="all" class="active">Todas</button>
@@ -154,6 +160,31 @@ function renderChart(history){
   });
 }
 
+function renderRiskSim(risco){
+  const statsEl = document.getElementById('risk-stats');
+  const noteEl = document.getElementById('risk-note');
+  if(!risco){
+    statsEl.innerHTML = '';
+    noteEl.textContent = 'Ainda sem apostas liquidadas suficientes para uma simulação de risco com significado estatístico.';
+    return;
+  }
+  const tiles = [
+    {label:"Pior cenário (95% de confiança)", end: risco.banca_pior_caso_95, fmt: v=>fmtEUR(v), delta: `−${fmtEUR(risco.perda_var_95)} vs banca atual`, cls:'neg'},
+    {label:"Cenário mediano", end: risco.banca_mediana_simulada, fmt: v=>fmtEUR(v), delta:"", cls:'neu'},
+    {label:"Queda máxima típica", end: risco.drawdown_mediano_pct, fmt: v=>v.toFixed(1)+"%", delta:"ao longo do caminho simulado", cls:'neu'},
+    {label:"Pior queda (5% dos casos)", end: risco.drawdown_pior_caso_95_pct, fmt: v=>v.toFixed(1)+"%", delta:"", cls:'neg'},
+    {label:"Risco de perder metade da banca", end: risco.prob_perder_metade_banca_pct, fmt: v=>v.toFixed(1)+"%", delta:`em ${risco.n_apostas_futuras} apostas futuras`, cls: risco.prob_perder_metade_banca_pct>5?'neg':'neu'},
+  ];
+  statsEl.innerHTML = tiles.map((t,i) => `
+    <div class="stat">
+      <div class="label">${t.label}</div>
+      <div class="value" id="risk-val-${i}">${t.fmt(0)}</div>
+      ${t.delta ? `<div class="delta ${t.cls}">${t.delta}</div>` : ''}
+    </div>`).join('');
+  tiles.forEach((t,i) => animateCount(document.getElementById(`risk-val-${i}`), t.end, t.fmt, 850));
+  noteEl.textContent = `Simulação de Monte Carlo (${risco.n_simulacoes.toLocaleString('pt-PT')} cenários, bootstrap sobre as últimas ${risco.n_apostas_historico_usado} apostas reais já liquidadas) — não é uma previsão, é uma estimativa de risco assumindo que o desempenho futuro se parece com o já observado.`;
+}
+
 let ALL_BETS = [];
 let CURRENT_FILTER = 'all';
 
@@ -232,6 +263,7 @@ fetch('../data/snapshot_nba.json', {cache:'no-store'})
     renderStatusBanner(data);
     renderStats(data.bankroll);
     renderChart(data.bankroll_history);
+    renderRiskSim(data.risco_var);
     // Apostas canceladas (valor que desapareceu na revisão, ou resíduo de uma
     // corrida corrigida entretanto) não interessam ao público — só ficam na
     // base de dados para auditoria interna.
