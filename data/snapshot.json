@@ -1,11 +1,11 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-10-28T22:33:02.916408+00:00",
+  "generated_at": "2026-10-28T22:58:27.607663+00:00",
   "bankroll": {
-    "current": 1000.0,
+    "current": 940.0,
     "starting": 1000.0,
-    "profit": 0.0,
-    "roi_pct": 0.0,
+    "profit": -60.0,
+    "roi_pct": -200.0,
     "win_rate_pct": 0.0,
     "settled_count": 3,
     "won_count": 0,
@@ -84,6 +84,30 @@
       "profit": 0.0,
       "created_at": "2026-10-28 12:00:28",
       "sport": "futebol"
+    },
+    {
+      "id": 12,
+      "date": "2026-10-28",
+      "balance": 970.0,
+      "bets_placed": 3,
+      "bets_won": 0,
+      "bets_lost": 3,
+      "staked": 30.0,
+      "profit": -30.0,
+      "created_at": "2026-10-28 22:50:27",
+      "sport": "futebol"
+    },
+    {
+      "id": 13,
+      "date": "2026-10-28",
+      "balance": 940.0,
+      "bets_placed": 3,
+      "bets_won": 0,
+      "bets_lost": 3,
+      "staked": 30.0,
+      "profit": -30.0,
+      "created_at": "2026-10-28 22:58:14",
+      "sport": "futebol"
     }
   ],
   "jurados_ranking": [
@@ -130,9 +154,9 @@
   ],
   "risco_var": null,
   "ultima_corrida": {
-    "last_attempt_at": "2026-10-28T22:33:02.906356+00:00",
-    "ok": false,
-    "error": "requests.exceptions.HTTPError: 400 Client Error:  for url: https://api.football-data.org/v4/matches/21717975"
+    "last_attempt_at": "2026-10-28T22:50:53.648107+00:00",
+    "ok": true,
+    "error": null
   },
   "bets": [
     {
