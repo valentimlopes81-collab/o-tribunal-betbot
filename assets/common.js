@@ -181,6 +181,64 @@ function buildPesosRadarSVG(processoRaw, agentLabels){
     </div>`;
 }
 
+/* ---- Monte Carlo formal: Odd Justa vs Odd da Casa, EV% ----
+   O modelo (Poisson/Dixon-Coles no futebol, Normal na NBA) já calcula a
+   probabilidade final (b.final_probability, o "Oráculo") de forma exata, por
+   enumeração completa — não por amostragem. Simular 10.000 vezes não muda
+   essa probabilidade; o que a simulação mostra, com honestidade, é a Lei dos
+   Grandes Números em ação: se esta aposta exata fosse repetida 10.000 vezes
+   com a mesma probabilidade, a taxa de vitórias simulada converge para o
+   número que o modelo já afirmava — é essa convergência visível que dá
+   confiança na probabilidade publicada, não um novo número.
+   bet: objeto da aposta (precisa de final_probability e market_odds).
+   Devolve '' se faltar informação suficiente. */
+function buildMonteCarloBlock(bet){
+  const p = bet.final_probability, odds = bet.market_odds;
+  if(p == null || odds == null || p <= 0 || p >= 1) return '';
+
+  const oddJusta = 1 / p;
+  const evPct = (p * odds - 1) * 100;
+  const evCls = evPct > 0.5 ? 'pos' : (evPct < -0.5 ? 'neg' : 'neu');
+
+  const N = 10000, CHECKPOINTS = 60;
+  const step = Math.max(1, Math.floor(N / CHECKPOINTS));
+  let wins = 0;
+  const series = [];
+  for(let i = 1; i <= N; i++){
+    if(Math.random() < p) wins++;
+    if(i % step === 0) series.push(wins / i);
+  }
+  if(series.length < 2) return '';
+
+  const W = 260, H = 64, padL = 4, padR = 4, padT = 6, padB = 6;
+  const allVals = series.concat([p]);
+  const minV = Math.min(...allVals), maxV = Math.max(...allVals);
+  const span = (maxV - minV) || 0.05;
+  const lo = Math.min(minV, p) - span * 0.2;
+  const hi = Math.max(maxV, p) + span * 0.2;
+  const safeSpan = (hi - lo) || 0.1;
+  const x = i => padL + (i / (series.length - 1)) * (W - padL - padR);
+  const ys = v => padT + (1 - (v - lo) / safeSpan) * (H - padT - padB);
+
+  const path = series.map((v,i) => `${i===0?'M':'L'} ${x(i).toFixed(1)} ${ys(v).toFixed(1)}`).join(' ');
+  const refY = ys(p).toFixed(1);
+
+  return `
+    <div class="mc-wrap">
+      <div class="radar-title">Monte Carlo (10.000 simulações) — convergência da taxa de vitórias para a probabilidade do modelo</div>
+      <div class="mc-stats">
+        <div><span class="m-label">Odd Justa</span><span class="m-value">${oddJusta.toFixed(2)}</span></div>
+        <div><span class="m-label">Odd da Casa</span><span class="m-value">${odds.toFixed(2)}</span></div>
+        <div><span class="m-label">EV</span><span class="m-value ${evCls}">${fmtPct(evPct)}</span></div>
+      </div>
+      <svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
+        <line x1="${padL}" y1="${refY}" x2="${W-padR}" y2="${refY}" stroke="var(--brass)" stroke-width="1" stroke-dasharray="3,3"/>
+        <path d="${path}" fill="none" stroke="var(--pitch-bright)" stroke-width="1.6"/>
+      </svg>
+      <div class="mc-caption">Linha a tracejado = probabilidade do modelo (${(p*100).toFixed(1)}%); linha sólida = taxa de vitórias acumulada ao longo de 10.000 repetições simuladas desta aposta.</div>
+    </div>`;
+}
+
 /* ---- deteta se uma aposta ganhou "recentemente" (liquidada nas últimas 48h)
    para aplicar o efeito de luz subtil no cartão ---- */
 function isRecentWin(bet){

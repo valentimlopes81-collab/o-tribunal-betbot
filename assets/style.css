@@ -190,6 +190,12 @@ svg#bankroll-chart{width:100%;height:260px;display:block;overflow:visible;}
 .radar-legend-item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--paper-dim);}
 .radar-legend-item .sw{width:9px;height:9px;border-radius:2px;display:inline-block;}
 
+.mc-wrap{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:8px;}
+.mc-stats{display:flex;gap:22px;}
+.mc-stats .m-label{color:var(--paper-dim);display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;}
+.mc-stats .m-value{font-family:'IBM Plex Mono',monospace;font-size:14px;}
+.mc-caption{font-size:11px;color:var(--paper-dim);text-align:center;max-width:320px;line-height:1.4;}
+
 /* ---------------- card grids (especialistas / tribunal) ---------------- */
 .card-grid{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line);}
 .person-card{background:var(--ink);padding:22px 20px;display:flex;flex-direction:column;gap:10px;flex:1 1 260px;min-width:260px;}

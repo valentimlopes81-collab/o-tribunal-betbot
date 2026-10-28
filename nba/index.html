@@ -233,6 +233,7 @@ function renderBets(){
         ${indisponiveis.length ? `<div class="agentes"><b>Por ligar:</b> ${indisponiveis.map(a=>AGENTE_LABELS[a]||a).join(', ')}</div>` : ''}
         ${reasoning.length ? `<ul class="reasoning ${b.status==='cancelado' ? 'motivo-cancelado' : ''}">${reasoning.map(r=>`<li>${r}</li>`).join('')}</ul>` : ''}
         ${buildPesosRadarSVG(b.processo_json, AGENTE_LABELS)}
+        ${buildMonteCarloBlock(b)}
       </div>
     </div>`;
   }).join('');
