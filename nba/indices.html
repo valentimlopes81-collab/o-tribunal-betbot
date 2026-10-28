@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Índices Sintéticos — O Tribunal da Pátria</title>
+<meta name="description" content="Cestas temáticas de candidatos de NBA do dia — 'ETFs de apostas' simulados, agrupados por tema (ataque, defesa, favoritos, desfavoritos, alta confiança).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html"><h1>O Tribunal da Pátria</h1></a>
+        <span class="tag">Apostas simuladas de basquetebol (NBA)</span>
+      </div>
+      <div class="updated"><span class="dot"></span><span id="updated-text">a carregar…</span></div>
+      <div class="sport-toggle" id="sport-toggle"></div>
+    </div>
+    <nav class="sitenav" id="sitenav"></nav>
+  </header>
+
+  <div class="page-head">
+    <div class="crumb">Índices Sintéticos</div>
+    <h1>Cestas temáticas — "ETFs" de apostas</h1>
+    <p class="lead">Em vez de uma aposta por jogo, estes são agrupamentos temáticos de TODOS os candidatos da NBA do
+      dia — uma cesta de "Ataque" junta todos os candidatos a mais pontos, uma cesta de "Desfavoritos" junta todos os
+      casos em que o modelo prefere a equipa visitante mais do que o mercado, e por aí. Cada cesta mostra o que seria
+      o retorno esperado se apostasses o mesmo valor em cada constituinte — é uma lente de diversificação sobre os
+      dados, não um produto nem uma aposta registada.</p>
+  </div>
+
+  <section>
+    <div class="indices-list" id="indices-list"></div>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado, e nenhuma cesta aqui é registada como aposta do Tribunal.
+    Veja as apostas reais em <a href="index.html">Hoje</a> ou monta a tua própria combinação no
+    <a href="construtor.html">Construtor de Múltiplas</a>.
+  </footer>
+</div>
+
+<script src="../assets/common.js"></script>
+<script>
+renderNav('indices.html');
+renderSportToggle('nba');
+
+const MARKET_LABELS = {"1x2":"Moneyline", "over_under":"Over/Under", "asian_handicap":"Handicap de Pontos"};
+const SELECTION_LABELS = {"home":"Casa", "away":"Fora", "over":"Mais de", "under":"Menos de"};
+
+function legProb(c){ return c.final_probability != null ? c.final_probability : (c.model_prob || 0.5); }
+function legEvPct(c){ return (legProb(c) * c.market_odds - 1) * 100; }
+
+function definirIndices(candidatos){
+  const confs = candidatos.map(c=>c.confidence).filter(v=>v!=null).sort((a,b)=>a-b);
+  const limiarAltaConf = confs.length ? confs[Math.floor(confs.length*0.7)] : 0.3;
+
+  return [
+    {
+      id: "etf-ataque", nome: "ETF-ATAQUE",
+      descricao: "Jogos em que o modelo vê valor em mais pontos — Over do total de pontos.",
+      filtro: c => c.market==='over_under' && c.selection==='over',
+    },
+    {
+      id: "etf-defesa", nome: "ETF-DEFESA",
+      descricao: "O oposto — jogos mais travados, com valor em Under do total de pontos.",
+      filtro: c => c.market==='over_under' && c.selection==='under',
+    },
+    {
+      id: "indice-favoritos-casa", nome: "ÍNDICE-FAVORITOS-CASA",
+      descricao: "A equipa da casa a ganhar (moneyline), nos jogos em que o modelo vê valor nessa seleção.",
+      filtro: c => c.market==='1x2' && c.selection==='home',
+    },
+    {
+      id: "indice-desfavorito", nome: "ÍNDICE-DESFAVORITO",
+      descricao: "Jogos em que o modelo prefere a equipa visitante mais do que as odds do mercado sugerem — o contrário do consenso.",
+      filtro: c => c.market==='1x2' && c.selection==='away' && (c.edge||0) > 0,
+    },
+    {
+      id: "indice-alta-confianca", nome: "ÍNDICE-ALTA-CONFIANÇA",
+      descricao: `Os candidatos em que o Tribunal teve mais confiança (top 30%), seja qual for o mercado ou tema.`,
+      filtro: c => c.confidence != null && c.confidence >= limiarAltaConf,
+    },
+  ];
+}
+
+function cardIndice(def, membros){
+  if(membros.length === 0){
+    return `
+      <div class="indice-card">
+        <div class="indice-nome">${def.nome}</div>
+        <p class="indice-desc">${def.descricao}</p>
+        <div class="chart-empty">Sem constituintes hoje com estes critérios.</div>
+      </div>`;
+  }
+  const stake = 10;
+  const totalStaked = stake * membros.length;
+  const payoutEsperado = membros.reduce((s,c) => s + stake * legProb(c) * c.market_odds, 0);
+  const roiPct = ((payoutEsperado - totalStaked) / totalStaked) * 100;
+  const roiCls = roiPct > 0.5 ? 'pos' : (roiPct < -0.5 ? 'neg' : 'neu');
+  const oddMedia = membros.reduce((s,c)=>s+c.market_odds,0) / membros.length;
+
+  const linhas = membros.slice(0,10).map(c => `
+    <div class="indice-membro">
+      <span>${c.home_team} vs ${c.away_team} · ${MARKET_LABELS[c.market]||c.market}/${SELECTION_LABELS[c.selection]||c.selection}${c.line!=null?' '+c.line:''} @ ${c.market_odds}</span>
+      <span class="${legEvPct(c)>0.5?'pos':(legEvPct(c)<-0.5?'neg':'neu')}">${fmtPct(legEvPct(c))}</span>
+    </div>`).join('');
+  const maisTexto = membros.length > 10 ? `<div class="risk-note">+ ${membros.length-10} constituinte(s) adicional(ais)</div>` : '';
+
+  return `
+    <div class="indice-card">
+      <div class="indice-nome">${def.nome}</div>
+      <p class="indice-desc">${def.descricao}</p>
+      <div class="indice-stats">
+        <div><span class="m-label">Constituintes</span><span class="m-value">${membros.length}</span></div>
+        <div><span class="m-label">Odd média</span><span class="m-value">${oddMedia.toFixed(2)}</span></div>
+        <div><span class="m-label">ROI esperado (${stake}€ cada)</span><span class="m-value ${roiCls}">${fmtPct(roiPct)}</span></div>
+      </div>
+      <div class="indice-membros">${linhas}${maisTexto}</div>
+    </div>`;
+}
+
+fetch('../data/candidatos_nba.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
+    const candidatos = data.candidatos || [];
+    const el = document.getElementById('indices-list');
+    if(candidatos.length === 0){
+      el.innerHTML = '<div class="chart-empty">Ainda sem candidatos publicados — volta depois da próxima corrida do bot.</div>';
+      return;
+    }
+    const defs = definirIndices(candidatos);
+    el.innerHTML = defs.map(def => cardIndice(def, candidatos.filter(def.filtro))).join('');
+  })
+  .catch(err => {
+    document.getElementById('updated-text').textContent = 'Erro a carregar dados.';
+    console.error(err);
+  });
+</script>
+</body>
+</html>

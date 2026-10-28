@@ -11,6 +11,7 @@ const SITE_PAGES = [
   {href: "tribunal.html",       label: "O Tribunal"},
   {href: "historico.html",      label: "Histórico"},
   {href: "construtor.html",     label: "Construtor de Múltiplas"},
+  {href: "indices.html",        label: "Índices Sintéticos"},
   {href: "ranking.html",        label: "Ranking dos Jurados"},
   {href: "metodologia.html",    label: "Metodologia"},
   {href: "glossario.html",      label: "Glossário"},
