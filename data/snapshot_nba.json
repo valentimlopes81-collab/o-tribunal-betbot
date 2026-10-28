@@ -1,18 +1,43 @@
 {
   "sport": "nba",
-  "generated_at": "2026-10-28T16:10:45.643096+00:00",
+  "generated_at": "2026-10-28T16:24:15.768801+00:00",
   "bankroll": {
     "current": 1000.0,
     "starting": 1000.0,
     "profit": 0.0,
-    "roi_pct": 0.0,
-    "win_rate_pct": 0.0,
+    "roi_pct": 0,
+    "win_rate_pct": 0,
     "settled_count": 0,
     "won_count": 0,
     "lost_count": 0,
     "pending_count": 0
   },
-  "bankroll_history": [],
+  "bankroll_history": [
+    {
+      "id": 7,
+      "date": "2026-10-28",
+      "balance": 1000.0,
+      "bets_placed": 0,
+      "bets_won": 0,
+      "bets_lost": 0,
+      "staked": 0.0,
+      "profit": 0.0,
+      "created_at": "2026-10-28 16:12:39",
+      "sport": "nba"
+    },
+    {
+      "id": 8,
+      "date": "2026-10-28",
+      "balance": 1000.0,
+      "bets_placed": 0,
+      "bets_won": 0,
+      "bets_lost": 0,
+      "staked": 0.0,
+      "profit": 0.0,
+      "created_at": "2026-10-28 16:12:39",
+      "sport": "nba"
+    }
+  ],
   "jurados_ranking": [],
   "ultima_corrida": null,
   "bets": []
