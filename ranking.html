@@ -22,6 +22,7 @@
     </div>
     <nav class="sitenav" id="sitenav"></nav>
   </header>
+  <div class="status-banner" id="status-banner"></div>
 
   <div class="page-head">
     <div class="crumb">Ranking dos Jurados</div>
@@ -92,6 +93,7 @@ fetch('./data/snapshot.json', {cache:'no-store'})
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
+    renderStatusBanner(data);
     renderRanking(data.jurados_ranking || []);
   })
   .catch(err => {

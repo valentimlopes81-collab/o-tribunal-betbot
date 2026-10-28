@@ -72,6 +72,31 @@ function animateBars(container){
   });
 }
 
+/* ---- mostra um aviso no topo da página se a última corrida do bot falhou,
+   ou se os dados estão há muito tempo sem atualizar (sinal indireto de que
+   a tarefa agendada parou de correr). ---- */
+function renderStatusBanner(data){
+  const el = document.getElementById('status-banner');
+  if(!el) return;
+  const run = data.ultima_corrida;
+  const generatedAt = data.generated_at ? new Date(data.generated_at) : null;
+  const ageHours = generatedAt ? (Date.now() - generatedAt.getTime()) / 3600000 : null;
+
+  let msg = null;
+  if(run && run.ok === false){
+    msg = `A última corrida do bot falhou a meio: ${run.error || 'erro desconhecido'}. Os dados podem estar desatualizados.`;
+  } else if(ageHours !== null && ageHours > 26){
+    msg = `Os dados não são atualizados há mais de ${Math.floor(ageHours)}h — vale a pena verificar se a tarefa agendada está a correr.`;
+  }
+
+  if(msg){
+    el.textContent = msg;
+    el.style.display = 'block';
+  } else {
+    el.style.display = 'none';
+  }
+}
+
 /* ---- deteta se uma aposta ganhou "recentemente" (liquidada nas últimas 48h)
    para aplicar o efeito de luz subtil no cartão ---- */
 function isRecentWin(bet){

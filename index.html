@@ -22,6 +22,7 @@
     </div>
     <nav class="sitenav" id="sitenav"></nav>
   </header>
+  <div class="status-banner" id="status-banner"></div>
 
   <section>
     <h2 class="section-title">Estado da banca</h2>
@@ -225,6 +226,7 @@ fetch('./data/snapshot.json', {cache:'no-store'})
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
+    renderStatusBanner(data);
     renderStats(data.bankroll);
     renderChart(data.bankroll_history);
     // Apostas canceladas (valor que desapareceu na revisão, ou resíduo de uma

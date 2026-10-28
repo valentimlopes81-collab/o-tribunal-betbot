@@ -67,6 +67,12 @@ body{animation:page-in .38s ease-out both;}
   0%,100%{opacity:1;} 50%{opacity:.35;}
 }
 
+/* ---------------- aviso de estado (falha/corrida desatualizada) ---------------- */
+.status-banner{
+  display:none;background:rgba(178,79,65,0.12);border:1px solid var(--red);color:var(--paper);
+  padding:10px 16px;border-radius:2px;font-size:13px;margin:14px 0 0;
+}
+
 /* ---------------- sections ---------------- */
 section{padding:32px 0;border-bottom:1px solid var(--line);}
 section:last-of-type{border-bottom:none;}
