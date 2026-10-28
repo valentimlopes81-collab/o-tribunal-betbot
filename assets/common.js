@@ -118,6 +118,69 @@ function renderStatusBanner(data){
   }
 }
 
+/* ---- radar dos pesos dos Jurados numa aposta concreta ----
+   Cada Jurado pondera os Especialistas disponíveis de forma diferente (ver
+   agents/jury.py) — isto desenha essa matriz de pesos como um radar, um
+   polígono por Jurado, para tornar visível porque é que divergem mesmo
+   vendo exatamente a mesma informação nesta aposta.
+   processoRaw: string JSON (ou objeto já parseado) guardado em b.processo_json.
+   agentLabels: dict {chave_do_especialista: nome_bonito}, na ordem canónica
+   da página (define também a ordem dos eixos). Devolve '' se não há dados
+   suficientes (menos de 3 eixos, ou nenhum jurado). */
+function buildPesosRadarSVG(processoRaw, agentLabels){
+  if(!processoRaw) return '';
+  let processo;
+  try{ processo = typeof processoRaw === 'string' ? JSON.parse(processoRaw) : processoRaw; }
+  catch(e){ return ''; }
+  const jurados = processo && processo.jurados;
+  if(!Array.isArray(jurados) || jurados.length === 0) return '';
+
+  const axisKeys = Object.keys(agentLabels).filter(k => jurados.some(j => j.pesos && (k in j.pesos)));
+  if(axisKeys.length < 3) return '';
+
+  const JUROR_COLORS = ['#c79a5b','#5fae80','#b24f41','#5b84c7','#b05bc2','#4fb0bd'];
+  let maxPeso = 0;
+  jurados.forEach(j => axisKeys.forEach(k => { const v = (j.pesos||{})[k] || 0; if(v > maxPeso) maxPeso = v; }));
+  if(maxPeso <= 0) maxPeso = 1;
+
+  const cx = 130, cy = 130, R = 92, N = axisKeys.length;
+  const angle = i => -Math.PI/2 + i * 2*Math.PI/N;
+  const pt = (i, frac) => [cx + Math.cos(angle(i))*R*frac, cy + Math.sin(angle(i))*R*frac];
+
+  let grid = '';
+  [0.25, 0.5, 0.75, 1].forEach(frac => {
+    const pts = axisKeys.map((_,i) => pt(i,frac).map(n=>n.toFixed(1)).join(',')).join(' ');
+    grid += `<polygon points="${pts}" fill="none" stroke="var(--line)" stroke-width="1"/>`;
+  });
+
+  let axesSvg = '';
+  axisKeys.forEach((k,i) => {
+    const [x,y] = pt(i,1);
+    axesSvg += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)" stroke-width="1"/>`;
+    const [lx,ly] = pt(i,1.22);
+    axesSvg += `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="var(--paper-dim)">${agentLabels[k]||k}</text>`;
+  });
+
+  let polys = '', legend = '';
+  jurados.forEach((j,ji) => {
+    const color = JUROR_COLORS[ji % JUROR_COLORS.length];
+    const pts = axisKeys.map((k,i) => {
+      const v = (j.pesos||{})[k] || 0;
+      const frac = Math.max(0.04, v/maxPeso);
+      return pt(i,frac).map(n=>n.toFixed(1)).join(',');
+    }).join(' ');
+    polys += `<polygon points="${pts}" fill="${color}" fill-opacity="0.1" stroke="${color}" stroke-width="1.6"/>`;
+    legend += `<span class="radar-legend-item"><span class="sw" style="background:${color}"></span>${j.jurado}</span>`;
+  });
+
+  return `
+    <div class="radar-wrap">
+      <div class="radar-title">Como cada Jurado ponderou os Especialistas nesta aposta</div>
+      <svg viewBox="0 0 260 270" width="260" height="270">${grid}${axesSvg}${polys}</svg>
+      <div class="radar-legend">${legend}</div>
+    </div>`;
+}
+
 /* ---- deteta se uma aposta ganhou "recentemente" (liquidada nas últimas 48h)
    para aplicar o efeito de luz subtil no cartão ---- */
 function isRecentWin(bet){

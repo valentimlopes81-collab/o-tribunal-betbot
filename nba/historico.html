@@ -154,6 +154,7 @@ function renderBets(){
         </div>
         ${reasoning.length ? `<ul class="reasoning">${reasoning.map(r=>`<li>${r}</li>`).join('')}</ul>` : ''}
         ${b.post_mortem ? `<div class="post-mortem"><b>Post-mortem:</b> ${b.post_mortem}</div>` : ''}
+        ${buildPesosRadarSVG(b.processo_json, AGENTE_LABELS)}
       </div>
     </div>`;
   }).join('');
