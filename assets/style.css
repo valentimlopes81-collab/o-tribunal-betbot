@@ -178,6 +178,10 @@ svg#bankroll-chart{width:100%;height:260px;display:block;overflow:visible;}
 .reasoning.motivo-cancelado li{color:var(--red);}
 .reasoning.motivo-cancelado li::before{color:var(--red);}
 
+.post-mortem{margin-top:14px;padding:12px 14px;background:var(--ink-2);border-left:2px solid var(--brass);
+  font-size:13px;line-height:1.55;color:var(--paper-dim);}
+.post-mortem b{color:var(--paper);font-weight:600;}
+
 /* ---------------- card grids (especialistas / tribunal) ---------------- */
 .card-grid{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line);}
 .person-card{background:var(--ink);padding:22px 20px;display:flex;flex-direction:column;gap:10px;flex:1 1 260px;min-width:260px;}
