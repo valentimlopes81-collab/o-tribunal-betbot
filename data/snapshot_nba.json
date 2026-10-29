@@ -1,6 +1,6 @@
 {
   "sport": "nba",
-  "generated_at": "2026-10-29T12:43:14.878666+00:00",
+  "generated_at": "2026-10-29T12:43:51.807889+00:00",
   "bankroll": {
     "current": 970.26,
     "starting": 1000.0,
@@ -142,7 +142,7 @@
   ],
   "risco_var": null,
   "ultima_corrida": {
-    "last_attempt_at": "2026-10-29T11:56:38.406362+00:00",
+    "last_attempt_at": "2026-10-29T12:43:29.059551+00:00",
     "ok": true,
     "error": null
   },
