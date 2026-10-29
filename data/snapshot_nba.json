@@ -1,6 +1,6 @@
 {
   "sport": "nba",
-  "generated_at": "2026-10-29T12:43:51.807889+00:00",
+  "generated_at": "2026-10-29T15:51:08.888512+00:00",
   "bankroll": {
     "current": 970.26,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 7,
     "won_count": 3,
     "lost_count": 4,
-    "pending_count": 5
+    "pending_count": 6
   },
   "bankroll_history": [
     {
@@ -86,7 +86,7 @@
       "sport": "nba"
     },
     {
-      "id": 31,
+      "id": 33,
       "date": "2026-10-29",
       "balance": 970.26,
       "bets_placed": 7,
@@ -94,7 +94,7 @@
       "bets_lost": 4,
       "staked": 70.0,
       "profit": -29.740000000000002,
-      "created_at": "2026-10-29 12:42:26",
+      "created_at": "2026-10-29 15:50:17",
       "sport": "nba"
     }
   ],
@@ -105,6 +105,7 @@
       "erros": 4,
       "abstencoes": 0,
       "total_votos": 7,
+      "total_votos_decisivos": 7,
       "precisao_pct": 42.9
     },
     {
@@ -113,6 +114,7 @@
       "erros": 4,
       "abstencoes": 0,
       "total_votos": 7,
+      "total_votos_decisivos": 7,
       "precisao_pct": 42.9
     },
     {
@@ -121,6 +123,7 @@
       "erros": 4,
       "abstencoes": 0,
       "total_votos": 7,
+      "total_votos_decisivos": 7,
       "precisao_pct": 42.9
     },
     {
@@ -129,6 +132,7 @@
       "erros": 4,
       "abstencoes": 0,
       "total_votos": 7,
+      "total_votos_decisivos": 7,
       "precisao_pct": 42.9
     },
     {
@@ -137,6 +141,7 @@
       "erros": 4,
       "abstencoes": 0,
       "total_votos": 7,
+      "total_votos_decisivos": 7,
       "precisao_pct": 42.9
     }
   ],
@@ -147,6 +152,38 @@
     "error": null
   },
   "bets": [
+    {
+      "id": 204,
+      "fixture_id": 21717989,
+      "league": "NBA",
+      "home_team": "Portland Trail Blazers",
+      "away_team": "Memphis Grizzlies",
+      "kickoff_utc": "2026-10-30T02:00:00.000Z",
+      "market": "player_rebounds",
+      "selection": "Robert Williams III_over",
+      "line": 7.5,
+      "model_prob": 0.6220632405682346,
+      "market_odds": 2.26,
+      "implied_prob": 0.4424778761061947,
+      "edge": 0.17958536446203988,
+      "bookmaker": "fanduel",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-10-29 15:51:08",
+      "final_probability": 0.6220632405682346,
+      "confidence": 0.315,
+      "tribunal_placar": "n/a (player prop)",
+      "agentes_disponiveis": "[]",
+      "agentes_indisponiveis": "[]",
+      "reasoning": "[\"Jogador: média ponderada de 8.4 em 20 jogos recentes (3 da época atual, 2026-27), desvio-padrão 2.9 (empírico 2.2, ajustado para cima por amostra ainda curta — desaparece conforme a época avança).\", \"Nota: linha de jogador ainda não passa pelo Tribunal completo (sem especialistas dedicados a jogadores individuais nesta versão) — confiança reflete a amostra disponível, mas sem bloquear o nº de apostas por causa disso.\"]",
+      "processo_json": "{\"modelo_jogador\": {\"media\": 8.391304347826088, \"desvio\": 2.8668142854540886, \"desvio_empirico\": 2.201563287160376, \"n_jogos\": 20, \"n_jogos_epoca_atual\": 3, \"soma_pesos\": 11.5}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "nba",
+      "post_mortem": null
+    },
     {
       "id": 199,
       "fixture_id": 21717988,
