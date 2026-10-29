@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-10-29T12:36:55.870984+00:00",
+  "generated_at": "2026-10-29T12:37:31.464230+00:00",
   "bankroll": {
     "current": 970.0,
     "starting": 1000.0,
@@ -94,7 +94,7 @@
   ],
   "risco_var": null,
   "ultima_corrida": {
-    "last_attempt_at": "2026-10-29T12:01:11.444878+00:00",
+    "last_attempt_at": "2026-10-29T12:37:08.856042+00:00",
     "ok": true,
     "error": null
   },
