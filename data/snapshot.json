@@ -1,11 +1,11 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-10-29T00:19:54.331375+00:00",
+  "generated_at": "2026-10-29T11:16:25.585191+00:00",
   "bankroll": {
-    "current": 940.0,
+    "current": 970.0,
     "starting": 1000.0,
-    "profit": -60.0,
-    "roi_pct": -200.0,
+    "profit": -30.0,
+    "roi_pct": -100.0,
     "win_rate_pct": 0.0,
     "settled_count": 3,
     "won_count": 0,
@@ -14,7 +14,7 @@
   },
   "bankroll_history": [
     {
-      "id": 1,
+      "id": 19,
       "date": "2026-10-27",
       "balance": 1000.0,
       "bets_placed": 0,
@@ -22,71 +22,11 @@
       "bets_lost": 0,
       "staked": 0.0,
       "profit": 0.0,
-      "created_at": "2026-10-27 21:09:37",
+      "created_at": "2026-10-29 10:56:12",
       "sport": "futebol"
     },
     {
-      "id": 2,
-      "date": "2026-10-27",
-      "balance": 1000.0,
-      "bets_placed": 0,
-      "bets_won": 0,
-      "bets_lost": 0,
-      "staked": 0.0,
-      "profit": 0.0,
-      "created_at": "2026-10-27 21:09:37",
-      "sport": "futebol"
-    },
-    {
-      "id": 3,
-      "date": "2026-10-27",
-      "balance": 1000.0,
-      "bets_placed": 0,
-      "bets_won": 0,
-      "bets_lost": 0,
-      "staked": 0.0,
-      "profit": 0.0,
-      "created_at": "2026-10-27 21:51:51",
-      "sport": "futebol"
-    },
-    {
-      "id": 4,
-      "date": "2026-10-27",
-      "balance": 1000.0,
-      "bets_placed": 0,
-      "bets_won": 0,
-      "bets_lost": 0,
-      "staked": 0.0,
-      "profit": 0.0,
-      "created_at": "2026-10-27 23:40:06",
-      "sport": "futebol"
-    },
-    {
-      "id": 5,
-      "date": "2026-10-27",
-      "balance": 1000.0,
-      "bets_placed": 0,
-      "bets_won": 0,
-      "bets_lost": 0,
-      "staked": 0.0,
-      "profit": 0.0,
-      "created_at": "2026-10-27 23:41:37",
-      "sport": "futebol"
-    },
-    {
-      "id": 6,
-      "date": "2026-10-28",
-      "balance": 1000.0,
-      "bets_placed": 0,
-      "bets_won": 0,
-      "bets_lost": 0,
-      "staked": 0.0,
-      "profit": 0.0,
-      "created_at": "2026-10-28 12:00:28",
-      "sport": "futebol"
-    },
-    {
-      "id": 12,
+      "id": 20,
       "date": "2026-10-28",
       "balance": 970.0,
       "bets_placed": 3,
@@ -94,31 +34,19 @@
       "bets_lost": 3,
       "staked": 30.0,
       "profit": -30.0,
-      "created_at": "2026-10-28 22:50:27",
+      "created_at": "2026-10-29 10:56:12",
       "sport": "futebol"
     },
     {
-      "id": 13,
-      "date": "2026-10-28",
-      "balance": 940.0,
-      "bets_placed": 3,
-      "bets_won": 0,
-      "bets_lost": 3,
-      "staked": 30.0,
-      "profit": -30.0,
-      "created_at": "2026-10-28 22:58:14",
-      "sport": "futebol"
-    },
-    {
-      "id": 15,
+      "id": 23,
       "date": "2026-10-29",
-      "balance": 940.0,
+      "balance": 970.0,
       "bets_placed": 0,
       "bets_won": 0,
       "bets_lost": 0,
       "staked": 0.0,
       "profit": 0.0,
-      "created_at": "2026-10-29 00:19:06",
+      "created_at": "2026-10-29 11:15:51",
       "sport": "futebol"
     }
   ],
@@ -166,7 +94,7 @@
   ],
   "risco_var": null,
   "ultima_corrida": {
-    "last_attempt_at": "2026-10-28T22:58:33.573389+00:00",
+    "last_attempt_at": "2026-10-29T00:20:00.326939+00:00",
     "ok": true,
     "error": null
   },
