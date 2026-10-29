@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-10-29T11:16:25.585191+00:00",
+  "generated_at": "2026-10-29T11:34:43.534312+00:00",
   "bankroll": {
     "current": 970.0,
     "starting": 1000.0,
@@ -38,7 +38,7 @@
       "sport": "futebol"
     },
     {
-      "id": 23,
+      "id": 25,
       "date": "2026-10-29",
       "balance": 970.0,
       "bets_placed": 0,
@@ -46,7 +46,7 @@
       "bets_lost": 0,
       "staked": 0.0,
       "profit": 0.0,
-      "created_at": "2026-10-29 11:15:51",
+      "created_at": "2026-10-29 11:34:14",
       "sport": "futebol"
     }
   ],
@@ -94,7 +94,7 @@
   ],
   "risco_var": null,
   "ultima_corrida": {
-    "last_attempt_at": "2026-10-29T00:20:00.326939+00:00",
+    "last_attempt_at": "2026-10-29T11:16:30.819832+00:00",
     "ok": true,
     "error": null
   },
