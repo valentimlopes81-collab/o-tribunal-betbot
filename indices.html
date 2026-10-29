@@ -56,6 +56,18 @@ const SELECTION_LABELS = {"home":"Casa", "draw":"Empate", "away":"Fora", "over":
 function legProb(c){ return c.final_probability != null ? c.final_probability : (c.model_prob || 0.5); }
 function legEvPct(c){ return (legProb(c) * c.market_odds - 1) * 100; }
 
+// no máximo um constituinte por jogo (fica o de maior edge) — sem isto, vários
+// mercados correlacionados do mesmo jogo (ex: over total + ambas marcam) contam
+// como "diversificação" quando são a mesma leitura disfarçada.
+function dedupPorJogo(lista){
+  const porJogo = {};
+  lista.forEach(c => {
+    const atual = porJogo[c.fixture_id];
+    if(!atual || (c.edge||0) > (atual.edge||0)) porJogo[c.fixture_id] = c;
+  });
+  return Object.values(porJogo);
+}
+
 function definirIndices(candidatos){
   const confs = candidatos.map(c=>c.confidence).filter(v=>v!=null).sort((a,b)=>a-b);
   const limiarAltaConf = confs.length ? confs[Math.floor(confs.length*0.7)] : 0.5;
@@ -74,7 +86,7 @@ function definirIndices(candidatos){
     {
       id: "indice-favoritos-casa", nome: "ÍNDICE-FAVORITOS-CASA",
       descricao: "A equipa da casa a ganhar (1X2), nos jogos em que o modelo vê valor nessa seleção.",
-      filtro: c => c.market==='1x2' && c.selection==='home',
+      filtro: c => c.market==='1x2' && c.selection==='home' && (c.edge||0) > 0,
     },
     {
       id: "indice-desfavorito", nome: "ÍNDICE-DESFAVORITO",
@@ -136,7 +148,7 @@ fetch('./data/candidatos.json', {cache:'no-store'})
       return;
     }
     const defs = definirIndices(candidatos);
-    el.innerHTML = defs.map(def => cardIndice(def, candidatos.filter(def.filtro))).join('');
+    el.innerHTML = defs.map(def => cardIndice(def, dedupPorJogo(candidatos.filter(def.filtro)))).join('');
   })
   .catch(err => {
     document.getElementById('updated-text').textContent = 'Erro a carregar dados.';
