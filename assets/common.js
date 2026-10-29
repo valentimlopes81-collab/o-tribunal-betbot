@@ -12,19 +12,29 @@ const SITE_PAGES = [
   {href: "historico.html",      label: "Histórico"},
   {href: "construtor.html",     label: "Construtor de Múltiplas"},
   {href: "indices.html",        label: "Índices Sintéticos"},
+  {href: "especiais.html",      label: "Apostas Especiais"},
   {href: "ranking.html",        label: "Ranking dos Jurados"},
   {href: "metodologia.html",    label: "Metodologia"},
   {href: "glossario.html",      label: "Glossário"},
 ];
 
-// Mesmas páginas, mesma ordem — as páginas da NBA vivem na pasta nba/ e
-// usam exatamente os mesmos nomes de ficheiro, só com conteúdo diferente.
-const SITE_PAGES_NBA = SITE_PAGES;
+// Mesmas páginas, mesma ordem, MENOS "Apostas Especiais" — essa secção é só
+// para ligas/taças de futebol fora da cobertura normal das APIs gratuitas
+// (ver apostas_especiais no schema), não existe equivalente de NBA. As
+// páginas da NBA vivem na pasta nba/ e usam os mesmos nomes de ficheiro das
+// restantes, só com conteúdo diferente.
+const SITE_PAGES_NBA = SITE_PAGES.filter(p => p.href !== "especiais.html");
 
 function renderNav(activeHref, pages){
   const navEl = document.getElementById('sitenav');
   if(!navEl) return;
-  pages = pages || SITE_PAGES;
+  // Nenhuma página da NBA passa "pages" explicitamente — por isso o default
+  // tem de detetar sozinho se estamos na secção NBA (pasta nba/) e usar
+  // SITE_PAGES_NBA (sem "Apostas Especiais", que não tem equivalente de NBA
+  // e apontaria para uma página inexistente, nba/especiais.html).
+  if(!pages){
+    pages = location.pathname.includes('/nba/') ? SITE_PAGES_NBA : SITE_PAGES;
+  }
   navEl.innerHTML = pages.map(p =>
     `<a href="${p.href}" class="${p.href===activeHref ? 'active' : ''}">${p.label}</a>`
   ).join('');
