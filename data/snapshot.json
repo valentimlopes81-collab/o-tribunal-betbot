@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-10-29T12:43:32.397323+00:00",
+  "generated_at": "2026-10-29T15:46:42.402175+00:00",
   "bankroll": {
     "current": 970.0,
     "starting": 1000.0,
@@ -38,7 +38,7 @@
       "sport": "futebol"
     },
     {
-      "id": 30,
+      "id": 32,
       "date": "2026-10-29",
       "balance": 970.0,
       "bets_placed": 0,
@@ -46,7 +46,7 @@
       "bets_lost": 0,
       "staked": 0.0,
       "profit": 0.0,
-      "created_at": "2026-10-29 12:41:06",
+      "created_at": "2026-10-29 15:46:08",
       "sport": "futebol"
     }
   ],
@@ -57,6 +57,7 @@
       "erros": 3,
       "abstencoes": 0,
       "total_votos": 3,
+      "total_votos_decisivos": 3,
       "precisao_pct": 0.0
     },
     {
@@ -65,6 +66,7 @@
       "erros": 3,
       "abstencoes": 0,
       "total_votos": 3,
+      "total_votos_decisivos": 3,
       "precisao_pct": 0.0
     },
     {
@@ -73,6 +75,7 @@
       "erros": 3,
       "abstencoes": 0,
       "total_votos": 3,
+      "total_votos_decisivos": 3,
       "precisao_pct": 0.0
     },
     {
@@ -81,6 +84,7 @@
       "erros": 3,
       "abstencoes": 0,
       "total_votos": 3,
+      "total_votos_decisivos": 3,
       "precisao_pct": 0.0
     },
     {
@@ -89,6 +93,7 @@
       "erros": 3,
       "abstencoes": 0,
       "total_votos": 3,
+      "total_votos_decisivos": 3,
       "precisao_pct": 0.0
     }
   ],
@@ -173,25 +178,25 @@
       "market": "1x2",
       "selection": "home",
       "line": null,
-      "model_prob": 0.6595581569977903,
-      "market_odds": 1.69,
-      "implied_prob": 0.591715976331361,
-      "edge": 0.06784218066642933,
+      "model_prob": 0.6642293958298476,
+      "market_odds": 1.667,
+      "implied_prob": 0.5998800239952009,
+      "edge": 0.06434937183464673,
       "bookmaker": "draftkings",
       "stake": 10.0,
       "status": "pending",
       "payout": null,
       "settled_at": null,
       "created_at": "2026-10-29 12:42:10",
-      "final_probability": 0.6595581569977903,
+      "final_probability": 0.6642293958298476,
       "confidence": 0.31649774449277995,
       "tribunal_placar": "5-0",
       "agentes_disponiveis": "[\"estatisticas\", \"forma_recente\", \"fadiga_calendario\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
       "agentes_indisponiveis": "[\"casa_fora\"]",
-      "reasoning": "[\"Modelo Poisson/Dixon-Coles estima 65.5% de probabilidade para esta seleção, face a 59.2% implícita pela odd de mercado.\", \"Momentum recente (últimos 5 jogos vs média da época): Frosinone Calcio -0.30 | US Lecce +0.22 golos/jogo.\", \"Ausências confirmadas: 1 em Frosinone Calcio, 5 em US Lecce.\", \"Fadiga detetada: Frosinone Calcio jogou há só 2 dias; US Lecce jogou há só 2 dias.\", \"Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes.\", \"Árbitro do jogo: Rosario Abisso. Ainda sem histórico suficiente de cartões acumulado (menos de 8 jogos) para ajustar a probabilidade.\", \"Nota: 1 especialista(s) aplicável(eis) mas sem dados para este jogo (casa_fora) — confiança e stake reduzidos em conformidade (cobertura: 6/7).\"]",
-      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6548869181657331, \"confianca\": 0.5715, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 65.5% de probabilidade para esta seleção, face a 59.2% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.612886918165733, \"confianca\": 0.45, \"veredito\": \"desfavoravel\", \"justificacao\": \"Momentum recente (últimos 5 jogos vs média da época): Frosinone Calcio -0.30 | US Lecce +0.22 golos/jogo.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": true, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Poucos jogos em casa/fora registados para esta equipa esta época.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6548869181657331, \"confianca\": 0.3, \"veredito\": \"neutro\", \"justificacao\": \"Fadiga detetada: Frosinone Calcio jogou há só 2 dias; US Lecce jogou há só 2 dias.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6548869181657331, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Rosario Abisso. Ainda sem histórico suficiente de cartões acumulado (menos de 8 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7148869181657331, \"confianca\": 0.45, \"veredito\": \"favoravel\", \"justificacao\": \"Ausências confirmadas: 1 em Frosinone Calcio, 5 em US Lecce.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6548869181657331, \"confianca\": 0.15, \"veredito\": \"neutro\", \"justificacao\": \"Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes.\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.6558591515017337, \"confianca\": 0.4165666666666667, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 65.6% (vs 59.2% do mercado).\", \"pesos\": {\"estatisticas\": 0.914, \"forma_recente\": 0.585, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.6589630051222548, \"confianca\": 0.3312, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 65.9% (vs 59.2% do mercado).\", \"pesos\": {\"estatisticas\": 0.457, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.3, \"arbitro\": 0.18, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.6666190927657726, \"confianca\": 0.42191666666666666, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 66.7% (vs 59.2% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.45, \"arbitro\": 0.1, \"lesoes\": 0.81, \"noticias_moral\": 0.15}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.6568228357099858, \"confianca\": 0.3719166666666667, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 65.7% (vs 59.2% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"forma_recente\": 0.54, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.27}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.658893843716067, \"confianca\": 0.3369166666666667, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 65.9% (vs 59.2% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.6595581569977903, \"confianca\": 0.31649774449277995, \"desacordo_entre_jurados\": 0.0108, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
-      "fase": "preliminar",
-      "revisado_em": null,
+      "reasoning": "[\"Modelo Poisson/Dixon-Coles estima 66.0% de probabilidade para esta seleção, face a 60.0% implícita pela odd de mercado.\", \"Momentum recente (últimos 5 jogos vs média da época): Frosinone Calcio -0.30 | US Lecce +0.22 golos/jogo.\", \"Ausências confirmadas: 1 em Frosinone Calcio, 5 em US Lecce.\", \"Fadiga detetada: Frosinone Calcio jogou há só 2 dias; US Lecce jogou há só 2 dias.\", \"Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes.\", \"Árbitro do jogo: Rosario Abisso. Ainda sem histórico suficiente de cartões acumulado (menos de 8 jogos) para ajustar a probabilidade.\", \"Nota: 1 especialista(s) aplicável(eis) mas sem dados para este jogo (casa_fora) — confiança e stake reduzidos em conformidade (cobertura: 6/7).\"]",
+      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6595581569977903, \"confianca\": 0.5715, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 66.0% de probabilidade para esta seleção, face a 60.0% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6175581569977903, \"confianca\": 0.45, \"veredito\": \"desfavoravel\", \"justificacao\": \"Momentum recente (últimos 5 jogos vs média da época): Frosinone Calcio -0.30 | US Lecce +0.22 golos/jogo.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": true, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Poucos jogos em casa/fora registados para esta equipa esta época.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6595581569977903, \"confianca\": 0.3, \"veredito\": \"neutro\", \"justificacao\": \"Fadiga detetada: Frosinone Calcio jogou há só 2 dias; US Lecce jogou há só 2 dias.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6595581569977903, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Rosario Abisso. Ainda sem histórico suficiente de cartões acumulado (menos de 8 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7195581569977902, \"confianca\": 0.45, \"veredito\": \"favoravel\", \"justificacao\": \"Ausências confirmadas: 1 em Frosinone Calcio, 5 em US Lecce.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6595581569977903, \"confianca\": 0.15, \"veredito\": \"neutro\", \"justificacao\": \"Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes.\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.660530390333791, \"confianca\": 0.4165666666666667, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 66.1% (vs 60.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.914, \"forma_recente\": 0.585, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.663634243954312, \"confianca\": 0.3312, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 66.4% (vs 60.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.457, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.3, \"arbitro\": 0.18, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.6712903315978299, \"confianca\": 0.42191666666666666, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 67.1% (vs 60.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.45, \"arbitro\": 0.1, \"lesoes\": 0.81, \"noticias_moral\": 0.15}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.6614940745420431, \"confianca\": 0.3719166666666667, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 66.1% (vs 60.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"forma_recente\": 0.54, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.27}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.6635650825481242, \"confianca\": 0.3369166666666667, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 66.4% (vs 60.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.6642293958298476, \"confianca\": 0.31649774449277995, \"desacordo_entre_jurados\": 0.0108, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
+      "fase": "final",
+      "revisado_em": "2026-10-29T15:32:54.436420+00:00",
       "sport": "futebol",
       "post_mortem": null
     },
