@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-10-29T12:31:32.474812+00:00",
+  "generated_at": "2026-10-29T12:36:55.870984+00:00",
   "bankroll": {
     "current": 970.0,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 3,
     "won_count": 0,
     "lost_count": 3,
-    "pending_count": 1
+    "pending_count": 3
   },
   "bankroll_history": [
     {
@@ -38,7 +38,7 @@
       "sport": "futebol"
     },
     {
-      "id": 28,
+      "id": 29,
       "date": "2026-10-29",
       "balance": 970.0,
       "bets_placed": 0,
@@ -46,7 +46,7 @@
       "bets_lost": 0,
       "staked": 0.0,
       "profit": 0.0,
-      "created_at": "2026-10-29 12:00:15",
+      "created_at": "2026-10-29 12:36:10",
       "sport": "futebol"
     }
   ],
@@ -99,6 +99,70 @@
     "error": null
   },
   "bets": [
+    {
+      "id": 194,
+      "fixture_id": 558551,
+      "league": "Serie A (Itália)",
+      "home_team": "ACF Fiorentina",
+      "away_team": "Atalanta BC",
+      "kickoff_utc": "2026-10-29T19:45:00Z",
+      "market": "over_under",
+      "selection": "over",
+      "line": 3.5,
+      "model_prob": 0.591784690641716,
+      "market_odds": 2.24,
+      "implied_prob": 0.4464285714285714,
+      "edge": 0.14535611921314462,
+      "bookmaker": "fanduel",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-10-29 12:36:55",
+      "final_probability": 0.591784690641716,
+      "confidence": 0.35041640355633313,
+      "tribunal_placar": "5-0",
+      "agentes_disponiveis": "[\"estatisticas\", \"fadiga_calendario\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
+      "agentes_indisponiveis": "[\"forma_recente\", \"casa_fora\"]",
+      "reasoning": "[\"Modelo Poisson/Dixon-Coles estima 59.9% de probabilidade para esta seleção, face a 44.6% implícita pela odd de mercado.\", \"Ausências confirmadas: 5 em ACF Fiorentina, 8 em Atalanta BC.\", \"Fadiga detetada: ACF Fiorentina jogou há só 2 dias; Atalanta BC jogou há só 2 dias.\", \"Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes.\", \"Árbitro do jogo: Federico La Penna. Ainda sem histórico suficiente de cartões acumulado (menos de 8 jogos) para ajustar a probabilidade.\", \"(2 especialista(s) não se aplicam a este mercado (forma_recente, casa_fora) — não entram na conta de confiança.)\"]",
+      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.5992880159790815, \"confianca\": 0.5715, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 59.9% de probabilidade para esta seleção, face a 44.6% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.5592880159790815, \"confianca\": 0.3, \"veredito\": \"desfavoravel\", \"justificacao\": \"Fadiga detetada: ACF Fiorentina jogou há só 2 dias; Atalanta BC jogou há só 2 dias.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.5992880159790815, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Federico La Penna. Ainda sem histórico suficiente de cartões acumulado (menos de 8 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.5992880159790815, \"confianca\": 0.45, \"veredito\": \"neutro\", \"justificacao\": \"Ausências confirmadas: 5 em ACF Fiorentina, 8 em Atalanta BC.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.5992880159790815, \"confianca\": 0.15, \"veredito\": \"neutro\", \"justificacao\": \"Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes.\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.5930197334884838, \"confianca\": 0.38288, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 59.3% (vs 44.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.914, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.5914816147300573, \"confianca\": 0.30744000000000005, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 59.1% (vs 44.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.457, \"fadiga_calendario\": 0.3, \"arbitro\": 0.18, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.5906404060823723, \"confianca\": 0.4163, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 59.1% (vs 44.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"fadiga_calendario\": 0.45, \"arbitro\": 0.1, \"lesoes\": 0.81, \"noticias_moral\": 0.15}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.5921937209746476, \"confianca\": 0.3383, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 59.2% (vs 44.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.27}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.5916519994343791, \"confianca\": 0.31429999999999997, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 59.2% (vs 44.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.591784690641716, \"confianca\": 0.35041640355633313, \"desacordo_entre_jurados\": 0.0024, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "futebol",
+      "post_mortem": null
+    },
+    {
+      "id": 195,
+      "fixture_id": 558558,
+      "league": "Serie A (Itália)",
+      "home_team": "Frosinone Calcio",
+      "away_team": "US Lecce",
+      "kickoff_utc": "2026-10-29T17:30:00Z",
+      "market": "result_and_total",
+      "selection": "home_over",
+      "line": 1.5,
+      "model_prob": 0.6092212045593094,
+      "market_odds": 1.8,
+      "implied_prob": 0.5555555555555556,
+      "edge": 0.05366564900375381,
+      "bookmaker": "draftkings",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-10-29 12:36:55",
+      "final_probability": 0.6092212045593094,
+      "confidence": 0.35730499999999993,
+      "tribunal_placar": "4-0",
+      "agentes_disponiveis": "[\"estatisticas\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
+      "agentes_indisponiveis": "[\"forma_recente\", \"casa_fora\", \"fadiga_calendario\"]",
+      "reasoning": "[\"Modelo Poisson/Dixon-Coles estima 60.9% de probabilidade para esta seleção, face a 55.6% implícita pela odd de mercado.\", \"Ausências confirmadas: 1 em Frosinone Calcio, 5 em US Lecce.\", \"Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes.\", \"Árbitro do jogo: Rosario Abisso. Ainda sem histórico suficiente de cartões acumulado (menos de 8 jogos) para ajustar a probabilidade.\", \"(3 especialista(s) não se aplicam a este mercado (forma_recente, casa_fora, fadiga_calendario) — não entram na conta de confiança.)\"]",
+      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6092212045593093, \"confianca\": 0.5715, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 60.9% de probabilidade para esta seleção, face a 55.6% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de fadiga só avalia 1X2/dupla hipótese/draw-no-bet/over-under/btts nesta versão.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6092212045593093, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Rosario Abisso. Ainda sem histórico suficiente de cartões acumulado (menos de 8 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6092212045593093, \"confianca\": 0.45, \"veredito\": \"neutro\", \"justificacao\": \"Ausências confirmadas: 1 em Frosinone Calcio, 5 em US Lecce.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6092212045593093, \"confianca\": 0.15, \"veredito\": \"neutro\", \"justificacao\": \"Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes.\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.6092212045593093, \"confianca\": 0.4036, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 60.9% (vs 55.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.914, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.6092212045593093, \"confianca\": 0.3093, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 60.9% (vs 55.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.457, \"arbitro\": 0.18, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.6092212045593093, \"confianca\": 0.407875, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 60.9% (vs 55.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"arbitro\": 0.1, \"lesoes\": 0.81, \"noticias_moral\": 0.15}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.6092212045593093, \"confianca\": 0.347875, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 60.9% (vs 55.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.27}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.6092212045593094, \"confianca\": 0.31787499999999996, \"veredito\": \"neutro\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 60.9% (vs 55.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.572, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.6092212045593094, \"confianca\": 0.35730499999999993, \"desacordo_entre_jurados\": 0.0, \"placar\": \"4-0\", \"decisao\": \"aposta\"}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "futebol",
+      "post_mortem": null
+    },
     {
       "id": 184,
       "fixture_id": 558551,
