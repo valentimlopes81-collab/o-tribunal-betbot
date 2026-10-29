@@ -9,6 +9,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+  .pedido-especial{background:var(--ink-2);border:1px solid var(--line);border-radius:4px;padding:22px 24px;margin:0 0 24px;}
+  .pedido-titulo{font-family:'Fraunces',serif;font-weight:500;font-size:19px;margin:0 0 6px;}
+  .pedido-desc{color:var(--paper-dim);font-size:14px;margin:0 0 16px;max-width:640px;}
+  .pedido-form{display:flex;flex-wrap:wrap;gap:10px;}
+  .pedido-form input[type="text"]{flex:1 1 260px;background:var(--ink-2);border:1px solid var(--line);color:var(--paper);
+    padding:9px 12px;border-radius:4px;font-family:'Source Sans 3',sans-serif;font-size:14px;}
+  .pedido-form input[type="text"]:focus{outline:none;border-color:var(--brass);}
+  .pedido-aviso{margin:12px 0 0;font-size:13px;color:var(--pitch-bright);}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -27,11 +37,25 @@
   <div class="page-head">
     <div class="crumb">Apostas Especiais</div>
     <h1>Fora da rotina — pesquisa manual, por pedido</h1>
-    <p class="lead">A API gratuita do Tribunal não cobre todas as ligas e taças. Estas são apostas de exceção: pedidas
-      explicitamente, pesquisadas diretamente na net (sem dados de mercado automáticos) e registadas aqui à parte —
-      não entram na banca principal do Tribunal, nem no veredito automático dos jurados, nem na liquidação diária.
-      Servem apenas para acompanhar, de forma simulada, se este tipo de pesquisa manual vale a pena.</p>
+    <p class="lead">A API gratuita do Tribunal não cobre todas as ligas e taças (ex: Taça da Liga, Taça de Portugal).
+      Estas são apostas de exceção: os factos do jogo (equipas, odds de mercado) são procurados à parte, mas a
+      decisão continua a passar pelo mesmo Tribunal de sempre — especialistas, jurados e Presidente — por isso fica
+      honesto quando falta um especialista (ex: forma recente) por não haver histórico para esta competição. Não
+      entram na banca principal, nem na liquidação diária automática. Servem para acompanhar, de forma simulada, se
+      vale a pena cobrir estas competições.</p>
   </div>
+
+  <section class="pedido-especial">
+    <h2 class="pedido-titulo">Pedir análise de um jogo</h2>
+    <p class="pedido-desc">Escreve o jogo e, se quiseres, uma nota (competição, data). Abre um pedido no GitHub — à
+      próxima conversa, basta dizer "verifica os pedidos" e o Tribunal analisa e publica aqui o resultado.</p>
+    <div class="pedido-form">
+      <input type="text" id="pedido-jogo" placeholder="ex: Benfica vs Sporting (Taça de Portugal)">
+      <input type="text" id="pedido-nota" placeholder="Nota opcional">
+      <button type="button" class="btn-primary" onclick="submeterPedidoEspecial()">Pedir ao Tribunal</button>
+    </div>
+    <p class="pedido-aviso" id="pedido-aviso"></p>
+  </section>
 
   <section>
     <div class="stats" id="stats-especiais"></div>
@@ -51,6 +75,35 @@
 <script>
 renderNav('especiais.html');
 renderSportToggle('futebol');
+
+const GITHUB_REPO_PEDIDOS = 'valentimlopes81-collab/o-tribunal-betbot';
+
+// Não há servidor próprio nem chave de API aqui -- "pedir ao Tribunal" abre
+// um pedido de "issue" pré-preenchido no GitHub do próprio site (gratuito,
+// sem infraestrutura nova). Submeter o pedido continua a precisar de um
+// clique de confirmação do próprio utilizador, já autenticado no GitHub
+// como dono do repositório -- nunca é feito silenciosamente por esta página.
+function submeterPedidoEspecial(){
+  const jogoEl = document.getElementById('pedido-jogo');
+  const notaEl = document.getElementById('pedido-nota');
+  const avisoEl = document.getElementById('pedido-aviso');
+  const jogo = jogoEl.value.trim();
+  if(!jogo){
+    avisoEl.textContent = 'Escreve o jogo primeiro (ex: Benfica vs Sporting).';
+    return;
+  }
+  const nota = notaEl.value.trim();
+  const titulo = `Pedido: ${jogo}`;
+  const corpo = `Jogo: ${jogo}\n${nota ? 'Nota: ' + nota + '\n' : ''}\n---\nPedido aberto a partir da página Apostas Especiais.`;
+  const url = `https://github.com/${GITHUB_REPO_PEDIDOS}/issues/new`
+    + `?title=${encodeURIComponent(titulo)}`
+    + `&body=${encodeURIComponent(corpo)}`
+    + `&labels=${encodeURIComponent('pedido-aposta-especial')}`;
+  window.open(url, '_blank');
+  avisoEl.textContent = 'A abrir o GitHub numa nova janela — confirma lá a criação do pedido.';
+  jogoEl.value = '';
+  notaEl.value = '';
+}
 
 const STATUS_LABELS = {"won":"Ganhou","lost":"Perdeu","pending":"Pendente","void":"Anulada"};
 const STATUS_ICON = {"won":"●","lost":"●","pending":"●","void":"●"};
