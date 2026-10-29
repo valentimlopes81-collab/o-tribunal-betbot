@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apostas Especiais — O Tribunal da Pátria</title>
+<meta name="description" content="Apostas especiais: pesquisa manual, feita por pedido, em ligas e taças fora da cobertura automática da API — registadas e acompanhadas separadamente do Tribunal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand-row">
+      <div class="brand">
+        <a href="index.html"><h1>O Tribunal da Pátria</h1></a>
+        <span class="tag">Apostas simuladas de futebol</span>
+      </div>
+      <div class="updated"><span class="dot"></span><span id="updated-text">a carregar…</span></div>
+      <div class="sport-toggle" id="sport-toggle"></div>
+    </div>
+    <nav class="sitenav" id="sitenav"></nav>
+  </header>
+
+  <div class="page-head">
+    <div class="crumb">Apostas Especiais</div>
+    <h1>Fora da rotina — pesquisa manual, por pedido</h1>
+    <p class="lead">A API gratuita do Tribunal não cobre todas as ligas e taças. Estas são apostas de exceção: pedidas
+      explicitamente, pesquisadas diretamente na net (sem dados de mercado automáticos) e registadas aqui à parte —
+      não entram na banca principal do Tribunal, nem no veredito automático dos jurados, nem na liquidação diária.
+      Servem apenas para acompanhar, de forma simulada, se este tipo de pesquisa manual vale a pena.</p>
+  </div>
+
+  <section>
+    <div class="stats" id="stats-especiais"></div>
+  </section>
+
+  <section>
+    <div id="especiais-list"></div>
+  </section>
+
+  <footer>
+    Simulação apenas — nenhum dinheiro real é apostado. Estas apostas são pesquisa manual sob pedido, à parte do
+    pipeline automático do Tribunal. Veja as apostas automáticas em <a href="index.html">Hoje</a>.
+  </footer>
+</div>
+
+<script src="assets/common.js"></script>
+<script>
+renderNav('especiais.html');
+renderSportToggle('futebol');
+
+const STATUS_LABELS = {"won":"Ganhou","lost":"Perdeu","pending":"Pendente","void":"Anulada"};
+const STATUS_ICON = {"won":"●","lost":"●","pending":"●","void":"●"};
+const STATUS_CLASS = {"won":"won","lost":"lost","pending":"pending","void":"cancelado"};
+
+function renderResumo(apostas){
+  const liquidadas = apostas.filter(a => a.status === 'won' || a.status === 'lost');
+  const pendentes = apostas.filter(a => a.status === 'pending');
+  const ganhas = apostas.filter(a => a.status === 'won');
+  const totalStaked = liquidadas.reduce((s,a) => s + a.stake, 0);
+  const totalPayout = liquidadas.reduce((s,a) => s + (a.payout || 0), 0);
+  const roiPct = totalStaked > 0 ? ((totalPayout - totalStaked) / totalStaked) * 100 : 0;
+  const winRate = liquidadas.length > 0 ? (ganhas.length / liquidadas.length) * 100 : 0;
+
+  const tiles = [
+    {label:"Apostas registadas", value: apostas.length.toString(), delta:"", cls:""},
+    {label:"Liquidadas", value: liquidadas.length.toString(), delta: `${ganhas.length} ganhas · ${liquidadas.length-ganhas.length} perdidas`, cls:"neu"},
+    {label:"Taxa de acerto", value: winRate.toFixed(1)+"%", delta:"", cls:""},
+    {label:"ROI", value: fmtPct(roiPct), delta:"", cls: roiPct>0?'pos':(roiPct<0?'neg':'neu')},
+    {label:"Pendentes", value: pendentes.length.toString(), delta:"", cls:""},
+  ];
+
+  document.getElementById('stats-especiais').innerHTML = tiles.map(t => `
+    <div class="stat">
+      <div class="label">${t.label}</div>
+      <div class="value">${t.value}</div>
+      ${t.delta ? `<div class="delta ${t.cls}">${t.delta}</div>` : ''}
+    </div>`).join('');
+}
+
+function cardAposta(a){
+  const statusCls = STATUS_CLASS[a.status] || 'pending';
+  const lineStr = (a.linha !== null && a.linha !== undefined) ? ` ${a.linha}` : '';
+  const ganho = (a.status === 'won' || a.status === 'lost') ? (a.payout != null ? a.payout - a.stake : null) : null;
+
+  return `
+    <div class="bet" data-id="${a.id}">
+      <div class="bet-head">
+        <div>
+          <div class="bet-match">${a.jogo}</div>
+          <div class="bet-league">${a.liga}${a.kickoff_utc ? ' · ' + fmtDate(a.kickoff_utc) : ''}</div>
+        </div>
+        <div class="bet-status ${statusCls}"><span class="ico">${STATUS_ICON[a.status]||'●'}</span>${STATUS_LABELS[a.status]||a.status}</div>
+      </div>
+      <div class="bet-meta">
+        <div><span class="m-label">Mercado</span><span class="m-value">${a.mercado} / ${a.selecao}${lineStr}</span></div>
+        <div><span class="m-label">Odd</span><span class="m-value">${a.odd}</span></div>
+        <div><span class="m-label">Casa de apostas</span><span class="m-value">${a.casa_apostas||'—'}</span></div>
+        <div><span class="m-label">Stake</span><span class="m-value">${fmtEUR(a.stake)}</span></div>
+        ${ganho != null ? `<div><span class="m-label">Resultado</span><span class="m-value ${ganho>0?'pos':(ganho<0?'neg':'neu')}">${fmtEUR(ganho)}</span></div>` : ''}
+      </div>
+      <div class="bet-details">
+        <p class="risk-note">${a.justificacao}</p>
+        ${a.resultado_nota ? `<p class="risk-note"><b>Nota:</b> ${a.resultado_nota}</p>` : ''}
+      </div>
+    </div>`;
+}
+
+fetch('./data/apostas_especiais.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
+    const apostas = data.apostas || [];
+    renderResumo(apostas);
+    const el = document.getElementById('especiais-list');
+    if(apostas.length === 0){
+      el.innerHTML = '<div class="chart-empty">Ainda sem apostas especiais registadas. Estas são adicionadas manualmente, por pedido.</div>';
+      return;
+    }
+    el.innerHTML = apostas.map(cardAposta).join('');
+  })
+  .catch(err => {
+    document.getElementById('updated-text').textContent = 'Erro a carregar dados.';
+    console.error(err);
+  });
+</script>
+</body>
+</html>
