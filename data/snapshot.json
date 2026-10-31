@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-10-31T00:30:11.034958+00:00",
+  "generated_at": "2026-10-31T12:07:17.900082+00:00",
   "bankroll": {
     "current": 1040.75,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 13,
     "won_count": 9,
     "lost_count": 4,
-    "pending_count": 12
+    "pending_count": 13
   },
   "bankroll_history": [
     {
@@ -62,7 +62,7 @@
       "sport": "futebol"
     },
     {
-      "id": 42,
+      "id": 45,
       "date": "2026-10-31",
       "balance": 1040.75,
       "bets_placed": 0,
@@ -70,7 +70,7 @@
       "bets_lost": 0,
       "staked": 0.0,
       "profit": 0.0,
-      "created_at": "2026-10-31 00:30:11",
+      "created_at": "2026-10-31 12:01:21",
       "sport": "futebol"
     }
   ],
@@ -173,6 +173,38 @@
     "error": null
   },
   "bets": [
+    {
+      "id": 250,
+      "fixture_id": 564735,
+      "league": "La Liga (Espanha)",
+      "home_team": "Rayo Vallecano de Madrid",
+      "away_team": "RC Celta de Vigo",
+      "kickoff_utc": "2026-10-31T15:15:00Z",
+      "market": "team_total_goals",
+      "selection": "home_under",
+      "line": 1.5,
+      "model_prob": 0.8397948488954313,
+      "market_odds": 1.478,
+      "implied_prob": 0.6765899864682002,
+      "edge": 0.1632048624272311,
+      "bookmaker": "draftkings",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-10-31 12:07:17",
+      "final_probability": 0.8397948488954313,
+      "confidence": 0.33559499999999987,
+      "tribunal_placar": "5-0",
+      "agentes_disponiveis": "[\"estatisticas\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
+      "agentes_indisponiveis": "[\"forma_recente\", \"casa_fora\", \"fadiga_calendario\"]",
+      "reasoning": "[\"A aposta é em Rayo Vallecano de Madrid a marcar menos de 1.5 golos, a odd de 1.478. Modelo Poisson/Dixon-Coles estima 84.0% de probabilidade para esta seleção, face a 67.7% implícita pela odd de mercado. Também conta a favor: Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas. E, por fim, Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes. O Tribunal foi unânime, com confiança de 34% no palpite -- +16.3% acima do que a odd de mercado implica.\"]",
+      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8397948488954312, \"confianca\": 0.5985, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 84.0% de probabilidade para esta seleção, face a 67.7% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de fadiga só avalia 1X2/dupla hipótese/draw-no-bet/over-under/btts nesta versão.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8397948488954312, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Manuel Jesus Orellana Cid. Ainda sem histórico suficiente de cartões acumulado (menos de 1 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8397948488954312, \"confianca\": 0.35, \"veredito\": \"neutro\", \"justificacao\": \"Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8397948488954312, \"confianca\": 0.15, \"veredito\": \"neutro\", \"justificacao\": \"Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes.\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.8397948488954313, \"confianca\": 0.38939999999999997, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 84.0% (vs 67.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.958, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.15}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.8397948488954314, \"confianca\": 0.28969999999999996, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 84.0% (vs 67.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.479, \"arbitro\": 0.18, \"lesoes\": 0.35, \"noticias_moral\": 0.15}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.8397948488954313, \"confianca\": 0.369625, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 84.0% (vs 67.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.599, \"arbitro\": 0.1, \"lesoes\": 0.63, \"noticias_moral\": 0.15}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.8397948488954313, \"confianca\": 0.329625, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 84.0% (vs 67.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.599, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.27}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.8397948488954312, \"confianca\": 0.299625, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 84.0% (vs 67.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.599, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.15}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.8397948488954313, \"confianca\": 0.33559499999999987, \"desacordo_entre_jurados\": 0.0, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "futebol",
+      "post_mortem": null
+    },
     {
       "id": 225,
       "fixture_id": 565842,
