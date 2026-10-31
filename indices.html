@@ -101,54 +101,85 @@ function definirIndices(candidatos){
   ];
 }
 
-function cardIndice(def, membros){
-  if(membros.length === 0){
+function realizadoStats(membrosHistorico){
+  const liquidados = membrosHistorico.filter(c => c.status === 'won' || c.status === 'lost');
+  if(liquidados.length === 0) return null;
+  const stake = 10;
+  const totalStaked = stake * liquidados.length;
+  const totalPayout = liquidados.reduce((s,c) => s + (c.payout||0), 0);
+  const roiPct = ((totalPayout - totalStaked) / totalStaked) * 100;
+  const ganhas = liquidados.filter(c => c.status === 'won').length;
+  const taxaAcerto = (ganhas / liquidados.length) * 100;
+  return {n: liquidados.length, roiPct, taxaAcerto, ganhas, perdidas: liquidados.length - ganhas};
+}
+
+function cardIndice(def, membrosHoje, membrosHistorico){
+  const realizado = realizadoStats(membrosHistorico);
+  const realizadoCls = !realizado ? 'neu' : (realizado.roiPct > 0.5 ? 'pos' : (realizado.roiPct < -0.5 ? 'neg' : 'neu'));
+  const realizadoHtml = `
+      <div class="indice-stats">
+        <div><span class="m-label">ROI real até agora</span><span class="m-value ${realizadoCls}">${realizado ? fmtPct(realizado.roiPct) : '—'}</span></div>
+        <div><span class="m-label">Liquidados</span><span class="m-value">${realizado ? realizado.n : 0}</span></div>
+        <div><span class="m-label">Taxa de acerto real</span><span class="m-value">${realizado ? realizado.taxaAcerto.toFixed(0)+'%' : '—'}</span></div>
+      </div>`;
+
+  if(membrosHoje.length === 0){
     return `
       <div class="indice-card">
         <div class="indice-nome">${def.nome}</div>
         <p class="indice-desc">${def.descricao}</p>
         <div class="chart-empty">Sem constituintes hoje com estes critérios.</div>
+        ${realizadoHtml}
       </div>`;
   }
   const stake = 10;
-  const totalStaked = stake * membros.length;
-  const payoutEsperado = membros.reduce((s,c) => s + stake * legProb(c) * c.market_odds, 0);
+  const totalStaked = stake * membrosHoje.length;
+  const payoutEsperado = membrosHoje.reduce((s,c) => s + stake * legProb(c) * c.market_odds, 0);
   const roiPct = ((payoutEsperado - totalStaked) / totalStaked) * 100;
   const roiCls = roiPct > 0.5 ? 'pos' : (roiPct < -0.5 ? 'neg' : 'neu');
-  const oddMedia = membros.reduce((s,c)=>s+c.market_odds,0) / membros.length;
+  const oddMedia = membrosHoje.reduce((s,c)=>s+c.market_odds,0) / membrosHoje.length;
 
-  const linhas = membros.slice(0,10).map(c => `
+  const linhas = membrosHoje.slice(0,10).map(c => `
     <div class="indice-membro">
       <span>${c.home_team} vs ${c.away_team} · ${MARKET_LABELS[c.market]||c.market}/${SELECTION_LABELS[c.selection]||c.selection}${c.line!=null?' '+c.line:''} @ ${c.market_odds}</span>
       <span class="${legEvPct(c)>0.5?'pos':(legEvPct(c)<-0.5?'neg':'neu')}">${fmtPct(legEvPct(c))}</span>
     </div>`).join('');
-  const maisTexto = membros.length > 10 ? `<div class="risk-note">+ ${membros.length-10} constituinte(s) adicional(ais)</div>` : '';
+  const maisTexto = membrosHoje.length > 10 ? `<div class="risk-note">+ ${membrosHoje.length-10} constituinte(s) adicional(ais)</div>` : '';
 
   return `
     <div class="indice-card">
       <div class="indice-nome">${def.nome}</div>
       <p class="indice-desc">${def.descricao}</p>
       <div class="indice-stats">
-        <div><span class="m-label">Constituintes</span><span class="m-value">${membros.length}</span></div>
+        <div><span class="m-label">Constituintes hoje</span><span class="m-value">${membrosHoje.length}</span></div>
         <div><span class="m-label">Odd média</span><span class="m-value">${oddMedia.toFixed(2)}</span></div>
         <div><span class="m-label">ROI esperado (${stake}€ cada)</span><span class="m-value ${roiCls}">${fmtPct(roiPct)}</span></div>
       </div>
+      ${realizadoHtml}
       <div class="indice-membros">${linhas}${maisTexto}</div>
     </div>`;
 }
 
-fetch('./data/candidatos.json', {cache:'no-store'})
-  .then(r => r.json())
-  .then(data => {
+Promise.all([
+  fetch('./data/candidatos.json', {cache:'no-store'}).then(r => r.json()),
+  fetch('./data/indices_historico.json', {cache:'no-store'}).then(r => r.ok ? r.json() : {candidatos: []}).catch(() => ({candidatos: []})),
+])
+  .then(([data, historico]) => {
     document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
     const candidatos = data.candidatos || [];
+    const candidatosHistorico = historico.candidatos || [];
     const el = document.getElementById('indices-list');
-    if(candidatos.length === 0){
+    if(candidatos.length === 0 && candidatosHistorico.length === 0){
       el.innerHTML = '<div class="chart-empty">Ainda sem candidatos publicados — volta depois da próxima corrida do bot.</div>';
       return;
     }
-    const defs = definirIndices(candidatos);
-    el.innerHTML = defs.map(def => cardIndice(def, dedupPorJogo(candidatos.filter(def.filtro)))).join('');
+    const defsBase = candidatos.length ? candidatos : candidatosHistorico;
+    const defs = definirIndices(defsBase);
+    el.innerHTML = defs.map(def => cardIndice(
+      def,
+      dedupPorJogo(candidatos.filter(def.filtro)),
+      dedupPorJogo(candidatosHistorico.filter(def.filtro)),
+    )).join('');
   })
   .catch(err => {
     document.getElementById('updated-text').textContent = 'Erro a carregar dados.';
