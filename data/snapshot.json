@@ -1,11 +1,11 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-10-31T00:21:51.505775+00:00",
+  "generated_at": "2026-10-31T00:30:11.034958+00:00",
   "bankroll": {
-    "current": 1020.75,
+    "current": 1040.75,
     "starting": 1000.0,
-    "profit": 20.75,
-    "roi_pct": 15.96,
+    "profit": 40.75,
+    "roi_pct": 31.35,
     "win_rate_pct": 69.23,
     "settled_count": 13,
     "won_count": 9,
@@ -50,27 +50,27 @@
       "sport": "futebol"
     },
     {
-      "id": 38,
+      "id": 41,
       "date": "2026-10-30",
-      "balance": 1020.75,
+      "balance": 1040.75,
       "bets_placed": 10,
-      "bets_won": 8,
-      "bets_lost": 2,
+      "bets_won": 9,
+      "bets_lost": 1,
       "staked": 100.0,
-      "profit": 50.75,
-      "created_at": "2026-10-30 23:59:08",
+      "profit": 70.75,
+      "created_at": "2026-10-31 00:30:11",
       "sport": "futebol"
     },
     {
-      "id": 40,
+      "id": 42,
       "date": "2026-10-31",
-      "balance": 1020.75,
+      "balance": 1040.75,
       "bets_placed": 0,
       "bets_won": 0,
       "bets_lost": 0,
       "staked": 0.0,
       "profit": 0.0,
-      "created_at": "2026-10-31 00:15:26",
+      "created_at": "2026-10-31 00:30:11",
       "sport": "futebol"
     }
   ],
@@ -168,7 +168,7 @@
   ],
   "risco_var": null,
   "ultima_corrida": {
-    "last_attempt_at": "2026-10-31T00:00:44.306611+00:00",
+    "last_attempt_at": "2026-10-31T00:21:58.739684+00:00",
     "ok": true,
     "error": null
   },
