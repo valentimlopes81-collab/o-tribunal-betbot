@@ -1,16 +1,16 @@
 {
   "sport": "nba",
-  "generated_at": "2026-10-31T09:31:30.416100+00:00",
+  "generated_at": "2026-10-31T09:51:06.834528+00:00",
   "bankroll": {
-    "current": 994.44,
+    "current": 996.64,
     "starting": 1000.0,
-    "profit": -5.56,
-    "roi_pct": -2.53,
-    "win_rate_pct": 54.55,
-    "settled_count": 22,
-    "won_count": 12,
-    "lost_count": 10,
-    "pending_count": 15
+    "profit": -3.36,
+    "roi_pct": -1.4,
+    "win_rate_pct": 54.17,
+    "settled_count": 24,
+    "won_count": 13,
+    "lost_count": 11,
+    "pending_count": 14
   },
   "bankroll_history": [
     {
@@ -110,15 +110,15 @@
       "sport": "nba"
     },
     {
-      "id": 43,
+      "id": 44,
       "date": "2026-10-31",
-      "balance": 994.44,
-      "bets_placed": 10,
-      "bets_won": 7,
-      "bets_lost": 3,
-      "staked": 100.0,
-      "profit": 35.44999999999999,
-      "created_at": "2026-10-31 09:20:19",
+      "balance": 996.64,
+      "bets_placed": 12,
+      "bets_won": 8,
+      "bets_lost": 4,
+      "staked": 120.0,
+      "profit": 37.650000000000006,
+      "created_at": "2026-10-31 09:43:49",
       "sport": "nba"
     }
   ],
@@ -172,22 +172,54 @@
   "risco_var": {
     "n_simulacoes": 3000,
     "n_apostas_futuras": 30,
-    "n_apostas_historico_usado": 22,
-    "banca_atual": 994.44,
-    "banca_pior_caso_95": 903.07,
-    "perda_var_95": 91.37,
-    "banca_mediana_simulada": 985.9,
-    "banca_melhor_caso_95": 1070.74,
+    "n_apostas_historico_usado": 24,
+    "banca_atual": 996.64,
+    "banca_pior_caso_95": 907.79,
+    "perda_var_95": 88.85,
+    "banca_mediana_simulada": 992.68,
+    "banca_melhor_caso_95": 1074.46,
     "drawdown_mediano_pct": 5.1,
-    "drawdown_pior_caso_95_pct": 10.8,
+    "drawdown_pior_caso_95_pct": 10.9,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-10-30T18:25:31.852432+00:00",
+    "last_attempt_at": "2026-10-31T09:31:42.505072+00:00",
     "ok": true,
     "error": null
   },
   "bets": [
+    {
+      "id": 249,
+      "fixture_id": 21718005,
+      "league": "NBA",
+      "home_team": "Milwaukee Bucks",
+      "away_team": "Cleveland Cavaliers",
+      "kickoff_utc": "2026-11-01T00:00:00.000Z",
+      "market": "player_points",
+      "selection": "Myles Turner_under",
+      "line": 9.5,
+      "model_prob": 0.5574843386445314,
+      "market_odds": 1.971,
+      "implied_prob": 0.5073566717402334,
+      "edge": 0.05012766690429804,
+      "bookmaker": "draftkings",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-10-31 09:51:06",
+      "final_probability": 0.5574843386445314,
+      "confidence": 0.32499999999999996,
+      "tribunal_placar": "n/a (player prop)",
+      "agentes_disponiveis": "[]",
+      "agentes_indisponiveis": "[]",
+      "reasoning": "[\"A aposta é em Myles Turner a fazer menos de 9.5 pontos, a odd de 1.971. Jogador: média ponderada de 8.5 em 20 jogos recentes (5 da época atual, 2026-27), desvio-padrão 6.8 (empírico 5.3, ajustado para cima por amostra ainda curta — desaparece conforme a época avança). O Tribunal foi unânime, com confiança de 32% no palpite -- +5.0% acima do que a odd de mercado implica. Nota: linha de jogador ainda não passa pelo Tribunal completo (sem especialistas dedicados a jogadores individuais nesta versão) — confiança reflete a amostra disponível, mas sem bloquear o nº de apostas por causa disso.\"]",
+      "processo_json": "{\"modelo_jogador\": {\"media\": 8.52, \"desvio\": 6.777591312553451, \"desvio_empirico\": 5.292409659125038, \"n_jogos\": 20, \"n_jogos_epoca_atual\": 5, \"soma_pesos\": 12.5}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "nba",
+      "post_mortem": null
+    },
     {
       "id": 237,
       "fixture_id": 21718001,
@@ -780,9 +812,9 @@
       "edge": 0.20358173410086433,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 22.2,
+      "settled_at": "2026-10-31T09:34:47.465607+00:00",
       "created_at": "2026-10-30 10:21:42",
       "final_probability": 0.6540321845513147,
       "confidence": 0.32499999999999996,
@@ -794,7 +826,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +20.4% e confiança de 32% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 222,
@@ -844,9 +876,9 @@
       "edge": 0.1624288774126612,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-10-31T09:35:23.935916+00:00",
       "created_at": "2026-10-30 10:21:42",
       "final_probability": 0.5689329424533116,
       "confidence": 0.32499999999999996,
@@ -858,7 +890,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +16.2% e confiança de 32%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 212,
