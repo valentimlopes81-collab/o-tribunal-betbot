@@ -6,16 +6,10 @@
 
 const SITE_PAGES = [
   {href: "index.html",         label: "Hoje"},
-  {href: "como-funciona.html",  label: "Como Funciona"},
-  {href: "especialistas.html",  label: "Os Especialistas"},
-  {href: "tribunal.html",       label: "O Tribunal"},
   {href: "historico.html",      label: "Histórico"},
   {href: "construtor.html",     label: "Construtor de Múltiplas"},
   {href: "indices.html",        label: "Índices Sintéticos"},
   {href: "especiais.html",      label: "Apostas Especiais"},
-  {href: "ranking.html",        label: "Ranking dos Jurados"},
-  {href: "metodologia.html",    label: "Metodologia"},
-  {href: "glossario.html",      label: "Glossário"},
 ];
 
 // Mesmas páginas, mesma ordem, MENOS "Apostas Especiais" — essa secção é só
