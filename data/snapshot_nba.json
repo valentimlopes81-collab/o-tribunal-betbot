@@ -1,6 +1,6 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-02T11:00:51.837107+00:00",
+  "generated_at": "2026-11-02T11:28:25.129417+00:00",
   "bankroll": {
     "current": 1032.82,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 48,
     "won_count": 27,
     "lost_count": 21,
-    "pending_count": 13
+    "pending_count": 14
   },
   "bankroll_history": [
     {
@@ -134,7 +134,7 @@
       "sport": "nba"
     },
     {
-      "id": 58,
+      "id": 60,
       "date": "2026-11-02",
       "balance": 1032.82,
       "bets_placed": 10,
@@ -142,7 +142,7 @@
       "bets_lost": 4,
       "staked": 100.0,
       "profit": 23.78,
-      "created_at": "2026-11-02 10:55:11",
+      "created_at": "2026-11-02 11:23:37",
       "sport": "nba"
     }
   ],
@@ -198,20 +198,52 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 48,
     "banca_atual": 1032.82,
-    "banca_pior_caso_95": 967.59,
-    "perda_var_95": 65.23,
-    "banca_mediana_simulada": 1053.64,
-    "banca_melhor_caso_95": 1138.52,
+    "banca_pior_caso_95": 965.29,
+    "perda_var_95": 67.53,
+    "banca_mediana_simulada": 1051.79,
+    "banca_melhor_caso_95": 1138.45,
     "drawdown_mediano_pct": 4.1,
-    "drawdown_pior_caso_95_pct": 9.0,
+    "drawdown_pior_caso_95_pct": 8.9,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-02T10:44:17.628676+00:00",
+    "last_attempt_at": "2026-11-02T11:01:03.924444+00:00",
     "ok": true,
     "error": null
   },
   "bets": [
+    {
+      "id": 293,
+      "fixture_id": 21718012,
+      "league": "NBA",
+      "home_team": "Cleveland Cavaliers",
+      "away_team": "Oklahoma City Thunder",
+      "kickoff_utc": "2026-11-03T00:00:00.000Z",
+      "market": "player_rebounds",
+      "selection": "Bennett Stirtz_under",
+      "line": 1.5,
+      "model_prob": 0.7436546198690384,
+      "market_odds": 1.98,
+      "implied_prob": 0.5050505050505051,
+      "edge": 0.23860411481853327,
+      "bookmaker": "fanduel",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-02 11:28:25",
+      "final_probability": 0.7436546198690384,
+      "confidence": 0.26,
+      "tribunal_placar": "n/a (player prop)",
+      "agentes_disponiveis": "[]",
+      "agentes_indisponiveis": "[]",
+      "reasoning": "[\"A aposta é em Bennett Stirtz a fazer menos de 1.5 ressaltos, a odd de 1.98. Jogador: média ponderada de 0.5 em 6 jogos recentes (6 da época atual, 2026-27), desvio-padrão 1.5 (empírico 1.0, ajustado para cima por amostra ainda curta — desaparece conforme a época avança). O Tribunal foi unânime, com confiança de 26% no palpite -- +23.9% acima do que a odd de mercado implica. Nota: linha de jogador ainda não passa pelo Tribunal completo (sem especialistas dedicados a jogadores individuais nesta versão) — confiança reflete a amostra disponível, mas sem bloquear o nº de apostas por causa disso.\"]",
+      "processo_json": "{\"modelo_jogador\": {\"media\": 0.5, \"desvio\": 1.5275252316519465, \"desvio_empirico\": 1.0, \"n_jogos\": 6, \"n_jogos_epoca_atual\": 6, \"soma_pesos\": 6.0}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "nba",
+      "post_mortem": null
+    },
     {
       "id": 292,
       "fixture_id": 21718012,
