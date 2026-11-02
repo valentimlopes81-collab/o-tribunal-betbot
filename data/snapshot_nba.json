@@ -1,6 +1,6 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-02T10:44:06.947395+00:00",
+  "generated_at": "2026-11-02T11:00:51.837107+00:00",
   "bankroll": {
     "current": 1032.82,
     "starting": 1000.0,
@@ -134,7 +134,7 @@
       "sport": "nba"
     },
     {
-      "id": 57,
+      "id": 58,
       "date": "2026-11-02",
       "balance": 1032.82,
       "bets_placed": 10,
@@ -142,7 +142,7 @@
       "bets_lost": 4,
       "staked": 100.0,
       "profit": 23.78,
-      "created_at": "2026-11-02 10:36:18",
+      "created_at": "2026-11-02 10:55:11",
       "sport": "nba"
     }
   ],
@@ -198,20 +198,52 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 48,
     "banca_atual": 1032.82,
-    "banca_pior_caso_95": 965.97,
-    "perda_var_95": 66.85,
-    "banca_mediana_simulada": 1053.95,
-    "banca_melhor_caso_95": 1138.25,
-    "drawdown_mediano_pct": 4.2,
-    "drawdown_pior_caso_95_pct": 9.1,
+    "banca_pior_caso_95": 967.59,
+    "perda_var_95": 65.23,
+    "banca_mediana_simulada": 1053.64,
+    "banca_melhor_caso_95": 1138.52,
+    "drawdown_mediano_pct": 4.1,
+    "drawdown_pior_caso_95_pct": 9.0,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-01T11:24:32.218731+00:00",
+    "last_attempt_at": "2026-11-02T10:44:17.628676+00:00",
     "ok": true,
     "error": null
   },
   "bets": [
+    {
+      "id": 292,
+      "fixture_id": 21718012,
+      "league": "NBA",
+      "home_team": "Cleveland Cavaliers",
+      "away_team": "Oklahoma City Thunder",
+      "kickoff_utc": "2026-11-03T00:00:00.000Z",
+      "market": "asian_handicap",
+      "selection": "home",
+      "line": -4.5,
+      "model_prob": 0.6419012843133962,
+      "market_odds": 1.962,
+      "implied_prob": 0.509683995922528,
+      "edge": 0.13221728839086822,
+      "bookmaker": "fanduel",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-02 11:00:51",
+      "final_probability": 0.6419012843133962,
+      "confidence": 0.47019500000000003,
+      "tribunal_placar": "5-0",
+      "agentes_disponiveis": "[\"estatisticas_nba\", \"noticias_moral_nba\"]",
+      "agentes_indisponiveis": "[\"forma_recente_nba\", \"casa_fora_nba\", \"fadiga_calendario_nba\", \"arbitro_nba\", \"lesoes_nba\"]",
+      "reasoning": "[\"A aposta é em Cleveland Cavaliers com handicap de -4.5, a odd de 1.962. Modelo de pontos esperados: Cleveland Cavaliers 116.0 - 106.9 Oklahoma City Thunder. Estima 64.2% de probabilidade para esta seleção. Também conta a favor: Sinais nas notícias: 2 palavra(s)-chave sobre Cleveland Cavaliers, 0 sobre Oklahoma City Thunder (contagem simples, sem leitura de contexto). O Tribunal foi unânime, com confiança de 47% no palpite -- +13.2% acima do que a odd de mercado implica.\"]",
+      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas_nba\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6419012843133962, \"confianca\": 0.5, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo de pontos esperados: Cleveland Cavaliers 116.0 - 106.9 Oklahoma City Thunder. Estima 64.2% de probabilidade para esta seleção.\"}, {\"agente\": \"forma_recente_nba\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia moneyline (1x2) nesta versão.\"}, {\"agente\": \"casa_fora_nba\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia moneyline (1x2) nesta versão.\"}, {\"agente\": \"fadiga_calendario_nba\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de fadiga só avalia moneyline/over-under nesta versão.\"}, {\"agente\": \"arbitro_nba\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Ainda não há fonte gratuita confirmada de equipas de arbitragem por jogo da NBA — por ligar.\"}, {\"agente\": \"lesoes_nba\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Ainda não há fonte gratuita confirmada de relatórios de lesões diários da NBA — por ligar.\"}, {\"agente\": \"noticias_moral_nba\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6419012843133962, \"confianca\": 0.25, \"veredito\": \"neutro\", \"justificacao\": \"Sinais nas notícias: 2 palavra(s)-chave sobre Cleveland Cavaliers, 0 sobre Oklahoma City Thunder (contagem simples, sem leitura de contexto).\"}], \"jurados\": [{\"jurado\": \"Daryl Morey\", \"probabilidade\": 0.6419012843133962, \"confianca\": 0.525, \"veredito\": \"favoravel\", \"justificacao\": \"Daryl Morey: Dou mais peso aos números frios e à eficiência. Ouvi 2 especialista(s) (estatisticas_nba, noticias_moral_nba) e cheguei a 64.2% (vs 51.0% do mercado).\", \"pesos\": {\"estatisticas_nba\": 0.8, \"noticias_moral_nba\": 0.25}}, {\"jurado\": \"Earl Strom\", \"probabilidade\": 0.6419012843133962, \"confianca\": 0.325, \"veredito\": \"favoravel\", \"justificacao\": \"Earl Strom: Olho sobretudo para a arbitragem e a disciplina do jogo. Ouvi 2 especialista(s) (estatisticas_nba, noticias_moral_nba) e cheguei a 64.2% (vs 51.0% do mercado).\", \"pesos\": {\"estatisticas_nba\": 0.4, \"noticias_moral_nba\": 0.25}}, {\"jurado\": \"Bill Walton\", \"probabilidade\": 0.6419012843133962, \"confianca\": 0.375, \"veredito\": \"favoravel\", \"justificacao\": \"Bill Walton: Preocupo-me com o estado físico das equipas — sei bem o que é jogar magoado. Ouvi 2 especialista(s) (estatisticas_nba, noticias_moral_nba) e cheguei a 64.2% (vs 51.0% do mercado).\", \"pesos\": {\"estatisticas_nba\": 0.5, \"noticias_moral_nba\": 0.25}}, {\"jurado\": \"Phil Jackson\", \"probabilidade\": 0.6419012843133962, \"confianca\": 0.475, \"veredito\": \"favoravel\", \"justificacao\": \"Phil Jackson: Dou valor ao contexto e à energia à volta da equipa. Ouvi 2 especialista(s) (estatisticas_nba, noticias_moral_nba) e cheguei a 64.2% (vs 51.0% do mercado).\", \"pesos\": {\"estatisticas_nba\": 0.5, \"noticias_moral_nba\": 0.45}}, {\"jurado\": \"Gregg Popovich\", \"probabilidade\": 0.6419012843133962, \"confianca\": 0.375, \"veredito\": \"favoravel\", \"justificacao\": \"Gregg Popovich: Sou o mais cético — não me impressiono com números bonitos sem substância. Ouvi 2 especialista(s) (estatisticas_nba, noticias_moral_nba) e cheguei a 64.2% (vs 51.0% do mercado).\", \"pesos\": {\"estatisticas_nba\": 0.5, \"noticias_moral_nba\": 0.25}}], \"presidente\": {\"nome\": \"David Stern\", \"probabilidade_final\": 0.6419012843133962, \"confianca\": 0.47019500000000003, \"desacordo_entre_jurados\": 0.0, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "nba",
+      "post_mortem": null
+    },
     {
       "id": 280,
       "fixture_id": 21718020,
@@ -900,9 +932,9 @@
       "edge": 0.09808866569318819,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "void",
+      "payout": 10.0,
+      "settled_at": "2026-11-02T10:47:32.630155+00:00",
       "created_at": "2026-11-01 10:58:49",
       "final_probability": 0.659570979000319,
       "confidence": 0.32499999999999996,
@@ -914,7 +946,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Obi Toppin não chegou a jogar — aposta anulada, stake devolvido."
     },
     {
       "id": 270,
