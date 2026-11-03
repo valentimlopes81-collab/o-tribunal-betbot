@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-03T11:04:40.986070+00:00",
+  "generated_at": "2026-11-03T11:07:48.853166+00:00",
   "bankroll": {
     "current": 1093.93,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 43,
     "won_count": 28,
     "lost_count": 15,
-    "pending_count": 12
+    "pending_count": 8
   },
   "bankroll_history": [
     {
@@ -98,7 +98,7 @@
       "sport": "futebol"
     },
     {
-      "id": 67,
+      "id": 68,
       "date": "2026-11-03",
       "balance": 1093.93,
       "bets_placed": 5,
@@ -106,7 +106,7 @@
       "bets_lost": 0,
       "staked": 50.0,
       "profit": 37.67,
-      "created_at": "2026-11-03 11:01:16",
+      "created_at": "2026-11-03 11:07:48",
       "sport": "futebol"
     }
   ],
@@ -207,16 +207,16 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 43,
     "banca_atual": 1093.93,
-    "banca_pior_caso_95": 1073.54,
-    "perda_var_95": 20.39,
-    "banca_mediana_simulada": 1159.04,
-    "banca_melhor_caso_95": 1241.4,
+    "banca_pior_caso_95": 1076.51,
+    "perda_var_95": 17.42,
+    "banca_mediana_simulada": 1163.76,
+    "banca_melhor_caso_95": 1240.03,
     "drawdown_mediano_pct": 2.7,
-    "drawdown_pior_caso_95_pct": 6.1,
+    "drawdown_pior_caso_95_pct": 5.9,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-03T10:45:42.545709+00:00",
+    "last_attempt_at": "2026-11-03T11:04:51.467633+00:00",
     "ok": true,
     "error": null
   },
@@ -237,9 +237,9 @@
       "edge": 0.15480315429048258,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "void",
+      "payout": 10.0,
+      "settled_at": "2026-11-03T11:07:48.830837+00:00",
       "created_at": "2026-11-03 10:45:32",
       "final_probability": 0.5858376370491033,
       "confidence": 0.5088225019864042,
@@ -251,7 +251,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Manchester United FC vs AS Roma (over_under/over) -- anulada: reducao do limite de apostas por jogo de 3 para 2 -- era a de menor edge*confianca das 3 no Man Utd-Roma, stake devolvido."
     },
     {
       "id": 300,
@@ -365,9 +365,9 @@
       "edge": 0.0940045514881298,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "void",
+      "payout": 10.0,
+      "settled_at": "2026-11-03T11:07:48.819810+00:00",
       "created_at": "2026-11-03 10:32:33",
       "final_probability": 0.6808590115820266,
       "confidence": 0.31317818181818186,
@@ -379,7 +379,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "FK Bodø/Glimt vs Lille OSC (over_under/under) -- anulada: equipa de liga sem dados domesticos fiaveis (plano gratuito da API-Football nao cobre a epoca atual), stake devolvido."
     },
     {
       "id": 304,
@@ -429,9 +429,9 @@
       "edge": 0.4106309219235821,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "void",
+      "payout": 10.0,
+      "settled_at": "2026-11-03T11:07:48.810336+00:00",
       "created_at": "2026-11-03 09:54:10",
       "final_probability": 0.9661864774791377,
       "confidence": 0.45044399999999984,
@@ -443,7 +443,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "LASK Linz vs ŠK Slovan Bratislava (team_total_goals/home_over) -- anulada: equipa de liga sem dados domesticos fiaveis (plano gratuito da API-Football nao cobre a epoca atual), stake devolvido."
     },
     {
       "id": 295,
@@ -461,9 +461,9 @@
       "edge": 0.38853628189574585,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "void",
+      "payout": 10.0,
+      "settled_at": "2026-11-03T11:07:48.819810+00:00",
       "created_at": "2026-11-03 09:54:10",
       "final_probability": 0.9379868313462952,
       "confidence": 0.4131551999999999,
@@ -475,7 +475,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "LASK Linz vs ŠK Slovan Bratislava (over_under/over) -- anulada: equipa de liga sem dados domesticos fiaveis (plano gratuito da API-Football nao cobre a epoca atual), stake devolvido."
     },
     {
       "id": 296,
