@@ -1,9 +1,9 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-03T10:32:37.495206+00:00",
+  "generated_at": "2026-11-03T10:38:40.510741+00:00",
   "candidatos": [
     {
-      "id": 924,
+      "id": 937,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575380,
@@ -23,12 +23,12 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "4-0",
       "aceite": 0,
-      "created_at": "2026-11-03 10:31:50",
+      "created_at": "2026-11-03 10:37:49",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 925,
+      "id": 938,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575380,
@@ -48,12 +48,12 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-03 10:31:50",
+      "created_at": "2026-11-03 10:37:50",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 926,
+      "id": 939,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575381,
@@ -73,12 +73,12 @@
       "bookmaker": "fanduel",
       "tribunal_placar": "4-0",
       "aceite": 1,
-      "created_at": "2026-11-03 10:32:00",
+      "created_at": "2026-11-03 10:38:01",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 927,
+      "id": 940,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575381,
@@ -98,12 +98,12 @@
       "bookmaker": "fanduel",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-03 10:32:00",
+      "created_at": "2026-11-03 10:38:01",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 928,
+      "id": 941,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575381,
@@ -123,12 +123,12 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-03 10:32:01",
+      "created_at": "2026-11-03 10:38:02",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 929,
+      "id": 942,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575383,
@@ -148,12 +148,12 @@
       "bookmaker": "fanduel",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-03 10:32:11",
+      "created_at": "2026-11-03 10:38:13",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 930,
+      "id": 943,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575383,
@@ -173,12 +173,12 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-03 10:32:12",
+      "created_at": "2026-11-03 10:38:14",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 931,
+      "id": 944,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575383,
@@ -198,12 +198,12 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-03 10:32:13",
+      "created_at": "2026-11-03 10:38:15",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 932,
+      "id": 945,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575384,
@@ -223,12 +223,12 @@
       "bookmaker": "fanduel",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-03 10:32:22",
+      "created_at": "2026-11-03 10:38:25",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 933,
+      "id": 946,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575384,
@@ -248,12 +248,12 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "5-0",
       "aceite": 0,
-      "created_at": "2026-11-03 10:32:22",
+      "created_at": "2026-11-03 10:38:25",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 934,
+      "id": 947,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575385,
@@ -273,12 +273,12 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "5-0",
       "aceite": 0,
-      "created_at": "2026-11-03 10:32:33",
+      "created_at": "2026-11-03 10:38:36",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 935,
+      "id": 948,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575385,
@@ -298,12 +298,12 @@
       "bookmaker": "fanduel",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-03 10:32:33",
+      "created_at": "2026-11-03 10:38:36",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 936,
+      "id": 949,
       "sport": "futebol",
       "date": "2026-11-03",
       "fixture_id": 575385,
@@ -323,7 +323,7 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-03 10:32:33",
+      "created_at": "2026-11-03 10:38:36",
       "status": "pending",
       "payout": null
     }
