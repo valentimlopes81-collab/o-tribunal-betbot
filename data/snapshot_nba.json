@@ -1,16 +1,16 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-02T11:28:25.129417+00:00",
+  "generated_at": "2026-11-03T10:18:27.308764+00:00",
   "bankroll": {
-    "current": 1032.82,
+    "current": 1046.74,
     "starting": 1000.0,
-    "profit": 32.82,
-    "roi_pct": 6.84,
-    "win_rate_pct": 56.25,
-    "settled_count": 48,
-    "won_count": 27,
-    "lost_count": 21,
-    "pending_count": 14
+    "profit": 46.74,
+    "roi_pct": 7.66,
+    "win_rate_pct": 55.74,
+    "settled_count": 61,
+    "won_count": 34,
+    "lost_count": 27,
+    "pending_count": 1
   },
   "bankroll_history": [
     {
@@ -144,70 +144,82 @@
       "profit": 23.78,
       "created_at": "2026-11-02 11:23:37",
       "sport": "nba"
+    },
+    {
+      "id": 63,
+      "date": "2026-11-03",
+      "balance": 1046.74,
+      "bets_placed": 13,
+      "bets_won": 7,
+      "bets_lost": 6,
+      "staked": 130.0,
+      "profit": 13.919999999999987,
+      "created_at": "2026-11-03 10:06:32",
+      "sport": "nba"
     }
   ],
   "jurados_ranking": [
     {
       "jurado": "Daryl Morey",
-      "acertos": 19,
-      "erros": 11,
+      "acertos": 26,
+      "erros": 16,
       "abstencoes": 0,
-      "total_votos": 30,
-      "total_votos_decisivos": 30,
-      "precisao_pct": 63.3
+      "total_votos": 42,
+      "total_votos_decisivos": 42,
+      "precisao_pct": 61.9
     },
     {
       "jurado": "Earl Strom",
-      "acertos": 19,
-      "erros": 11,
+      "acertos": 26,
+      "erros": 16,
       "abstencoes": 0,
-      "total_votos": 30,
-      "total_votos_decisivos": 30,
-      "precisao_pct": 63.3
+      "total_votos": 42,
+      "total_votos_decisivos": 42,
+      "precisao_pct": 61.9
     },
     {
       "jurado": "Bill Walton",
-      "acertos": 19,
-      "erros": 11,
+      "acertos": 26,
+      "erros": 16,
       "abstencoes": 0,
-      "total_votos": 30,
-      "total_votos_decisivos": 30,
-      "precisao_pct": 63.3
+      "total_votos": 42,
+      "total_votos_decisivos": 42,
+      "precisao_pct": 61.9
     },
     {
       "jurado": "Phil Jackson",
-      "acertos": 19,
-      "erros": 11,
+      "acertos": 26,
+      "erros": 16,
       "abstencoes": 0,
-      "total_votos": 30,
-      "total_votos_decisivos": 30,
-      "precisao_pct": 63.3
+      "total_votos": 42,
+      "total_votos_decisivos": 42,
+      "precisao_pct": 61.9
     },
     {
       "jurado": "Gregg Popovich",
-      "acertos": 19,
-      "erros": 11,
+      "acertos": 26,
+      "erros": 16,
       "abstencoes": 0,
-      "total_votos": 30,
-      "total_votos_decisivos": 30,
-      "precisao_pct": 63.3
+      "total_votos": 42,
+      "total_votos_decisivos": 42,
+      "precisao_pct": 61.9
     }
   ],
   "risco_var": {
     "n_simulacoes": 3000,
     "n_apostas_futuras": 30,
-    "n_apostas_historico_usado": 48,
-    "banca_atual": 1032.82,
-    "banca_pior_caso_95": 965.29,
-    "perda_var_95": 67.53,
-    "banca_mediana_simulada": 1051.79,
-    "banca_melhor_caso_95": 1138.45,
-    "drawdown_mediano_pct": 4.1,
-    "drawdown_pior_caso_95_pct": 8.9,
+    "n_apostas_historico_usado": 61,
+    "banca_atual": 1046.74,
+    "banca_pior_caso_95": 978.37,
+    "perda_var_95": 68.37,
+    "banca_mediana_simulada": 1069.72,
+    "banca_melhor_caso_95": 1157.84,
+    "drawdown_mediano_pct": 4.0,
+    "drawdown_pior_caso_95_pct": 9.0,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-02T11:01:03.924444+00:00",
+    "last_attempt_at": "2026-11-02T11:28:39.164166+00:00",
     "ok": true,
     "error": null
   },
@@ -228,9 +240,9 @@
       "edge": 0.23860411481853327,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-03T10:06:32.558927+00:00",
       "created_at": "2026-11-02 11:28:25",
       "final_probability": 0.7436546198690384,
       "confidence": 0.26,
@@ -242,7 +254,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +23.9% e confiança de 26%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 292,
@@ -260,9 +272,9 @@
       "edge": 0.13221728839086822,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-03T10:05:51.675771+00:00",
       "created_at": "2026-11-02 11:00:51",
       "final_probability": 0.6419012843133962,
       "confidence": 0.47019500000000003,
@@ -274,7 +286,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +13.2% e confiança de 47%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 280,
@@ -292,9 +304,9 @@
       "edge": 0.3957443371465291,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 19.09,
+      "settled_at": "2026-11-03T09:58:03.422393+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.9195788054545437,
       "confidence": 0.5359089999999999,
@@ -306,7 +318,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +39.6% e confiança de 54% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 281,
@@ -324,9 +336,9 @@
       "edge": 0.40270299259453934,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 20.0,
+      "settled_at": "2026-11-03T09:58:42.436989+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.9027029925945393,
       "confidence": 0.470195,
@@ -338,7 +350,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +40.3% e confiança de 47% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 282,
@@ -356,9 +368,9 @@
       "edge": 0.3498813143558315,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-03T09:59:21.542109+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.8912998308690963,
       "confidence": 0.5359089999999999,
@@ -370,7 +382,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +35.0% e confiança de 54%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 283,
@@ -388,9 +400,9 @@
       "edge": 0.425769718357231,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-03T10:00:00.691237+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.935453714279759,
       "confidence": 0.41732166666666665,
@@ -402,7 +414,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +42.6% e confiança de 42%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 284,
@@ -420,9 +432,9 @@
       "edge": 0.3512057912488603,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-03T10:00:39.450800+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.8750402595568749,
       "confidence": 0.5030519999999999,
@@ -434,7 +446,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +35.1% e confiança de 50%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 285,
@@ -452,9 +464,9 @@
       "edge": 0.4075769132171988,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 19.52,
+      "settled_at": "2026-11-03T10:01:18.492027+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.9198719951844119,
       "confidence": 0.4044809999999999,
@@ -466,7 +478,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +40.8% e confiança de 40% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 286,
@@ -516,9 +528,9 @@
       "edge": 0.369766250829937,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 24.5,
+      "settled_at": "2026-11-03T10:02:36.934707+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.7779295161360594,
       "confidence": 0.37940527001569857,
@@ -530,7 +542,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +37.0% e confiança de 38% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 288,
@@ -548,9 +560,9 @@
       "edge": 0.28300503123778764,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-03T10:03:15.739951+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.7976730703525586,
       "confidence": 0.470195,
@@ -562,7 +574,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +28.3% e confiança de 47%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 289,
@@ -580,9 +592,9 @@
       "edge": 0.2396898878573227,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 19.52,
+      "settled_at": "2026-11-03T10:03:54.758725+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.7519849698245358,
       "confidence": 0.470195,
@@ -594,7 +606,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +24.0% e confiança de 47% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 290,
@@ -612,9 +624,9 @@
       "edge": 0.2610119909198485,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 22.2,
+      "settled_at": "2026-11-03T10:04:33.673525+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.7114624413702989,
       "confidence": 0.42908049939976,
@@ -626,7 +638,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +26.1% e confiança de 43% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 291,
@@ -644,9 +656,9 @@
       "edge": 0.2718942326637783,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 19.09,
+      "settled_at": "2026-11-03T10:05:12.763011+00:00",
       "created_at": "2026-11-02 10:44:06",
       "final_probability": 0.7957287009717929,
       "confidence": 0.40448099999999987,
@@ -658,7 +670,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +27.2% e confiança de 40% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 272,
