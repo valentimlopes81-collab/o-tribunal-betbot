@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-05T10:12:41.011936+00:00",
+  "generated_at": "2026-11-05T10:14:52.199261+00:00",
   "bankroll": {
     "current": 1101.61,
     "starting": 1000.0,
@@ -122,7 +122,7 @@
       "sport": "futebol"
     },
     {
-      "id": 91,
+      "id": 92,
       "date": "2026-11-05",
       "balance": 1101.61,
       "bets_placed": 7,
@@ -130,7 +130,7 @@
       "bets_lost": 1,
       "staked": 70.0,
       "profit": 35.03,
-      "created_at": "2026-11-05 10:11:28",
+      "created_at": "2026-11-05 10:14:44",
       "sport": "futebol"
     }
   ],
@@ -231,16 +231,16 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 56,
     "banca_atual": 1101.61,
-    "banca_pior_caso_95": 1073.34,
-    "perda_var_95": 28.27,
-    "banca_mediana_simulada": 1156.56,
-    "banca_melhor_caso_95": 1237.18,
-    "drawdown_mediano_pct": 2.9,
+    "banca_pior_caso_95": 1071.96,
+    "perda_var_95": 29.65,
+    "banca_mediana_simulada": 1156.99,
+    "banca_melhor_caso_95": 1237.06,
+    "drawdown_mediano_pct": 3.0,
     "drawdown_pior_caso_95_pct": 6.3,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-04T16:02:29.865240+00:00",
+    "last_attempt_at": "2026-11-05T10:12:51.031141+00:00",
     "ok": true,
     "error": null
   },
