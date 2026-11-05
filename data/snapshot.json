@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-05T11:06:05.978050+00:00",
+  "generated_at": "2026-11-05T11:08:52.119288+00:00",
   "bankroll": {
     "current": 1101.61,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 56,
     "won_count": 36,
     "lost_count": 20,
-    "pending_count": 5
+    "pending_count": 6
   },
   "bankroll_history": [
     {
@@ -231,20 +231,52 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 56,
     "banca_atual": 1101.61,
-    "banca_pior_caso_95": 1073.66,
-    "perda_var_95": 27.95,
-    "banca_mediana_simulada": 1157.15,
-    "banca_melhor_caso_95": 1238.45,
-    "drawdown_mediano_pct": 2.8,
-    "drawdown_pior_caso_95_pct": 6.3,
+    "banca_pior_caso_95": 1075.26,
+    "perda_var_95": 26.35,
+    "banca_mediana_simulada": 1158.75,
+    "banca_melhor_caso_95": 1239.03,
+    "drawdown_mediano_pct": 2.9,
+    "drawdown_pior_caso_95_pct": 6.1,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-05T10:52:23.436735+00:00",
+    "last_attempt_at": "2026-11-05T11:06:17.413181+00:00",
     "ok": true,
     "error": null
   },
   "bets": [
+    {
+      "id": 335,
+      "fixture_id": "uefa_-_europa_league_crystalpalace_hoffenheim_2026-11-05_b2",
+      "league": "UEFA Europa League",
+      "home_team": "Crystal Palace FC",
+      "away_team": "TSG 1899 Hoffenheim",
+      "kickoff_utc": "2026-11-05T17:45:00Z",
+      "market": "team_total_goals",
+      "selection": "away_over",
+      "line": 1.5,
+      "model_prob": 0.7303762969473906,
+      "market_odds": 2.19,
+      "implied_prob": 0.4566210045662101,
+      "edge": 0.2737552923811805,
+      "bookmaker": "draftkings",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-05 11:08:52",
+      "final_probability": 0.7303762969473906,
+      "confidence": 0.4422124999999999,
+      "tribunal_placar": "5-0",
+      "agentes_disponiveis": "[\"estatisticas\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
+      "agentes_indisponiveis": "[\"forma_recente\", \"casa_fora\", \"fadiga_calendario\"]",
+      "reasoning": "[\"A aposta é em TSG 1899 Hoffenheim a marcar mais de 1.5 golos, a odd de 2.19. Modelo Poisson/Dixon-Coles estima 73.0% de probabilidade para esta seleção, face a 45.7% implícita pela odd de mercado. Também conta a favor: Ausências confirmadas: 9 em Crystal Palace FC, 8 em TSG 1899 Hoffenheim. E, por fim, Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes. O Tribunal foi unânime, com confiança de 44% no palpite -- +27.4% acima do que a odd de mercado implica.\"]",
+      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7303762969473906, \"confianca\": 0.75, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 73.0% de probabilidade para esta seleção, face a 45.7% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de fadiga só avalia 1X2/dupla hipótese/draw-no-bet/over-under/btts nesta versão.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7303762969473906, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Horatiu Fesnic. Ainda sem histórico suficiente de cartões acumulado (menos de 1 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7303762969473906, \"confianca\": 0.45, \"veredito\": \"neutro\", \"justificacao\": \"Ausências confirmadas: 9 em Crystal Palace FC, 8 em TSG 1899 Hoffenheim.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7303762969473906, \"confianca\": 0.15, \"veredito\": \"neutro\", \"justificacao\": \"Sem sinais claros de crise ou bom momento em nenhuma das equipas nas notícias recentes.\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.7303762969473907, \"confianca\": 0.47500000000000003, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 73.0% (vs 45.7% do mercado).\", \"pesos\": {\"estatisticas\": 1.2, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.7303762969473907, \"confianca\": 0.34500000000000003, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 73.0% (vs 45.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.6, \"arbitro\": 0.18, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.7303762969473906, \"confianca\": 0.4525, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 73.0% (vs 45.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.75, \"arbitro\": 0.1, \"lesoes\": 0.81, \"noticias_moral\": 0.15}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.7303762969473905, \"confianca\": 0.3925, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 73.0% (vs 45.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.75, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.27}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.7303762969473906, \"confianca\": 0.3625, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 4 especialista(s) (estatisticas, arbitro, lesoes, noticias_moral) e cheguei a 73.0% (vs 45.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.75, \"arbitro\": 0.1, \"lesoes\": 0.45, \"noticias_moral\": 0.15}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.7303762969473906, \"confianca\": 0.4422124999999999, \"desacordo_entre_jurados\": 0.0, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "futebol",
+      "post_mortem": null
+    },
     {
       "id": 332,
       "fixture_id": "uefa_-_europa_conference_league_brighton_getafe_2026-11-05_b3",
