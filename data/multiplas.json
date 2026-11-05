@@ -1,8 +1,59 @@
 {
-  "generated_at": "2026-11-05T12:31:32.913656+00:00",
-  "multiplas": [],
+  "generated_at": "2026-11-05T12:36:33.921977+00:00",
+  "multiplas": [
+    {
+      "id": 1,
+      "sport": "futebol",
+      "date": "2026-11-05",
+      "pernas_json": "[{\"fixture_id\": \"uefa_-_europa_league_crystalpalace_hoffenheim_2026-11-05_b2\", \"jogo\": \"Crystal Palace FC vs TSG 1899 Hoffenheim\", \"league\": \"UEFA Europa League\", \"kickoff_utc\": \"2026-11-05T17:45:00Z\", \"market\": \"team_total_goals\", \"selection\": \"away_over\", \"line\": 1.5, \"odd\": 2.19, \"confianca\": 0.4422124999999999, \"requer_liquidacao_manual\": true}, {\"fixture_id\": \"uefa_-_europa_conference_league_freiburg_trabzonspor_2026-11-05_b2\", \"jogo\": \"Trabzonspor vs SC Freiburg\", \"league\": \"UEFA Conference League\", \"kickoff_utc\": \"2026-11-05T17:45:00Z\", \"market\": \"1x2\", \"selection\": \"home\", \"line\": null, \"odd\": 2.35, \"confianca\": 0.37953724124446464, \"requer_liquidacao_manual\": true}, {\"fixture_id\": \"uefa_-_europa_conference_league_brighton_getafe_2026-11-05_b3\", \"jogo\": \"Getafe CF vs Brighton & Hove Albion FC\", \"league\": \"UEFA Conference League\", \"kickoff_utc\": \"2026-11-05T20:00:00Z\", \"market\": \"team_total_goals\", \"selection\": \"home_under\", \"line\": 0.5, \"odd\": 2.07, \"confianca\": 0.41058749999999994, \"requer_liquidacao_manual\": true}]",
+      "odd_total": 10.653254999999998,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-05 12:36:33",
+      "pernas": [
+        {
+          "fixture_id": "uefa_-_europa_league_crystalpalace_hoffenheim_2026-11-05_b2",
+          "jogo": "Crystal Palace FC vs TSG 1899 Hoffenheim",
+          "league": "UEFA Europa League",
+          "kickoff_utc": "2026-11-05T17:45:00Z",
+          "market": "team_total_goals",
+          "selection": "away_over",
+          "line": 1.5,
+          "odd": 2.19,
+          "confianca": 0.4422124999999999,
+          "requer_liquidacao_manual": true
+        },
+        {
+          "fixture_id": "uefa_-_europa_conference_league_freiburg_trabzonspor_2026-11-05_b2",
+          "jogo": "Trabzonspor vs SC Freiburg",
+          "league": "UEFA Conference League",
+          "kickoff_utc": "2026-11-05T17:45:00Z",
+          "market": "1x2",
+          "selection": "home",
+          "line": null,
+          "odd": 2.35,
+          "confianca": 0.37953724124446464,
+          "requer_liquidacao_manual": true
+        },
+        {
+          "fixture_id": "uefa_-_europa_conference_league_brighton_getafe_2026-11-05_b3",
+          "jogo": "Getafe CF vs Brighton & Hove Albion FC",
+          "league": "UEFA Conference League",
+          "kickoff_utc": "2026-11-05T20:00:00Z",
+          "market": "team_total_goals",
+          "selection": "home_under",
+          "line": 0.5,
+          "odd": 2.07,
+          "confianca": 0.41058749999999994,
+          "requer_liquidacao_manual": true
+        }
+      ]
+    }
+  ],
   "resumo": {
-    "total": 0,
+    "total": 1,
     "liquidadas": 0,
     "ganhas": 0,
     "win_rate_pct": 0
