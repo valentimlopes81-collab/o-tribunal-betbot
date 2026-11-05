@@ -1,16 +1,16 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-05T10:35:46.083304+00:00",
+  "generated_at": "2026-11-05T11:18:55.543458+00:00",
   "bankroll": {
-    "current": 1043.72,
+    "current": 1053.34,
     "starting": 1000.0,
-    "profit": 43.72,
-    "roi_pct": 5.99,
-    "win_rate_pct": 54.79,
-    "settled_count": 73,
-    "won_count": 40,
+    "profit": 53.34,
+    "roi_pct": 7.21,
+    "win_rate_pct": 55.41,
+    "settled_count": 74,
+    "won_count": 41,
     "lost_count": 33,
-    "pending_count": 3
+    "pending_count": 2
   },
   "bankroll_history": [
     {
@@ -170,15 +170,15 @@
       "sport": "nba"
     },
     {
-      "id": 93,
+      "id": 98,
       "date": "2026-11-05",
-      "balance": 1043.72,
-      "bets_placed": 11,
-      "bets_won": 6,
+      "balance": 1053.34,
+      "bets_placed": 12,
+      "bets_won": 7,
       "bets_lost": 5,
-      "staked": 110.0,
-      "profit": 6.97999999999999,
-      "created_at": "2026-11-05 10:24:44",
+      "staked": 120.0,
+      "profit": 16.599999999999994,
+      "created_at": "2026-11-05 11:18:55",
       "sport": "nba"
     }
   ],
@@ -232,18 +232,18 @@
   "risco_var": {
     "n_simulacoes": 3000,
     "n_apostas_futuras": 30,
-    "n_apostas_historico_usado": 73,
-    "banca_atual": 1043.72,
-    "banca_pior_caso_95": 974.75,
-    "perda_var_95": 68.97,
-    "banca_mediana_simulada": 1062.57,
-    "banca_melhor_caso_95": 1152.25,
-    "drawdown_mediano_pct": 4.4,
-    "drawdown_pior_caso_95_pct": 9.1,
+    "n_apostas_historico_usado": 74,
+    "banca_atual": 1053.34,
+    "banca_pior_caso_95": 985.07,
+    "perda_var_95": 68.27,
+    "banca_mediana_simulada": 1075.35,
+    "banca_melhor_caso_95": 1165.52,
+    "drawdown_mediano_pct": 4.1,
+    "drawdown_pior_caso_95_pct": 9.2,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-04T12:27:35.054006+00:00",
+    "last_attempt_at": "2026-11-05T10:35:56.904561+00:00",
     "ok": true,
     "error": null
   },
@@ -360,9 +360,9 @@
       "edge": 0.4392057221642113,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 19.62,
+      "settled_at": "2026-11-05T11:18:55.501162+00:00",
       "created_at": "2026-11-04 12:27:17",
       "final_probability": 0.9488897180867393,
       "confidence": 0.305,
@@ -374,7 +374,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "nba",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +43.9% e confiança de 30% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 318,
