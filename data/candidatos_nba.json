@@ -1,9 +1,9 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-05T10:35:50.482212+00:00",
+  "generated_at": "2026-11-05T11:20:13.290477+00:00",
   "candidatos": [
     {
-      "id": 1121,
+      "id": 1158,
       "sport": "nba",
       "date": "2026-11-05",
       "fixture_id": 21718041,
@@ -23,12 +23,12 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "n/a (player prop)",
       "aceite": 1,
-      "created_at": "2026-11-05 10:35:17",
+      "created_at": "2026-11-05 11:20:01",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 1122,
+      "id": 1159,
       "sport": "nba",
       "date": "2026-11-05",
       "fixture_id": 21718042,
@@ -48,12 +48,12 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-05 10:35:45",
+      "created_at": "2026-11-05 11:20:08",
       "status": "pending",
       "payout": null
     },
     {
-      "id": 1123,
+      "id": 1160,
       "sport": "nba",
       "date": "2026-11-05",
       "fixture_id": 21718042,
@@ -73,7 +73,7 @@
       "bookmaker": "draftkings",
       "tribunal_placar": "5-0",
       "aceite": 1,
-      "created_at": "2026-11-05 10:35:46",
+      "created_at": "2026-11-05 11:20:08",
       "status": "pending",
       "payout": null
     }
