@@ -230,6 +230,7 @@ function renderMultiplaDoDia(multiplas){
 
 let ALL_BETS = [];
 let CURRENT_FILTER = 'all';
+let APOSTA_DO_DIA_ID = null;
 
 function renderBets(){
   const el = document.getElementById('bets');
@@ -249,11 +250,13 @@ function renderBets(){
     const confianca = b.confidence!=null ? (b.confidence*100).toFixed(0)+'%' : '—';
     const margem = (b.edge!=null) ? fmtPct(b.edge*100) : '—';
     const glowCls = isRecentWin(b) ? ' win-glow' : '';
+    const ehApostaDoDia = APOSTA_DO_DIA_ID!=null && b.id===APOSTA_DO_DIA_ID;
 
     return `
-    <div class="bet${glowCls}" data-id="${b.id}">
+    <div class="bet${glowCls}" data-id="${b.id}" ${ehApostaDoDia ? 'style="border-color:var(--pitch-bright);box-shadow:0 0 0 1px var(--pitch-bright);"' : ''}>
       <div class="bet-head">
         <div>
+          ${ehApostaDoDia ? '<div style="font-family:IBM Plex Mono;font-size:11px;letter-spacing:.05em;color:var(--pitch-bright);margin-bottom:4px;">★ APOSTA DO DIA</div>' : ''}
           <div class="bet-match">${b.home_team} vs ${b.away_team}</div>
           <div class="bet-league">${b.league} · ${fmtDate(b.kickoff_utc)}</div>
         </div>
@@ -304,6 +307,7 @@ document.getElementById('filters').addEventListener('click', e=>{
 fetch('./data/snapshot.json', {cache:'no-store'})
   .then(r => r.json())
   .then(data => {
+    APOSTA_DO_DIA_ID = data.aposta_do_dia_id ?? null;
     document.getElementById('updated-text').textContent = 'Última atualização: ' + fmtDate(data.generated_at);
     renderStatusBanner(data);
     renderStats(data.bankroll);
