@@ -1,6 +1,6 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-06T12:21:10.414381+00:00",
+  "generated_at": "2026-11-06T15:30:48.530611+00:00",
   "bankroll": {
     "current": 1071.86,
     "starting": 1000.0,
@@ -182,7 +182,7 @@
       "sport": "nba"
     },
     {
-      "id": 101,
+      "id": 103,
       "date": "2026-11-06",
       "balance": 1071.86,
       "bets_placed": 2,
@@ -190,7 +190,7 @@
       "bets_lost": 0,
       "staked": 20.0,
       "profit": 18.519999999999996,
-      "created_at": "2026-11-06 12:01:59",
+      "created_at": "2026-11-06 15:26:09",
       "sport": "nba"
     }
   ],
@@ -246,19 +246,20 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 76,
     "banca_atual": 1071.86,
-    "banca_pior_caso_95": 1011.32,
-    "perda_var_95": 60.54,
-    "banca_mediana_simulada": 1102.07,
-    "banca_melhor_caso_95": 1187.98,
+    "banca_pior_caso_95": 1012.11,
+    "perda_var_95": 59.75,
+    "banca_mediana_simulada": 1099.8,
+    "banca_melhor_caso_95": 1186.16,
     "drawdown_mediano_pct": 3.8,
-    "drawdown_pior_caso_95_pct": 8.6,
+    "drawdown_pior_caso_95_pct": 8.4,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-05T11:20:20.169213+00:00",
+    "last_attempt_at": "2026-11-06T12:21:22.669891+00:00",
     "ok": true,
     "error": null
   },
+  "aposta_do_dia_id": null,
   "bets": [
     {
       "id": 348,
