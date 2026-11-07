@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-07T12:27:53.790392+00:00",
+  "generated_at": "2026-11-07T15:54:35.586954+00:00",
   "bankroll": {
     "current": 1083.85,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 72,
     "won_count": 44,
     "lost_count": 28,
-    "pending_count": 13
+    "pending_count": 10
   },
   "bankroll_history": [
     {
@@ -146,7 +146,7 @@
       "sport": "futebol"
     },
     {
-      "id": 106,
+      "id": 107,
       "date": "2026-11-07",
       "balance": 1083.85,
       "bets_placed": 11,
@@ -154,7 +154,7 @@
       "bets_lost": 5,
       "staked": 110.0,
       "profit": -5.5,
-      "created_at": "2026-11-07 12:19:38",
+      "created_at": "2026-11-07 13:28:05",
       "sport": "futebol"
     }
   ],
@@ -255,16 +255,16 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 72,
     "banca_atual": 1083.85,
-    "banca_pior_caso_95": 1034.28,
-    "perda_var_95": 49.57,
-    "banca_mediana_simulada": 1118.02,
-    "banca_melhor_caso_95": 1199.57,
-    "drawdown_mediano_pct": 3.5,
-    "drawdown_pior_caso_95_pct": 7.5,
+    "banca_pior_caso_95": 1035.52,
+    "perda_var_95": 48.33,
+    "banca_mediana_simulada": 1120.92,
+    "banca_melhor_caso_95": 1199.74,
+    "drawdown_mediano_pct": 3.4,
+    "drawdown_pior_caso_95_pct": 7.4,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-07T09:09:59.973345+00:00",
+    "last_attempt_at": "2026-11-07T12:28:14.599032+00:00",
     "ok": true,
     "error": null
   },
@@ -382,7 +382,7 @@
       "edge": 0.2683038596346198,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
+      "status": "cancelado",
       "payout": null,
       "settled_at": null,
       "created_at": "2026-11-07 09:09:45",
@@ -391,10 +391,10 @@
       "tribunal_placar": "5-0",
       "agentes_disponiveis": "[\"estatisticas\", \"fadiga_calendario\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
       "agentes_indisponiveis": "[\"forma_recente\", \"casa_fora\"]",
-      "reasoning": "[\"A aposta é em mais de 3.5 golos no total do jogo, a odd de 1.588. Modelo Poisson/Dixon-Coles estima 89.8% de probabilidade para esta seleção, face a 63.0% implícita pela odd de mercado. Também conta a favor: Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas. E, por fim, Sinais nas notícias: 0 palavra(s)-chave sobre 1. FSV Mainz 05, 2 sobre FC Bayern München (contagem simples, sem leitura de contexto). O Tribunal foi unânime, com confiança de 35% no palpite -- +26.8% acima do que a odd de mercado implica.\"]",
+      "reasoning": "[\"Valor desapareceu na revisão de última hora (margem=+29.0%, confiança=24%).\"]",
       "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8980267815489774, \"confianca\": 0.558, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 89.8% de probabilidade para esta seleção, face a 63.0% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8980267815489774, \"confianca\": 0.2, \"veredito\": \"neutro\", \"justificacao\": \"Ambas as equipas tiveram descanso normal antes deste jogo.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8980267815489774, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Robert Schroder. Ainda sem histórico suficiente de cartões acumulado (menos de 1 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8980267815489774, \"confianca\": 0.35, \"veredito\": \"neutro\", \"justificacao\": \"Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8980267815489774, \"confianca\": 0.25, \"veredito\": \"neutro\", \"justificacao\": \"Sinais nas notícias: 0 palavra(s)-chave sobre 1. FSV Mainz 05, 2 sobre FC Bayern München (contagem simples, sem leitura de contexto).\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.8980267815489774, \"confianca\": 0.35856000000000005, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 89.8% (vs 63.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.893, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.8980267815489773, \"confianca\": 0.28528000000000003, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 89.8% (vs 63.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.446, \"fadiga_calendario\": 0.2, \"arbitro\": 0.18, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.8980267815489773, \"confianca\": 0.36760000000000004, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 89.8% (vs 63.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.63, \"noticias_moral\": 0.25}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.8980267815489774, \"confianca\": 0.3316, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 89.8% (vs 63.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.45}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.8980267815489774, \"confianca\": 0.29159999999999997, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 89.8% (vs 63.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.8980267815489774, \"confianca\": 0.347968032, \"desacordo_entre_jurados\": 0.0, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
       "fase": "preliminar",
-      "revisado_em": null,
+      "revisado_em": "2026-11-07T13:27:25.039064+00:00",
       "sport": "futebol",
       "post_mortem": null
     },
@@ -478,7 +478,7 @@
       "edge": 0.26562420315547697,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
+      "status": "cancelado",
       "payout": null,
       "settled_at": null,
       "created_at": "2026-11-07 09:09:45",
@@ -487,10 +487,10 @@
       "tribunal_placar": "5-0",
       "agentes_disponiveis": "[\"estatisticas\", \"fadiga_calendario\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
       "agentes_indisponiveis": "[\"forma_recente\", \"casa_fora\"]",
-      "reasoning": "[\"A aposta é em mais de 3.5 golos no total do jogo, a odd de 1.645. Modelo Poisson/Dixon-Coles estima 87.4% de probabilidade para esta seleção, face a 60.8% implícita pela odd de mercado. Também conta a favor: Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas. E, por fim, Ambas as equipas tiveram descanso normal antes deste jogo. O Tribunal foi unânime, com confiança de 32% no palpite -- +26.6% acima do que a odd de mercado implica.\"]",
+      "reasoning": "[\"Valor desapareceu na revisão de última hora (margem=+25.5%, confiança=21%).\"]",
       "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8735269387177869, \"confianca\": 0.558, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 87.4% de probabilidade para esta seleção, face a 60.8% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8735269387177869, \"confianca\": 0.2, \"veredito\": \"neutro\", \"justificacao\": \"Ambas as equipas tiveram descanso normal antes deste jogo.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8735269387177869, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Daniel Schlager. Ainda sem histórico suficiente de cartões acumulado (menos de 1 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8735269387177869, \"confianca\": 0.35, \"veredito\": \"neutro\", \"justificacao\": \"Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8735269387177869, \"confianca\": 0.15, \"veredito\": \"neutro\", \"justificacao\": \"Sinais nas notícias: 0 palavra(s)-chave sobre RB Leipzig, 1 sobre FC Augsburg (contagem simples, sem leitura de contexto).\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.8735269387177867, \"confianca\": 0.33856, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 87.4% (vs 60.8% do mercado).\", \"pesos\": {\"estatisticas\": 0.893, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.15}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.8735269387177869, \"confianca\": 0.26528, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 87.4% (vs 60.8% do mercado).\", \"pesos\": {\"estatisticas\": 0.446, \"fadiga_calendario\": 0.2, \"arbitro\": 0.18, \"lesoes\": 0.35, \"noticias_moral\": 0.15}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.8735269387177869, \"confianca\": 0.3476, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 87.4% (vs 60.8% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.63, \"noticias_moral\": 0.15}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.8735269387177869, \"confianca\": 0.2956, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 87.4% (vs 60.8% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.27}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.8735269387177869, \"confianca\": 0.27159999999999995, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 87.4% (vs 60.8% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.15}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.873526938717787, \"confianca\": 0.3232752319999999, \"desacordo_entre_jurados\": 0.0, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
       "fase": "preliminar",
-      "revisado_em": null,
+      "revisado_em": "2026-11-07T13:27:42.760893+00:00",
       "sport": "futebol",
       "post_mortem": null
     },
@@ -670,7 +670,7 @@
       "edge": 0.21128060459594344,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
+      "status": "cancelado",
       "payout": null,
       "settled_at": null,
       "created_at": "2026-11-07 09:09:45",
@@ -679,10 +679,10 @@
       "tribunal_placar": "5-0",
       "agentes_disponiveis": "[\"estatisticas\", \"fadiga_calendario\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
       "agentes_indisponiveis": "[\"forma_recente\", \"casa_fora\"]",
-      "reasoning": "[\"A aposta é em ambas as equipas a marcar, a odd de 1.488. Modelo Poisson/Dixon-Coles estima 88.3% de probabilidade para esta seleção, face a 67.2% implícita pela odd de mercado. Também conta a favor: Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas. E, por fim, Sinais nas notícias: 0 palavra(s)-chave sobre 1. FSV Mainz 05, 2 sobre FC Bayern München (contagem simples, sem leitura de contexto). O Tribunal foi unânime, com confiança de 35% no palpite -- +21.1% acima do que a odd de mercado implica.\"]",
+      "reasoning": "[\"Valor desapareceu na revisão de última hora (margem=+22.8%, confiança=24%).\"]",
       "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8833236153486316, \"confianca\": 0.558, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 88.3% de probabilidade para esta seleção, face a 67.2% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8833236153486316, \"confianca\": 0.2, \"veredito\": \"neutro\", \"justificacao\": \"Ambas as equipas tiveram descanso normal antes deste jogo.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8833236153486316, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Robert Schroder. Ainda sem histórico suficiente de cartões acumulado (menos de 1 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8833236153486316, \"confianca\": 0.35, \"veredito\": \"neutro\", \"justificacao\": \"Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8833236153486316, \"confianca\": 0.25, \"veredito\": \"neutro\", \"justificacao\": \"Sinais nas notícias: 0 palavra(s)-chave sobre 1. FSV Mainz 05, 2 sobre FC Bayern München (contagem simples, sem leitura de contexto).\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.8833236153486317, \"confianca\": 0.35856000000000005, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 88.3% (vs 67.2% do mercado).\", \"pesos\": {\"estatisticas\": 0.893, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.8833236153486316, \"confianca\": 0.28528000000000003, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 88.3% (vs 67.2% do mercado).\", \"pesos\": {\"estatisticas\": 0.446, \"fadiga_calendario\": 0.2, \"arbitro\": 0.18, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.8833236153486316, \"confianca\": 0.36760000000000004, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 88.3% (vs 67.2% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.63, \"noticias_moral\": 0.25}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.8833236153486316, \"confianca\": 0.3316, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 88.3% (vs 67.2% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.45}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.8833236153486316, \"confianca\": 0.29159999999999997, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 88.3% (vs 67.2% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.8833236153486316, \"confianca\": 0.347968032, \"desacordo_entre_jurados\": 0.0, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
       "fase": "preliminar",
-      "revisado_em": null,
+      "revisado_em": "2026-11-07T13:28:57.526893+00:00",
       "sport": "futebol",
       "post_mortem": null
     },
