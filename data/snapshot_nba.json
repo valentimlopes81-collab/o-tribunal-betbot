@@ -1,6 +1,6 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-07T09:27:19.932247+00:00",
+  "generated_at": "2026-11-07T16:01:37.308202+00:00",
   "bankroll": {
     "current": 1074.77,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 87,
     "won_count": 49,
     "lost_count": 38,
-    "pending_count": 13
+    "pending_count": 14
   },
   "bankroll_history": [
     {
@@ -194,7 +194,7 @@
       "sport": "nba"
     },
     {
-      "id": 105,
+      "id": 108,
       "date": "2026-11-07",
       "balance": 1074.77,
       "bets_placed": 11,
@@ -202,7 +202,7 @@
       "bets_lost": 5,
       "staked": 110.0,
       "profit": 2.9099999999999966,
-      "created_at": "2026-11-07 09:17:41",
+      "created_at": "2026-11-07 15:54:50",
       "sport": "nba"
     }
   ],
@@ -258,21 +258,53 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 87,
     "banca_atual": 1074.77,
-    "banca_pior_caso_95": 1015.71,
-    "perda_var_95": 59.06,
-    "banca_mediana_simulada": 1101.25,
-    "banca_melhor_caso_95": 1185.32,
-    "drawdown_mediano_pct": 3.8,
-    "drawdown_pior_caso_95_pct": 8.3,
+    "banca_pior_caso_95": 1013.13,
+    "perda_var_95": 61.64,
+    "banca_mediana_simulada": 1100.4,
+    "banca_melhor_caso_95": 1184.95,
+    "drawdown_mediano_pct": 3.9,
+    "drawdown_pior_caso_95_pct": 8.4,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-06T15:31:00.592450+00:00",
+    "last_attempt_at": "2026-11-07T09:27:27.750511+00:00",
     "ok": true,
     "error": null
   },
   "aposta_do_dia_id": null,
   "bets": [
+    {
+      "id": 385,
+      "fixture_id": 21718055,
+      "league": "NBA",
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "Washington Wizards",
+      "kickoff_utc": "2026-11-08T01:00:00.000Z",
+      "market": "player_points",
+      "selection": "Alex Caruso_under",
+      "line": 7.5,
+      "model_prob": 0.5774284793896266,
+      "market_odds": 1.99,
+      "implied_prob": 0.5025125628140703,
+      "edge": 0.0749159165755563,
+      "bookmaker": "draftkings",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-07 16:01:37",
+      "final_probability": 0.5774284793896266,
+      "confidence": 0.32999999999999996,
+      "tribunal_placar": "n/a (player prop)",
+      "agentes_disponiveis": "[]",
+      "agentes_indisponiveis": "[]",
+      "reasoning": "[\"A aposta é em Alex Caruso a fazer menos de 7.5 pontos, a odd de 1.99. Jogador: média ponderada de 6.6 em 20 jogos recentes (6 da época atual, 2026-27), desvio-padrão 4.5 (empírico 3.6, ajustado para cima por amostra ainda curta — desaparece conforme a época avança). O Tribunal foi unânime, com confiança de 33% no palpite -- +7.5% acima do que a odd de mercado implica. Nota: linha de jogador ainda não passa pelo Tribunal completo (sem especialistas dedicados a jogadores individuais nesta versão) — confiança reflete a amostra disponível, mas sem bloquear o nº de apostas por causa disso.\"]",
+      "processo_json": "{\"modelo_jogador\": {\"media\": 6.615384615384615, \"desvio\": 4.529074637133958, \"desvio_empirico\": 3.5634568682770675, \"n_jogos\": 20, \"n_jogos_epoca_atual\": 6, \"soma_pesos\": 13.0}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "nba",
+      "post_mortem": null
+    },
     {
       "id": 372,
       "fixture_id": 21718057,
