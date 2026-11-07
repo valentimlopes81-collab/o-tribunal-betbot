@@ -1,6 +1,56 @@
 {
-  "generated_at": "2026-11-06T12:05:54.032860+00:00",
+  "generated_at": "2026-11-07T09:09:57.975516+00:00",
   "multiplas": [
+    {
+      "id": 3,
+      "sport": "futebol",
+      "date": "2026-11-07",
+      "pernas_json": "[{\"fixture_id\": 558531, \"jogo\": \"AS Roma vs US Sassuolo Calcio\", \"league\": \"Serie A (Itália)\", \"kickoff_utc\": \"2026-11-07T19:45:00Z\", \"market\": \"over_under\", \"selection\": \"over\", \"line\": 3.5, \"odd\": 1.847, \"confianca\": 0.3795949859754329, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 565848, \"jogo\": \"RB Leipzig vs FC Augsburg\", \"league\": \"Bundesliga (Alemanha)\", \"kickoff_utc\": \"2026-11-07T14:30:00Z\", \"market\": \"team_total_goals\", \"selection\": \"home_over\", \"line\": 2.5, \"odd\": 1.787, \"confianca\": 0.34555403999999995, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 565851, \"jogo\": \"1. FSV Mainz 05 vs FC Bayern München\", \"league\": \"Bundesliga (Alemanha)\", \"kickoff_utc\": \"2026-11-07T14:30:00Z\", \"market\": \"over_under\", \"selection\": \"over\", \"line\": 3.5, \"odd\": 1.588, \"confianca\": 0.347968032, \"requer_liquidacao_manual\": false}]",
+      "odd_total": 5.241335332,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-07 09:09:57",
+      "pernas": [
+        {
+          "fixture_id": 558531,
+          "jogo": "AS Roma vs US Sassuolo Calcio",
+          "league": "Serie A (Itália)",
+          "kickoff_utc": "2026-11-07T19:45:00Z",
+          "market": "over_under",
+          "selection": "over",
+          "line": 3.5,
+          "odd": 1.847,
+          "confianca": 0.3795949859754329,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 565848,
+          "jogo": "RB Leipzig vs FC Augsburg",
+          "league": "Bundesliga (Alemanha)",
+          "kickoff_utc": "2026-11-07T14:30:00Z",
+          "market": "team_total_goals",
+          "selection": "home_over",
+          "line": 2.5,
+          "odd": 1.787,
+          "confianca": 0.34555403999999995,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 565851,
+          "jogo": "1. FSV Mainz 05 vs FC Bayern München",
+          "league": "Bundesliga (Alemanha)",
+          "kickoff_utc": "2026-11-07T14:30:00Z",
+          "market": "over_under",
+          "selection": "over",
+          "line": 3.5,
+          "odd": 1.588,
+          "confianca": 0.347968032,
+          "requer_liquidacao_manual": false
+        }
+      ]
+    },
     {
       "id": 2,
       "sport": "futebol",
@@ -8,9 +58,9 @@
       "pernas_json": "[{\"fixture_id\": 564740, \"jogo\": \"Sevilla FC vs Deportivo Alavés\", \"league\": \"La Liga (Espanha)\", \"kickoff_utc\": \"2026-11-06T20:00:00Z\", \"market\": \"over_under\", \"selection\": \"over\", \"line\": 2.5, \"odd\": 2.25, \"confianca\": 0.3873100599999999, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 558537, \"jogo\": \"Venezia FC vs Udinese Calcio\", \"league\": \"Serie A (Itália)\", \"kickoff_utc\": \"2026-11-06T19:45:00Z\", \"market\": \"team_total_goals\", \"selection\": \"home_under\", \"line\": 1.5, \"odd\": 1.68, \"confianca\": 0.4834324999999999, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 567353, \"jogo\": \"FC Famalicão vs FC Arouca\", \"league\": \"Primeira Liga (Portugal)\", \"kickoff_utc\": \"2026-11-06T20:45:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"away\", \"line\": null, \"odd\": 2.2, \"confianca\": 0.23607554430742764, \"requer_liquidacao_manual\": false}]",
       "odd_total": 8.316,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-07 09:09:57",
       "created_at": "2026-11-06 09:49:00",
       "pernas": [
         {
@@ -103,8 +153,8 @@
     }
   ],
   "resumo": {
-    "total": 2,
-    "liquidadas": 1,
+    "total": 3,
+    "liquidadas": 2,
     "ganhas": 0,
     "win_rate_pct": 0.0
   }
