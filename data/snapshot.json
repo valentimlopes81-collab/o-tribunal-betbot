@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-07T09:09:45.563504+00:00",
+  "generated_at": "2026-11-07T12:27:53.790392+00:00",
   "bankroll": {
     "current": 1083.85,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 72,
     "won_count": 44,
     "lost_count": 28,
-    "pending_count": 12
+    "pending_count": 13
   },
   "bankroll_history": [
     {
@@ -146,7 +146,7 @@
       "sport": "futebol"
     },
     {
-      "id": 104,
+      "id": 106,
       "date": "2026-11-07",
       "balance": 1083.85,
       "bets_placed": 11,
@@ -154,7 +154,7 @@
       "bets_lost": 5,
       "staked": 110.0,
       "profit": -5.5,
-      "created_at": "2026-11-07 09:02:29",
+      "created_at": "2026-11-07 12:19:38",
       "sport": "futebol"
     }
   ],
@@ -255,21 +255,53 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 72,
     "banca_atual": 1083.85,
-    "banca_pior_caso_95": 1034.38,
-    "perda_var_95": 49.47,
-    "banca_mediana_simulada": 1119.08,
-    "banca_melhor_caso_95": 1198.79,
-    "drawdown_mediano_pct": 3.6,
-    "drawdown_pior_caso_95_pct": 7.2,
+    "banca_pior_caso_95": 1034.28,
+    "perda_var_95": 49.57,
+    "banca_mediana_simulada": 1118.02,
+    "banca_melhor_caso_95": 1199.57,
+    "drawdown_mediano_pct": 3.5,
+    "drawdown_pior_caso_95_pct": 7.5,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-06T12:05:59.303584+00:00",
+    "last_attempt_at": "2026-11-07T09:09:59.973345+00:00",
     "ok": true,
     "error": null
   },
   "aposta_do_dia_id": 360,
   "bets": [
+    {
+      "id": 384,
+      "fixture_id": 560641,
+      "league": "Premier League (Inglaterra)",
+      "home_team": "Nottingham Forest FC",
+      "away_team": "Manchester City FC",
+      "kickoff_utc": "2026-11-07T17:30:00Z",
+      "market": "1x2",
+      "selection": "away",
+      "line": null,
+      "model_prob": 0.689062320031618,
+      "market_odds": 1.769,
+      "implied_prob": 0.5652911249293386,
+      "edge": 0.12377119510227941,
+      "bookmaker": "draftkings",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-07 12:27:53",
+      "final_probability": 0.689062320031618,
+      "confidence": 0.3263522272581982,
+      "tribunal_placar": "5-0",
+      "agentes_disponiveis": "[\"estatisticas\", \"forma_recente\", \"fadiga_calendario\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
+      "agentes_indisponiveis": "[\"casa_fora\"]",
+      "reasoning": "[\"A aposta é em Manchester City FC a vencer, a odd de 1.769. Modelo Poisson/Dixon-Coles estima 68.1% de probabilidade para esta seleção, face a 56.5% implícita pela odd de mercado. Também conta a favor: Momentum recente (últimos 5 jogos vs média da época): Nottingham Forest FC -0.53 | Manchester City FC -0.31 golos/jogo. E, por fim, Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas. O Tribunal foi unânime, com confiança de 33% no palpite -- +12.4% acima do que a odd de mercado implica. Nota: 1 especialista(s) aplicável(eis) mas sem dados para este jogo (casa_fora) — confiança e stake reduzidos em conformidade (cobertura: 6/7).\"]",
+      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6809559969934569, \"confianca\": 0.585, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 68.1% de probabilidade para esta seleção, face a 56.5% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6987337747712347, \"confianca\": 0.45, \"veredito\": \"favoravel\", \"justificacao\": \"Momentum recente (últimos 5 jogos vs média da época): Nottingham Forest FC -0.53 | Manchester City FC -0.31 golos/jogo.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": true, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Poucos jogos em casa/fora registados para esta equipa esta época.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6809559969934569, \"confianca\": 0.2, \"veredito\": \"neutro\", \"justificacao\": \"Ambas as equipas tiveram descanso normal antes deste jogo.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6809559969934569, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Samuel Barrott. Ainda sem histórico suficiente de cartões acumulado (menos de 1 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6809559969934569, \"confianca\": 0.35, \"veredito\": \"neutro\", \"justificacao\": \"Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7109559969934569, \"confianca\": 0.25, \"veredito\": \"favoravel\", \"justificacao\": \"Sinais nas notícias: 2 palavra(s)-chave sobre Nottingham Forest FC, 0 sobre Manchester City FC (contagem simples, sem leitura de contexto).\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.6883496359856089, \"confianca\": 0.40349999999999997, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 68.8% (vs 56.5% do mercado).\", \"pesos\": {\"estatisticas\": 0.936, \"forma_recente\": 0.585, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.6891224880366603, \"confianca\": 0.3163333333333333, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 68.9% (vs 56.5% do mercado).\", \"pesos\": {\"estatisticas\": 0.468, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.2, \"arbitro\": 0.18, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.6876514613563078, \"confianca\": 0.3858333333333333, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 68.8% (vs 56.5% do mercado).\", \"pesos\": {\"estatisticas\": 0.585, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.63, \"noticias_moral\": 0.25}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.691338019465367, \"confianca\": 0.37083333333333335, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 69.1% (vs 56.5% do mercado).\", \"pesos\": {\"estatisticas\": 0.585, \"forma_recente\": 0.54, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.45}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.6889663329107695, \"confianca\": 0.3225, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 68.9% (vs 56.5% do mercado).\", \"pesos\": {\"estatisticas\": 0.585, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.689062320031618, \"confianca\": 0.3263522272581982, \"desacordo_entre_jurados\": 0.0037, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "futebol",
+      "post_mortem": null
+    },
     {
       "id": 360,
       "fixture_id": 558531,
