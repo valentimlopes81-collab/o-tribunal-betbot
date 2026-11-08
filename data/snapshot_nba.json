@@ -1,6 +1,6 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-08T11:37:13.910879+00:00",
+  "generated_at": "2026-11-08T11:57:22.054757+00:00",
   "bankroll": {
     "current": 1093.07,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 99,
     "won_count": 56,
     "lost_count": 43,
-    "pending_count": 13
+    "pending_count": 14
   },
   "bankroll_history": [
     {
@@ -206,7 +206,7 @@
       "sport": "nba"
     },
     {
-      "id": 109,
+      "id": 112,
       "date": "2026-11-08",
       "balance": 1093.07,
       "bets_placed": 12,
@@ -214,7 +214,7 @@
       "bets_lost": 5,
       "staked": 120.0,
       "profit": 18.30000000000001,
-      "created_at": "2026-11-08 11:26:37",
+      "created_at": "2026-11-08 11:54:05",
       "sport": "nba"
     }
   ],
@@ -270,21 +270,53 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 99,
     "banca_atual": 1093.07,
-    "banca_pior_caso_95": 1031.55,
-    "perda_var_95": 61.52,
-    "banca_mediana_simulada": 1120.17,
-    "banca_melhor_caso_95": 1206.36,
+    "banca_pior_caso_95": 1033.01,
+    "perda_var_95": 60.06,
+    "banca_mediana_simulada": 1122.98,
+    "banca_melhor_caso_95": 1209.89,
     "drawdown_mediano_pct": 3.7,
-    "drawdown_pior_caso_95_pct": 8.2,
+    "drawdown_pior_caso_95_pct": 8.3,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-07T16:01:50.872572+00:00",
+    "last_attempt_at": "2026-11-08T11:37:23.892948+00:00",
     "ok": true,
     "error": null
   },
   "aposta_do_dia_id": null,
   "bets": [
+    {
+      "id": 409,
+      "fixture_id": 21718064,
+      "league": "NBA",
+      "home_team": "LA Clippers",
+      "away_team": "New Orleans Pelicans",
+      "kickoff_utc": "2026-11-09T02:00:00.000Z",
+      "market": "player_assists",
+      "selection": "Saddiq Bey_over",
+      "line": 1.5,
+      "model_prob": 0.6863976865839898,
+      "market_odds": 1.714,
+      "implied_prob": 0.5834305717619603,
+      "edge": 0.10296711482202947,
+      "bookmaker": "fanduel",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-08 11:57:22",
+      "final_probability": 0.6863976865839898,
+      "confidence": 0.345,
+      "tribunal_placar": "n/a (player prop)",
+      "agentes_disponiveis": "[]",
+      "agentes_indisponiveis": "[]",
+      "reasoning": "[\"A aposta é em Saddiq Bey a fazer mais de 1.5 assistências, a odd de 1.714. Jogador: média ponderada de 2.3 em 20 jogos recentes (9 da época atual, 2026-27), desvio-padrão 1.7 (empírico 1.4, ajustado para cima por amostra ainda curta — desaparece conforme a época avança). O Tribunal foi unânime, com confiança de 34% no palpite -- +10.3% acima do que a odd de mercado implica. Nota: linha de jogador ainda não passa pelo Tribunal completo (sem especialistas dedicados a jogadores individuais nesta versão) — confiança reflete a amostra disponível, mas sem bloquear o nº de apostas por causa disso.\"]",
+      "processo_json": "{\"modelo_jogador\": {\"media\": 2.3448275862068964, \"desvio\": 1.7395270402240106, \"desvio_empirico\": 1.396445291814937, \"n_jogos\": 20, \"n_jogos_epoca_atual\": 9, \"soma_pesos\": 14.5}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "nba",
+      "post_mortem": null
+    },
     {
       "id": 386,
       "fixture_id": 21718061,
