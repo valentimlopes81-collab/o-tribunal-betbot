@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-07T15:54:35.586954+00:00",
+  "generated_at": "2026-11-08T11:28:26.356585+00:00",
   "bankroll": {
     "current": 1083.85,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 72,
     "won_count": 44,
     "lost_count": 28,
-    "pending_count": 10
+    "pending_count": 9
   },
   "bankroll_history": [
     {
@@ -156,6 +156,18 @@
       "profit": -5.5,
       "created_at": "2026-11-07 13:28:05",
       "sport": "futebol"
+    },
+    {
+      "id": 110,
+      "date": "2026-11-08",
+      "balance": 1083.85,
+      "bets_placed": 0,
+      "bets_won": 0,
+      "bets_lost": 0,
+      "staked": 0.0,
+      "profit": 0.0,
+      "created_at": "2026-11-08 11:28:26",
+      "sport": "futebol"
     }
   ],
   "jurados_ranking": [
@@ -255,20 +267,20 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 72,
     "banca_atual": 1083.85,
-    "banca_pior_caso_95": 1035.52,
-    "perda_var_95": 48.33,
-    "banca_mediana_simulada": 1120.92,
-    "banca_melhor_caso_95": 1199.74,
-    "drawdown_mediano_pct": 3.4,
+    "banca_pior_caso_95": 1036.7,
+    "perda_var_95": 47.15,
+    "banca_mediana_simulada": 1120.43,
+    "banca_melhor_caso_95": 1199.99,
+    "drawdown_mediano_pct": 3.5,
     "drawdown_pior_caso_95_pct": 7.4,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-07T12:28:14.599032+00:00",
+    "last_attempt_at": "2026-11-07T15:55:16.526248+00:00",
     "ok": true,
     "error": null
   },
-  "aposta_do_dia_id": 360,
+  "aposta_do_dia_id": null,
   "bets": [
     {
       "id": 384,
@@ -395,38 +407,6 @@
       "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8980267815489774, \"confianca\": 0.558, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 89.8% de probabilidade para esta seleção, face a 63.0% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8980267815489774, \"confianca\": 0.2, \"veredito\": \"neutro\", \"justificacao\": \"Ambas as equipas tiveram descanso normal antes deste jogo.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8980267815489774, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Robert Schroder. Ainda sem histórico suficiente de cartões acumulado (menos de 1 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8980267815489774, \"confianca\": 0.35, \"veredito\": \"neutro\", \"justificacao\": \"Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.8980267815489774, \"confianca\": 0.25, \"veredito\": \"neutro\", \"justificacao\": \"Sinais nas notícias: 0 palavra(s)-chave sobre 1. FSV Mainz 05, 2 sobre FC Bayern München (contagem simples, sem leitura de contexto).\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.8980267815489774, \"confianca\": 0.35856000000000005, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 89.8% (vs 63.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.893, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.8980267815489773, \"confianca\": 0.28528000000000003, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 89.8% (vs 63.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.446, \"fadiga_calendario\": 0.2, \"arbitro\": 0.18, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.8980267815489773, \"confianca\": 0.36760000000000004, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 89.8% (vs 63.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.63, \"noticias_moral\": 0.25}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.8980267815489774, \"confianca\": 0.3316, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 89.8% (vs 63.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.45}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.8980267815489774, \"confianca\": 0.29159999999999997, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 89.8% (vs 63.0% do mercado).\", \"pesos\": {\"estatisticas\": 0.558, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.8980267815489774, \"confianca\": 0.347968032, \"desacordo_entre_jurados\": 0.0, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
       "fase": "preliminar",
       "revisado_em": "2026-11-07T13:27:25.039064+00:00",
-      "sport": "futebol",
-      "post_mortem": null
-    },
-    {
-      "id": 363,
-      "fixture_id": 567352,
-      "league": "Primeira Liga (Portugal)",
-      "home_team": "CD Nacional",
-      "away_team": "Académico de Viseu FC",
-      "kickoff_utc": "2026-11-07T15:30:00Z",
-      "market": "1x2",
-      "selection": "away",
-      "line": null,
-      "model_prob": 0.71116724727249,
-      "market_odds": 2.4,
-      "implied_prob": 0.4166666666666667,
-      "edge": 0.29450058060582335,
-      "bookmaker": "draftkings",
-      "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
-      "created_at": "2026-11-07 09:09:45",
-      "final_probability": 0.71116724727249,
-      "confidence": 0.3076088226831158,
-      "tribunal_placar": "5-0",
-      "agentes_disponiveis": "[\"estatisticas\", \"forma_recente\", \"fadiga_calendario\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
-      "agentes_indisponiveis": "[\"casa_fora\"]",
-      "reasoning": "[\"A aposta é em Académico de Viseu FC a vencer, a odd de 2.4. Modelo Poisson/Dixon-Coles estima 69.1% de probabilidade para esta seleção, face a 41.7% implícita pela odd de mercado. Também conta a favor: Momentum recente (últimos 5 jogos vs média da época): CD Nacional -0.50 | Académico de Viseu FC +0.90 golos/jogo. E, por fim, Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas. O Tribunal foi unânime, com confiança de 31% no palpite -- +29.5% acima do que a odd de mercado implica. Nota: 1 especialista(s) aplicável(eis) mas sem dados para este jogo (casa_fora) — confiança e stake reduzidos em conformidade (cobertura: 6/7).\"]",
-      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6905043701326715, \"confianca\": 0.585, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 69.1% de probabilidade para esta seleção, face a 41.7% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7705043701326715, \"confianca\": 0.45, \"veredito\": \"favoravel\", \"justificacao\": \"Momentum recente (últimos 5 jogos vs média da época): CD Nacional -0.50 | Académico de Viseu FC +0.90 golos/jogo.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": true, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Poucos jogos em casa/fora registados para esta equipa esta época.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6905043701326715, \"confianca\": 0.2, \"veredito\": \"neutro\", \"justificacao\": \"Ambas as equipas tiveram descanso normal antes deste jogo.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6905043701326715, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Pedro Miguel Torres Ramalho. Ainda sem histórico suficiente de cartões acumulado (menos de 1 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6905043701326715, \"confianca\": 0.35, \"veredito\": \"neutro\", \"justificacao\": \"Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7055043701326715, \"confianca\": 0.15, \"veredito\": \"favoravel\", \"justificacao\": \"Sinais nas notícias: 1 palavra(s)-chave sobre CD Nacional, 0 sobre Académico de Viseu FC (contagem simples, sem leitura de contexto).\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.7116375024032445, \"confianca\": 0.3868333333333333, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 71.2% (vs 41.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.936, \"forma_recente\": 0.585, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.15}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.7117780075075326, \"confianca\": 0.2996666666666666, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 71.2% (vs 41.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.468, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.2, \"arbitro\": 0.18, \"lesoes\": 0.35, \"noticias_moral\": 0.15}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.7077729931575022, \"confianca\": 0.36916666666666664, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 70.8% (vs 41.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.585, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.63, \"noticias_moral\": 0.15}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.7136095046069992, \"confianca\": 0.3408333333333333, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 71.4% (vs 41.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.585, \"forma_recente\": 0.54, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.27}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.7113490567811728, \"confianca\": 0.30583333333333335, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 6 especialista(s) (estatisticas, forma_recente, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 71.1% (vs 41.7% do mercado).\", \"pesos\": {\"estatisticas\": 0.585, \"forma_recente\": 0.45, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.15}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.71116724727249, \"confianca\": 0.3076088226831158, \"desacordo_entre_jurados\": 0.0058, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
-      "fase": "preliminar",
-      "revisado_em": null,
       "sport": "futebol",
       "post_mortem": null
     },
