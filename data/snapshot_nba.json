@@ -1,6 +1,6 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-09T11:30:52.053830+00:00",
+  "generated_at": "2026-11-09T19:35:03.182484+00:00",
   "bankroll": {
     "current": 1159.1,
     "starting": 1000.0,
@@ -10,7 +10,7 @@
     "settled_count": 111,
     "won_count": 66,
     "lost_count": 45,
-    "pending_count": 13
+    "pending_count": 14
   },
   "bankroll_history": [
     {
@@ -218,7 +218,7 @@
       "sport": "nba"
     },
     {
-      "id": 115,
+      "id": 117,
       "date": "2026-11-09",
       "balance": 1159.1,
       "bets_placed": 12,
@@ -226,7 +226,7 @@
       "bets_lost": 2,
       "staked": 120.0,
       "profit": 66.03,
-      "created_at": "2026-11-09 11:09:42",
+      "created_at": "2026-11-09 19:30:52",
       "sport": "nba"
     }
   ],
@@ -282,21 +282,53 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 111,
     "banca_atual": 1159.1,
-    "banca_pior_caso_95": 1113.09,
-    "perda_var_95": 46.01,
-    "banca_mediana_simulada": 1203.47,
-    "banca_melhor_caso_95": 1286.01,
+    "banca_pior_caso_95": 1116.07,
+    "perda_var_95": 43.03,
+    "banca_mediana_simulada": 1203.27,
+    "banca_melhor_caso_95": 1287.74,
     "drawdown_mediano_pct": 3.3,
-    "drawdown_pior_caso_95_pct": 6.9,
+    "drawdown_pior_caso_95_pct": 6.8,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-08T11:57:30.244024+00:00",
+    "last_attempt_at": "2026-11-09T11:31:10.065007+00:00",
     "ok": true,
     "error": null
   },
   "aposta_do_dia_id": null,
   "bets": [
+    {
+      "id": 422,
+      "fixture_id": 21718070,
+      "league": "NBA",
+      "home_team": "Dallas Mavericks",
+      "away_team": "Indiana Pacers",
+      "kickoff_utc": "2026-11-10T01:00:00.000Z",
+      "market": "over_under",
+      "selection": "under",
+      "line": 225.5,
+      "model_prob": 0.6752710337817799,
+      "market_odds": 1.952,
+      "implied_prob": 0.5122950819672131,
+      "edge": 0.1629759518145668,
+      "bookmaker": "draftkings",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-09 19:35:03",
+      "final_probability": 0.6752710337817799,
+      "confidence": 0.4693343678160919,
+      "tribunal_placar": "5-0",
+      "agentes_disponiveis": "[\"estatisticas_nba\", \"fadiga_calendario_nba\", \"noticias_moral_nba\"]",
+      "agentes_indisponiveis": "[\"forma_recente_nba\", \"casa_fora_nba\", \"arbitro_nba\", \"lesoes_nba\"]",
+      "reasoning": "[\"A aposta é em menos de 225.5 pontos no total do jogo, a odd de 1.952. Modelo de pontos esperados: Dallas Mavericks 116.2 - 103.9 Indiana Pacers. Estima 65.4% de probabilidade para esta seleção. Também conta a favor: Fadiga detetada: Dallas Mavericks está em back-to-back. E, por fim, Sinais nas notícias: 2 palavra(s)-chave sobre Dallas Mavericks, 0 sobre Indiana Pacers (contagem simples, sem leitura de contexto). O Tribunal foi unânime, com confiança de 47% no palpite -- +16.3% acima do que a odd de mercado implica.\"]",
+      "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas_nba\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6544836322069767, \"confianca\": 0.5, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo de pontos esperados: Dallas Mavericks 116.2 - 103.9 Indiana Pacers. Estima 65.4% de probabilidade para esta seleção.\"}, {\"agente\": \"forma_recente_nba\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia moneyline (1x2) nesta versão.\"}, {\"agente\": \"casa_fora_nba\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia moneyline (1x2) nesta versão.\"}, {\"agente\": \"fadiga_calendario_nba\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7144836322069767, \"confianca\": 0.4, \"veredito\": \"favoravel\", \"justificacao\": \"Fadiga detetada: Dallas Mavericks está em back-to-back.\"}, {\"agente\": \"arbitro_nba\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Ainda não há fonte gratuita confirmada de equipas de arbitragem por jogo da NBA — por ligar.\"}, {\"agente\": \"lesoes_nba\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Ainda não há fonte gratuita confirmada de relatórios de lesões diários da NBA — por ligar.\"}, {\"agente\": \"noticias_moral_nba\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.6544836322069767, \"confianca\": 0.25, \"veredito\": \"neutro\", \"justificacao\": \"Sinais nas notícias: 2 palavra(s)-chave sobre Dallas Mavericks, 0 sobre Indiana Pacers (contagem simples, sem leitura de contexto).\"}], \"jurados\": [{\"jurado\": \"Daryl Morey\", \"probabilidade\": 0.6710353563449076, \"confianca\": 0.4833333333333334, \"veredito\": \"favoravel\", \"justificacao\": \"Daryl Morey: Dou mais peso aos números frios e à eficiência. Ouvi 3 especialista(s) (estatisticas_nba, fadiga_calendario_nba, noticias_moral_nba) e cheguei a 67.1% (vs 51.2% do mercado).\", \"pesos\": {\"estatisticas_nba\": 0.8, \"fadiga_calendario_nba\": 0.4, \"noticias_moral_nba\": 0.25}}, {\"jurado\": \"Earl Strom\", \"probabilidade\": 0.6773407750641197, \"confianca\": 0.35000000000000003, \"veredito\": \"favoravel\", \"justificacao\": \"Earl Strom: Olho sobretudo para a arbitragem e a disciplina do jogo. Ouvi 3 especialista(s) (estatisticas_nba, fadiga_calendario_nba, noticias_moral_nba) e cheguei a 67.7% (vs 51.2% do mercado).\", \"pesos\": {\"estatisticas_nba\": 0.4, \"fadiga_calendario_nba\": 0.4, \"noticias_moral_nba\": 0.25}}, {\"jurado\": \"Bill Walton\", \"probabilidade\": 0.6811502988736433, \"confianca\": 0.45, \"veredito\": \"favoravel\", \"justificacao\": \"Bill Walton: Preocupo-me com o estado físico das equipas — sei bem o que é jogar magoado. Ouvi 3 especialista(s) (estatisticas_nba, fadiga_calendario_nba, noticias_moral_nba) e cheguei a 68.1% (vs 51.2% do mercado).\", \"pesos\": {\"estatisticas_nba\": 0.5, \"fadiga_calendario_nba\": 0.6, \"noticias_moral_nba\": 0.25}}, {\"jurado\": \"Phil Jackson\", \"probabilidade\": 0.6722614099847544, \"confianca\": 0.45, \"veredito\": \"favoravel\", \"justificacao\": \"Phil Jackson: Dou valor ao contexto e à energia à volta da equipa. Ouvi 3 especialista(s) (estatisticas_nba, fadiga_calendario_nba, noticias_moral_nba) e cheguei a 67.2% (vs 51.2% do mercado).\", \"pesos\": {\"estatisticas_nba\": 0.5, \"fadiga_calendario_nba\": 0.4, \"noticias_moral_nba\": 0.45}}, {\"jurado\": \"Gregg Popovich\", \"probabilidade\": 0.6753531974243681, \"confianca\": 0.3833333333333333, \"veredito\": \"favoravel\", \"justificacao\": \"Gregg Popovich: Sou o mais cético — não me impressiono com números bonitos sem substância. Ouvi 3 especialista(s) (estatisticas_nba, fadiga_calendario_nba, noticias_moral_nba) e cheguei a 67.5% (vs 51.2% do mercado).\", \"pesos\": {\"estatisticas_nba\": 0.5, \"fadiga_calendario_nba\": 0.4, \"noticias_moral_nba\": 0.25}}], \"presidente\": {\"nome\": \"David Stern\", \"probabilidade_final\": 0.6752710337817799, \"confianca\": 0.4693343678160919, \"desacordo_entre_jurados\": 0.0101, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "nba",
+      "post_mortem": null
+    },
     {
       "id": 410,
       "fixture_id": 21718070,
