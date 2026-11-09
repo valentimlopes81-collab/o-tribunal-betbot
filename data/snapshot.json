@@ -1,16 +1,16 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-08T11:43:26.855029+00:00",
+  "generated_at": "2026-11-09T10:59:16.167275+00:00",
   "bankroll": {
-    "current": 1089.7,
+    "current": 1034.8,
     "starting": 1000.0,
-    "profit": 89.7,
-    "roi_pct": 11.07,
-    "win_rate_pct": 60.49,
-    "settled_count": 81,
-    "won_count": 49,
-    "lost_count": 32,
-    "pending_count": 12
+    "profit": 34.8,
+    "roi_pct": 3.78,
+    "win_rate_pct": 56.52,
+    "settled_count": 92,
+    "won_count": 52,
+    "lost_count": 40,
+    "pending_count": 0
   },
   "bankroll_history": [
     {
@@ -158,7 +158,7 @@
       "sport": "futebol"
     },
     {
-      "id": 111,
+      "id": 113,
       "date": "2026-11-08",
       "balance": 1089.6999999999998,
       "bets_placed": 9,
@@ -166,55 +166,67 @@
       "bets_lost": 4,
       "staked": 90.0,
       "profit": 5.849999999999994,
-      "created_at": "2026-11-08 11:29:30",
+      "created_at": "2026-11-08 12:02:17",
+      "sport": "futebol"
+    },
+    {
+      "id": 114,
+      "date": "2026-11-09",
+      "balance": 1034.7999999999997,
+      "bets_placed": 11,
+      "bets_won": 3,
+      "bets_lost": 8,
+      "staked": 110.0,
+      "profit": -54.9,
+      "created_at": "2026-11-09 10:51:43",
       "sport": "futebol"
     }
   ],
   "jurados_ranking": [
     {
       "jurado": "Marquês de Pombal",
-      "acertos": 49,
-      "erros": 29,
+      "acertos": 52,
+      "erros": 37,
       "abstencoes": 0,
-      "total_votos": 78,
-      "total_votos_decisivos": 78,
-      "precisao_pct": 62.8
+      "total_votos": 89,
+      "total_votos_decisivos": 89,
+      "precisao_pct": 58.4
     },
     {
       "jurado": "Luís Godinho",
-      "acertos": 49,
-      "erros": 29,
+      "acertos": 52,
+      "erros": 37,
       "abstencoes": 0,
-      "total_votos": 78,
-      "total_votos_decisivos": 78,
-      "precisao_pct": 62.8
+      "total_votos": 89,
+      "total_votos_decisivos": 89,
+      "precisao_pct": 58.4
     },
     {
       "jurado": "D. Afonso Henriques",
-      "acertos": 49,
-      "erros": 29,
+      "acertos": 52,
+      "erros": 37,
       "abstencoes": 0,
-      "total_votos": 78,
-      "total_votos_decisivos": 78,
-      "precisao_pct": 62.8
+      "total_votos": 89,
+      "total_votos_decisivos": 89,
+      "precisao_pct": 58.4
     },
     {
       "jurado": "Padre António Vieira",
-      "acertos": 49,
-      "erros": 29,
+      "acertos": 52,
+      "erros": 37,
       "abstencoes": 0,
-      "total_votos": 78,
-      "total_votos_decisivos": 78,
-      "precisao_pct": 62.8
+      "total_votos": 89,
+      "total_votos_decisivos": 89,
+      "precisao_pct": 58.4
     },
     {
       "jurado": "Inquisidor",
-      "acertos": 48,
-      "erros": 29,
+      "acertos": 51,
+      "erros": 37,
       "abstencoes": 1,
-      "total_votos": 78,
-      "total_votos_decisivos": 77,
-      "precisao_pct": 62.3
+      "total_votos": 89,
+      "total_votos_decisivos": 88,
+      "precisao_pct": 58.0
     },
     {
       "jurado": "Jurado 1",
@@ -265,22 +277,22 @@
   "risco_var": {
     "n_simulacoes": 3000,
     "n_apostas_futuras": 30,
-    "n_apostas_historico_usado": 81,
-    "banca_atual": 1089.7,
-    "banca_pior_caso_95": 1042.39,
-    "perda_var_95": 47.31,
-    "banca_mediana_simulada": 1124.31,
-    "banca_melhor_caso_95": 1205.83,
-    "drawdown_mediano_pct": 3.5,
-    "drawdown_pior_caso_95_pct": 7.5,
+    "n_apostas_historico_usado": 92,
+    "banca_atual": 1034.8,
+    "banca_pior_caso_95": 962.33,
+    "perda_var_95": 72.47,
+    "banca_mediana_simulada": 1045.44,
+    "banca_melhor_caso_95": 1129.94,
+    "drawdown_mediano_pct": 4.4,
+    "drawdown_pior_caso_95_pct": 9.2,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-07T15:55:16.526248+00:00",
+    "last_attempt_at": "2026-11-08T12:07:57.424297+00:00",
     "ok": true,
     "error": null
   },
-  "aposta_do_dia_id": 405,
+  "aposta_do_dia_id": null,
   "bets": [
     {
       "id": 397,
@@ -298,9 +310,9 @@
       "edge": 0.2853101396672371,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-09T10:50:39.619988+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.6901684392623788,
       "confidence": 0.38287287999999986,
@@ -312,7 +324,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +28.5% e confiança de 38%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 398,
@@ -330,9 +342,9 @@
       "edge": 0.2583607865517189,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 14.76,
+      "settled_at": "2026-11-09T10:50:49.329285+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.9358675616194696,
       "confidence": 0.36725307999999984,
@@ -344,7 +356,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +25.8% e confiança de 37% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 399,
@@ -362,9 +374,9 @@
       "edge": 0.19819454062311348,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-09T10:50:59.033041+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.83070560956682,
       "confidence": 0.36120623999999973,
@@ -376,7 +388,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +19.8% e confiança de 36%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 400,
@@ -394,9 +406,9 @@
       "edge": 0.22877296958078985,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-09T10:51:11.878482+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.8840809643383258,
       "confidence": 0.35281430399999986,
@@ -408,7 +420,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +22.9% e confiança de 35%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 401,
@@ -426,9 +438,9 @@
       "edge": 0.2754195383985498,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-09T10:51:13.280181+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.8752995623937507,
       "confidence": 0.34031846399999993,
@@ -440,7 +452,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +27.5% e confiança de 34%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 402,
@@ -458,9 +470,9 @@
       "edge": 0.2254440287614109,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-09T10:51:15.389184+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.8735321687484492,
       "confidence": 0.3354809919999997,
@@ -472,7 +484,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +22.5% e confiança de 34%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 403,
@@ -490,9 +502,9 @@
       "edge": 0.18882669922831252,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 23.4,
+      "settled_at": "2026-11-09T10:51:16.954120+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.6161771265787399,
       "confidence": 0.34836143999999997,
@@ -504,7 +516,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +18.9% e confiança de 35% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 404,
@@ -522,9 +534,9 @@
       "edge": 0.2117502676761217,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 16.94,
+      "settled_at": "2026-11-09T10:51:24.649660+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.8020690398130756,
       "confidence": 0.32520515199999994,
@@ -536,7 +548,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +21.2% e confiança de 33% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 405,
@@ -554,9 +566,9 @@
       "edge": 0.16431376099574846,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-09T10:51:26.959420+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.719869316551304,
       "confidence": 0.38372919999999977,
@@ -568,7 +580,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +16.4% e confiança de 38%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 406,
@@ -586,9 +598,9 @@
       "edge": 0.16581721133115535,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-09T10:51:34.453095+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.5877581396011975,
       "confidence": 0.35649647999999995,
@@ -600,7 +612,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +16.6% e confiança de 36%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 407,
@@ -618,7 +630,7 @@
       "edge": 0.1593404570835052,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
+      "status": "cancelado",
       "payout": null,
       "settled_at": null,
       "created_at": "2026-11-08 11:43:26",
@@ -627,10 +639,10 @@
       "tribunal_placar": "5-0",
       "agentes_disponiveis": "[\"estatisticas\", \"fadiga_calendario\", \"arbitro\", \"lesoes\", \"noticias_moral\"]",
       "agentes_indisponiveis": "[\"forma_recente\", \"casa_fora\"]",
-      "reasoning": "[\"A aposta é em mais de 2.5 golos no total do jogo, a odd de 1.8. Modelo Poisson/Dixon-Coles estima 71.5% de probabilidade para esta seleção, face a 55.6% implícita pela odd de mercado. Também conta a favor: Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas. E, por fim, Sinais nas notícias: 2 palavra(s)-chave sobre Sunderland AFC, 0 sobre Chelsea FC (contagem simples, sem leitura de contexto). O Tribunal foi unânime, com confiança de 35% no palpite -- +15.9% acima do que a odd de mercado implica.\"]",
+      "reasoning": "[\"Valor desapareceu na revisão de última hora (margem=+15.0%, confiança=24%).\"]",
       "processo_json": "{\"especialistas\": [{\"agente\": \"estatisticas\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7148960126390608, \"confianca\": 0.5925, \"veredito\": \"favoravel\", \"justificacao\": \"Modelo Poisson/Dixon-Coles estima 71.5% de probabilidade para esta seleção, face a 55.6% implícita pela odd de mercado.\"}, {\"agente\": \"forma_recente\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente de forma recente só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"casa_fora\", \"disponivel\": false, \"aplicavel\": false, \"probabilidade\": null, \"confianca\": 0.0, \"veredito\": \"abstem\", \"justificacao\": \"Agente casa/fora só avalia 1X2/dupla hipótese/draw-no-bet nesta versão.\"}, {\"agente\": \"fadiga_calendario\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7148960126390608, \"confianca\": 0.2, \"veredito\": \"neutro\", \"justificacao\": \"Ambas as equipas tiveram descanso normal antes deste jogo.\"}, {\"agente\": \"arbitro\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7148960126390608, \"confianca\": 0.1, \"veredito\": \"neutro\", \"justificacao\": \"Árbitro do jogo: Jarred Gillett. Ainda sem histórico suficiente de cartões acumulado (menos de 1 jogos) para ajustar a probabilidade.\"}, {\"agente\": \"lesoes\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7148960126390608, \"confianca\": 0.35, \"veredito\": \"neutro\", \"justificacao\": \"Sem ausências confirmadas (lesão/suspensão) em nenhuma das equipas.\"}, {\"agente\": \"noticias_moral\", \"disponivel\": true, \"aplicavel\": true, \"probabilidade\": 0.7148960126390608, \"confianca\": 0.25, \"veredito\": \"neutro\", \"justificacao\": \"Sinais nas notícias: 2 palavra(s)-chave sobre Sunderland AFC, 0 sobre Chelsea FC (contagem simples, sem leitura de contexto).\"}], \"jurados\": [{\"jurado\": \"Marquês de Pombal\", \"probabilidade\": 0.7148960126390607, \"confianca\": 0.36960000000000004, \"veredito\": \"favoravel\", \"justificacao\": \"Marquês de Pombal: Dou mais peso aos números frios. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 71.5% (vs 55.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.948, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}, {\"jurado\": \"Luís Godinho\", \"probabilidade\": 0.7148960126390606, \"confianca\": 0.29080000000000006, \"veredito\": \"favoravel\", \"justificacao\": \"Luís Godinho: Olho sobretudo para o árbitro e a disciplina do jogo. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 71.5% (vs 55.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.474, \"fadiga_calendario\": 0.2, \"arbitro\": 0.18, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}, {\"jurado\": \"D. Afonso Henriques\", \"probabilidade\": 0.7148960126390608, \"confianca\": 0.3745, \"veredito\": \"favoravel\", \"justificacao\": \"D. Afonso Henriques: Preocupo-me com o estado físico das equipas. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 71.5% (vs 55.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.593, \"fadiga_calendario\": 0.3, \"arbitro\": 0.1, \"lesoes\": 0.63, \"noticias_moral\": 0.25}}, {\"jurado\": \"Padre António Vieira\", \"probabilidade\": 0.7148960126390609, \"confianca\": 0.33849999999999997, \"veredito\": \"favoravel\", \"justificacao\": \"Padre António Vieira: Dou valor ao contexto e ao ambiente à volta da equipa. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 71.5% (vs 55.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.593, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.45}}, {\"jurado\": \"Inquisidor\", \"probabilidade\": 0.7148960126390609, \"confianca\": 0.2985, \"veredito\": \"favoravel\", \"justificacao\": \"Inquisidor: Sou o mais cético — só valido quando o sinal é mesmo forte em todos os lados. Ouvi 5 especialista(s) (estatisticas, fadiga_calendario, arbitro, lesoes, noticias_moral) e cheguei a 71.5% (vs 55.6% do mercado).\", \"pesos\": {\"estatisticas\": 0.593, \"fadiga_calendario\": 0.2, \"arbitro\": 0.1, \"lesoes\": 0.35, \"noticias_moral\": 0.25}}], \"presidente\": {\"nome\": \"D. João II\", \"probabilidade_final\": 0.7148960126390608, \"confianca\": 0.35349935999999976, \"desacordo_entre_jurados\": 0.0, \"placar\": \"5-0\", \"decisao\": \"aposta\"}}",
       "fase": "preliminar",
-      "revisado_em": null,
+      "revisado_em": "2026-11-08T12:00:52.709434+00:00",
       "sport": "futebol",
       "post_mortem": null
     },
@@ -650,9 +662,9 @@
       "edge": 0.15521701300807722,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-09T10:51:43.375805+00:00",
       "created_at": "2026-11-08 11:43:26",
       "final_probability": 0.7107725685636328,
       "confidence": 0.3317131839999999,
@@ -664,7 +676,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +15.5% e confiança de 33%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 384,
