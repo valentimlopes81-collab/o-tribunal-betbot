@@ -1,18 +1,18 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-10T11:05:19.331041+00:00",
+  "generated_at": "2026-11-10T11:11:39.465931+00:00",
   "multiplas": [
     {
-      "id": 8,
+      "id": 9,
       "sport": "nba",
       "date": "2026-11-10",
-      "pernas_json": "[{\"fixture_id\": 21718078, \"jogo\": \"Utah Jazz vs Miami Heat\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-11T02:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Klay Thompson_under\", \"jogador\": \"Klay Thompson\", \"line\": 2.5, \"odd\": 1.552, \"confianca\": 0.3}, {\"fixture_id\": 21718080, \"jogo\": \"Portland Trail Blazers vs Oklahoma City Thunder\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-11T04:00:00.000Z\", \"market\": \"player_points\", \"selection\": \"Robert Williams III_over\", \"jogador\": \"Robert Williams III\", \"line\": 5.5, \"odd\": 1.725, \"confianca\": 0.33499999999999996}, {\"fixture_id\": 21718076, \"jogo\": \"Phoenix Suns vs LA Clippers\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-11T02:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Devin Booker_under\", \"jogador\": \"Devin Booker\", \"line\": 3.5, \"odd\": 1.813, \"confianca\": 0.33999999999999997}, {\"fixture_id\": 21718074, \"jogo\": \"New York Knicks vs Milwaukee Bucks\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-11T00:30:00.000Z\", \"market\": \"player_points\", \"selection\": \"OG Anunoby_under\", \"jogador\": \"OG Anunoby\", \"line\": 17.5, \"odd\": 1.847, \"confianca\": 0.345}]",
-      "odd_total": 8.9649013692,
+      "pernas_json": "[{\"fixture_id\": 21718078, \"jogo\": \"Utah Jazz vs Miami Heat\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-11T02:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Klay Thompson_under\", \"jogador\": \"Klay Thompson\", \"line\": 2.5, \"odd\": 1.552, \"confianca\": 0.3}, {\"fixture_id\": 21718080, \"jogo\": \"Portland Trail Blazers vs Oklahoma City Thunder\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-11T04:00:00.000Z\", \"market\": \"player_points\", \"selection\": \"Robert Williams III_over\", \"jogador\": \"Robert Williams III\", \"line\": 5.5, \"odd\": 1.725, \"confianca\": 0.33499999999999996}, {\"fixture_id\": 21718076, \"jogo\": \"Phoenix Suns vs LA Clippers\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-11T02:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Devin Booker_under\", \"jogador\": \"Devin Booker\", \"line\": 3.5, \"odd\": 1.813, \"confianca\": 0.33999999999999997}]",
+      "odd_total": 4.8537636,
       "stake": 10.0,
       "status": "pending",
       "payout": null,
       "settled_at": null,
-      "created_at": "2026-11-10 11:05:19",
+      "created_at": "2026-11-10 11:11:39",
       "pernas": [
         {
           "fixture_id": 21718078,
@@ -49,18 +49,6 @@
           "line": 3.5,
           "odd": 1.813,
           "confianca": 0.33999999999999997
-        },
-        {
-          "fixture_id": 21718074,
-          "jogo": "New York Knicks vs Milwaukee Bucks",
-          "league": "NBA",
-          "kickoff_utc": "2026-11-11T00:30:00.000Z",
-          "market": "player_points",
-          "selection": "OG Anunoby_under",
-          "jogador": "OG Anunoby",
-          "line": 17.5,
-          "odd": 1.847,
-          "confianca": 0.345
         }
       ]
     }
