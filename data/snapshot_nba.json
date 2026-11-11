@@ -1,16 +1,16 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-11T12:00:55.955465+00:00",
+  "generated_at": "2026-11-11T12:07:32.282052+00:00",
   "bankroll": {
-    "current": 1220.91,
+    "current": 1259.45,
     "starting": 1000.0,
-    "profit": 220.91,
-    "roi_pct": 16.36,
+    "profit": 259.45,
+    "roi_pct": 19.22,
     "win_rate_pct": 60.74,
     "settled_count": 135,
     "won_count": 82,
     "lost_count": 53,
-    "pending_count": 12
+    "pending_count": 13
   },
   "bankroll_history": [
     {
@@ -242,15 +242,15 @@
       "sport": "nba"
     },
     {
-      "id": 126,
+      "id": 127,
       "date": "2026-11-11",
-      "balance": 1220.9099999999999,
-      "bets_placed": 11,
-      "bets_won": 9,
+      "balance": 1259.4476359999999,
+      "bets_placed": 12,
+      "bets_won": 10,
       "bets_lost": 2,
-      "staked": 110.0,
-      "profit": 60.77000000000001,
-      "created_at": "2026-11-11 12:00:05",
+      "staked": 120.0,
+      "profit": 99.307636,
+      "created_at": "2026-11-11 12:04:59",
       "sport": "nba"
     }
   ],
@@ -305,22 +305,54 @@
     "n_simulacoes": 3000,
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 135,
-    "banca_atual": 1220.91,
-    "banca_pior_caso_95": 1181.9,
-    "perda_var_95": 39.01,
-    "banca_mediana_simulada": 1268.59,
-    "banca_melhor_caso_95": 1353.33,
-    "drawdown_mediano_pct": 3.0,
+    "banca_atual": 1259.45,
+    "banca_pior_caso_95": 1219.86,
+    "perda_var_95": 39.59,
+    "banca_mediana_simulada": 1309.7,
+    "banca_melhor_caso_95": 1393.23,
+    "drawdown_mediano_pct": 2.9,
     "drawdown_pior_caso_95_pct": 6.3,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-11T11:12:45.549407+00:00",
-    "ok": false,
-    "error": "sqlite3.OperationalError: disk I/O error"
+    "last_attempt_at": "2026-11-11T12:05:03.585075+00:00",
+    "ok": true,
+    "error": null
   },
   "aposta_do_dia_id": 435,
   "bets": [
+    {
+      "id": 447,
+      "fixture_id": 21718088,
+      "league": "NBA",
+      "home_team": "Utah Jazz",
+      "away_team": "Orlando Magic",
+      "kickoff_utc": "2026-11-12T02:00:00.000Z",
+      "market": "player_assists",
+      "selection": "Lauri Markkanen_over",
+      "line": 1.5,
+      "model_prob": 0.6380738955602685,
+      "market_odds": 1.847,
+      "implied_prob": 0.5414185165132648,
+      "edge": 0.09665537904700372,
+      "bookmaker": "fanduel",
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-11 12:07:32",
+      "final_probability": 0.6380738955602685,
+      "confidence": 0.33999999999999997,
+      "tribunal_placar": "n/a (player prop)",
+      "agentes_disponiveis": "[]",
+      "agentes_indisponiveis": "[]",
+      "reasoning": "[\"A aposta é em Lauri Markkanen a fazer mais de 1.5 assistências, a odd de 1.847. Jogador: média ponderada de 2.0 em 20 jogos recentes (8 da época atual, 2026-27), desvio-padrão 1.5 (empírico 1.2, ajustado para cima por amostra ainda curta — desaparece conforme a época avança). O Tribunal foi unânime, com confiança de 34% no palpite -- +9.7% acima do que a odd de mercado implica. Nota: linha de jogador ainda não passa pelo Tribunal completo (sem especialistas dedicados a jogadores individuais nesta versão) — confiança reflete a amostra disponível, mas sem bloquear o nº de apostas por causa disso.\"]",
+      "processo_json": "{\"modelo_jogador\": {\"media\": 2.0357142857142856, \"desvio\": 1.5162506504484747, \"desvio_empirico\": 1.2095495872768642, \"n_jogos\": 20, \"n_jogos_epoca_atual\": 8, \"soma_pesos\": 14.0}}",
+      "fase": "preliminar",
+      "revisado_em": null,
+      "sport": "nba",
+      "post_mortem": null
+    },
     {
       "id": 435,
       "fixture_id": 21718084,
