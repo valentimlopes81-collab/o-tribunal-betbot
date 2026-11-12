@@ -1,7 +1,57 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-11T12:09:34.639250+00:00",
+  "generated_at": "2026-11-12T12:33:59.725040+00:00",
   "multiplas": [
+    {
+      "id": 11,
+      "sport": "nba",
+      "date": "2026-11-12",
+      "pernas_json": "[{\"fixture_id\": 21718092, \"jogo\": \"Washington Wizards vs Detroit Pistons\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-13T00:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"John Collins_under\", \"jogador\": \"John Collins\", \"line\": 1.5, \"odd\": 1.595, \"confianca\": 0.3}, {\"fixture_id\": 21718094, \"jogo\": \"Phoenix Suns vs Charlotte Hornets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-13T02:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Naz Reid_under\", \"jogador\": \"Naz Reid\", \"line\": 2.5, \"odd\": 1.862, \"confianca\": 0.31}, {\"fixture_id\": 21718091, \"jogo\": \"Philadelphia 76ers vs Toronto Raptors\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-13T00:00:00.000Z\", \"market\": \"over_under\", \"selection\": \"over\", \"jogador\": null, \"line\": 220.5, \"odd\": 1.87, \"confianca\": 0.48167009523809534}]",
+      "odd_total": 5.5536943,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-12 12:33:59",
+      "pernas": [
+        {
+          "fixture_id": 21718092,
+          "jogo": "Washington Wizards vs Detroit Pistons",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-13T00:00:00.000Z",
+          "market": "player_assists",
+          "selection": "John Collins_under",
+          "jogador": "John Collins",
+          "line": 1.5,
+          "odd": 1.595,
+          "confianca": 0.3
+        },
+        {
+          "fixture_id": 21718094,
+          "jogo": "Phoenix Suns vs Charlotte Hornets",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-13T02:00:00.000Z",
+          "market": "player_assists",
+          "selection": "Naz Reid_under",
+          "jogador": "Naz Reid",
+          "line": 2.5,
+          "odd": 1.862,
+          "confianca": 0.31
+        },
+        {
+          "fixture_id": 21718091,
+          "jogo": "Philadelphia 76ers vs Toronto Raptors",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-13T00:00:00.000Z",
+          "market": "over_under",
+          "selection": "over",
+          "jogador": null,
+          "line": 220.5,
+          "odd": 1.87,
+          "confianca": 0.48167009523809534
+        }
+      ]
+    },
     {
       "id": 10,
       "sport": "nba",
@@ -9,9 +59,9 @@
       "pernas_json": "[{\"fixture_id\": 21718087, \"jogo\": \"New Orleans Pelicans vs Brooklyn Nets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-12T01:00:00.000Z\", \"market\": \"1x2\", \"selection\": \"home\", \"jogador\": null, \"line\": null, \"odd\": 1.556, \"confianca\": 0.3882284463471209}, {\"fixture_id\": 21718085, \"jogo\": \"Memphis Grizzlies vs Denver Nuggets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-12T01:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Jerami Grant_over\", \"jogador\": \"Jerami Grant\", \"line\": 1.5, \"odd\": 1.725, \"confianca\": 0.3}, {\"fixture_id\": 21718089, \"jogo\": \"Houston Rockets vs Golden State Warriors\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-12T02:30:00.000Z\", \"market\": \"player_points\", \"selection\": \"Georges Niang_over\", \"jogador\": \"Georges Niang\", \"line\": 7.5, \"odd\": 1.877, \"confianca\": 0.31}]",
       "odd_total": 5.038055700000001,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-12 12:33:59",
       "created_at": "2026-11-11 12:05:00",
       "pernas": [
         {
@@ -104,9 +154,9 @@
     }
   ],
   "resumo": {
-    "total": 2,
-    "liquidadas": 1,
+    "total": 3,
+    "liquidadas": 2,
     "ganhas": 1,
-    "win_rate_pct": 100.0
+    "win_rate_pct": 50.0
   }
 }
