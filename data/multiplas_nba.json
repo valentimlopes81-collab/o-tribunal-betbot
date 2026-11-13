@@ -1,7 +1,69 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-12T12:33:59.725040+00:00",
+  "generated_at": "2026-11-13T11:33:30.174734+00:00",
   "multiplas": [
+    {
+      "id": 12,
+      "sport": "nba",
+      "date": "2026-11-13",
+      "pernas_json": "[{\"fixture_id\": 21718103, \"jogo\": \"LA Clippers vs Oklahoma City Thunder\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-14T03:30:00.000Z\", \"market\": \"1x2\", \"selection\": \"away\", \"jogador\": null, \"line\": null, \"odd\": 1.357, \"confianca\": 0.3925798363636363}, {\"fixture_id\": 21718095, \"jogo\": \"Indiana Pacers vs New York Knicks\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-14T00:00:00.000Z\", \"market\": \"1x2\", \"selection\": \"away\", \"jogador\": null, \"line\": null, \"odd\": 1.372, \"confianca\": 0.3970432206646108}, {\"fixture_id\": 21718097, \"jogo\": \"Miami Heat vs Cleveland Cavaliers\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-14T01:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Klay Thompson_under\", \"jogador\": \"Klay Thompson\", \"line\": 2.5, \"odd\": 1.529, \"confianca\": 0.31}, {\"fixture_id\": 21718100, \"jogo\": \"Houston Rockets vs Utah Jazz\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-14T01:30:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Jabari Smith_over\", \"jogador\": \"Jabari Smith\", \"line\": 1.5, \"odd\": 1.633, \"confianca\": 0.32}]",
+      "odd_total": 4.648658350028,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-13 11:33:30",
+      "pernas": [
+        {
+          "fixture_id": 21718103,
+          "jogo": "LA Clippers vs Oklahoma City Thunder",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-14T03:30:00.000Z",
+          "market": "1x2",
+          "selection": "away",
+          "jogador": null,
+          "line": null,
+          "odd": 1.357,
+          "confianca": 0.3925798363636363
+        },
+        {
+          "fixture_id": 21718095,
+          "jogo": "Indiana Pacers vs New York Knicks",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-14T00:00:00.000Z",
+          "market": "1x2",
+          "selection": "away",
+          "jogador": null,
+          "line": null,
+          "odd": 1.372,
+          "confianca": 0.3970432206646108
+        },
+        {
+          "fixture_id": 21718097,
+          "jogo": "Miami Heat vs Cleveland Cavaliers",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-14T01:00:00.000Z",
+          "market": "player_rebounds",
+          "selection": "Klay Thompson_under",
+          "jogador": "Klay Thompson",
+          "line": 2.5,
+          "odd": 1.529,
+          "confianca": 0.31
+        },
+        {
+          "fixture_id": 21718100,
+          "jogo": "Houston Rockets vs Utah Jazz",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-14T01:30:00.000Z",
+          "market": "player_assists",
+          "selection": "Jabari Smith_over",
+          "jogador": "Jabari Smith",
+          "line": 1.5,
+          "odd": 1.633,
+          "confianca": 0.32
+        }
+      ]
+    },
     {
       "id": 11,
       "sport": "nba",
@@ -9,9 +71,9 @@
       "pernas_json": "[{\"fixture_id\": 21718092, \"jogo\": \"Washington Wizards vs Detroit Pistons\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-13T00:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"John Collins_under\", \"jogador\": \"John Collins\", \"line\": 1.5, \"odd\": 1.595, \"confianca\": 0.3}, {\"fixture_id\": 21718094, \"jogo\": \"Phoenix Suns vs Charlotte Hornets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-13T02:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Naz Reid_under\", \"jogador\": \"Naz Reid\", \"line\": 2.5, \"odd\": 1.862, \"confianca\": 0.31}, {\"fixture_id\": 21718091, \"jogo\": \"Philadelphia 76ers vs Toronto Raptors\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-13T00:00:00.000Z\", \"market\": \"over_under\", \"selection\": \"over\", \"jogador\": null, \"line\": 220.5, \"odd\": 1.87, \"confianca\": 0.48167009523809534}]",
       "odd_total": 5.5536943,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-13 11:33:30",
       "created_at": "2026-11-12 12:33:59",
       "pernas": [
         {
@@ -154,9 +216,9 @@
     }
   ],
   "resumo": {
-    "total": 3,
-    "liquidadas": 2,
+    "total": 4,
+    "liquidadas": 3,
     "ganhas": 1,
-    "win_rate_pct": 50.0
+    "win_rate_pct": 33.33
   }
 }
