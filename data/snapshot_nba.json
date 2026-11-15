@@ -1,16 +1,16 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-14T16:34:09.019736+00:00",
+  "generated_at": "2026-11-15T09:21:53.236652+00:00",
   "bankroll": {
-    "current": 975.26,
+    "current": 984.35,
     "starting": 1000.0,
-    "profit": -24.74,
-    "roi_pct": -1.47,
+    "profit": -15.65,
+    "roi_pct": -0.93,
     "win_rate_pct": 51.19,
     "settled_count": 168,
     "won_count": 86,
     "lost_count": 82,
-    "pending_count": 11
+    "pending_count": 10
   },
   "bankroll_history": [
     {
@@ -288,6 +288,18 @@
       "profit": -55.0,
       "created_at": "2026-11-14 16:20:12",
       "sport": "nba"
+    },
+    {
+      "id": 151,
+      "date": "2026-11-15",
+      "balance": 984.3476359999999,
+      "bets_placed": 2,
+      "bets_won": 1,
+      "bets_lost": 1,
+      "staked": 20.0,
+      "profit": 9.09,
+      "created_at": "2026-11-15 09:21:27",
+      "sport": "nba"
     }
   ],
   "jurados_ranking": [
@@ -341,17 +353,17 @@
     "n_simulacoes": 3000,
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 168,
-    "banca_atual": 975.26,
-    "banca_pior_caso_95": 882.9,
-    "perda_var_95": 92.36,
-    "banca_mediana_simulada": 967.63,
-    "banca_melhor_caso_95": 1050.8,
+    "banca_atual": 984.35,
+    "banca_pior_caso_95": 889.33,
+    "perda_var_95": 95.02,
+    "banca_mediana_simulada": 976.44,
+    "banca_melhor_caso_95": 1066.41,
     "drawdown_mediano_pct": 5.5,
-    "drawdown_pior_caso_95_pct": 11.5,
+    "drawdown_pior_caso_95_pct": 11.6,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-13T12:15:17.910552+00:00",
+    "last_attempt_at": "2026-11-14T16:36:51.387078+00:00",
     "ok": true,
     "error": null
   },
@@ -1348,38 +1360,6 @@
       "revisado_em": null,
       "sport": "nba",
       "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +5.6% e confiança de 31%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
-    },
-    {
-      "id": 447,
-      "fixture_id": 21718088,
-      "league": "NBA",
-      "home_team": "Utah Jazz",
-      "away_team": "Orlando Magic",
-      "kickoff_utc": "2026-11-12T02:00:00.000Z",
-      "market": "player_assists",
-      "selection": "Lauri Markkanen_over",
-      "line": 1.5,
-      "model_prob": 0.6380738955602685,
-      "market_odds": 1.847,
-      "implied_prob": 0.5414185165132648,
-      "edge": 0.09665537904700372,
-      "bookmaker": "fanduel",
-      "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
-      "created_at": "2026-11-11 12:07:32",
-      "final_probability": 0.6380738955602685,
-      "confidence": 0.33999999999999997,
-      "tribunal_placar": "n/a (player prop)",
-      "agentes_disponiveis": "[]",
-      "agentes_indisponiveis": "[]",
-      "reasoning": "[\"A aposta é em Lauri Markkanen a fazer mais de 1.5 assistências, a odd de 1.847. Jogador: média ponderada de 2.0 em 20 jogos recentes (8 da época atual, 2026-27), desvio-padrão 1.5 (empírico 1.2, ajustado para cima por amostra ainda curta — desaparece conforme a época avança). O Tribunal foi unânime, com confiança de 34% no palpite -- +9.7% acima do que a odd de mercado implica. Nota: linha de jogador ainda não passa pelo Tribunal completo (sem especialistas dedicados a jogadores individuais nesta versão) — confiança reflete a amostra disponível, mas sem bloquear o nº de apostas por causa disso.\"]",
-      "processo_json": "{\"modelo_jogador\": {\"media\": 2.0357142857142856, \"desvio\": 1.5162506504484747, \"desvio_empirico\": 1.2095495872768642, \"n_jogos\": 20, \"n_jogos_epoca_atual\": 8, \"soma_pesos\": 14.0}}",
-      "fase": "preliminar",
-      "revisado_em": null,
-      "sport": "nba",
-      "post_mortem": null
     },
     {
       "id": 435,
