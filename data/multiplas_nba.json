@@ -1,7 +1,57 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-15T09:21:57.028300+00:00",
+  "generated_at": "2026-11-15T09:44:22.655765+00:00",
   "multiplas": [
+    {
+      "id": 14,
+      "sport": "nba",
+      "date": "2026-11-15",
+      "pernas_json": "[{\"fixture_id\": 21718109, \"jogo\": \"Philadelphia 76ers vs Indiana Pacers\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-15T18:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Anfernee Simons_over\", \"jogador\": \"Anfernee Simons\", \"line\": 1.5, \"odd\": 1.5, \"confianca\": 0.32999999999999996}, {\"fixture_id\": 21718116, \"jogo\": \"Milwaukee Bucks vs Atlanta Hawks\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-16T01:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Nate Ament_under\", \"jogador\": \"Nate Ament\", \"line\": 3.5, \"odd\": 1.649, \"confianca\": 0.31}, {\"fixture_id\": 21718111, \"jogo\": \"LA Clippers vs Charlotte Hornets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-15T21:30:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Moussa Diabate_over\", \"jogador\": \"Moussa Diabate\", \"line\": 1.5, \"odd\": 1.649, \"confianca\": 0.3}]",
+      "odd_total": 4.0788015,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-15 09:44:22",
+      "pernas": [
+        {
+          "fixture_id": 21718109,
+          "jogo": "Philadelphia 76ers vs Indiana Pacers",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-15T18:00:00.000Z",
+          "market": "player_rebounds",
+          "selection": "Anfernee Simons_over",
+          "jogador": "Anfernee Simons",
+          "line": 1.5,
+          "odd": 1.5,
+          "confianca": 0.32999999999999996
+        },
+        {
+          "fixture_id": 21718116,
+          "jogo": "Milwaukee Bucks vs Atlanta Hawks",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-16T01:00:00.000Z",
+          "market": "player_rebounds",
+          "selection": "Nate Ament_under",
+          "jogador": "Nate Ament",
+          "line": 3.5,
+          "odd": 1.649,
+          "confianca": 0.31
+        },
+        {
+          "fixture_id": 21718111,
+          "jogo": "LA Clippers vs Charlotte Hornets",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-15T21:30:00.000Z",
+          "market": "player_assists",
+          "selection": "Moussa Diabate_over",
+          "jogador": "Moussa Diabate",
+          "line": 1.5,
+          "odd": 1.649,
+          "confianca": 0.3
+        }
+      ]
+    },
     {
       "id": 13,
       "sport": "nba",
@@ -266,7 +316,7 @@
     }
   ],
   "resumo": {
-    "total": 5,
+    "total": 6,
     "liquidadas": 5,
     "ganhas": 2,
     "win_rate_pct": 40.0
