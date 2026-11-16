@@ -1,7 +1,57 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-15T09:44:22.655765+00:00",
+  "generated_at": "2026-11-16T12:05:47.967587+00:00",
   "multiplas": [
+    {
+      "id": 15,
+      "sport": "nba",
+      "date": "2026-11-16",
+      "pernas_json": "[{\"fixture_id\": 21718119, \"jogo\": \"Cleveland Cavaliers vs Chicago Bulls\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-17T00:00:00.000Z\", \"market\": \"1x2\", \"selection\": \"home\", \"jogador\": null, \"line\": null, \"odd\": 1.282, \"confianca\": 0.32338748337738205}, {\"fixture_id\": 21718122, \"jogo\": \"Miami Heat vs Houston Rockets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-17T00:30:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Reed Sheppard_under\", \"jogador\": \"Reed Sheppard\", \"line\": 2.5, \"odd\": 1.575, \"confianca\": 0.31}, {\"fixture_id\": 21718124, \"jogo\": \"New Orleans Pelicans vs Golden State Warriors\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-17T01:00:00.000Z\", \"market\": \"1x2\", \"selection\": \"away\", \"jogador\": null, \"line\": null, \"odd\": 1.658, \"confianca\": 0.32304395053554047}]",
+      "odd_total": 3.3477506999999993,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-16 12:05:47",
+      "pernas": [
+        {
+          "fixture_id": 21718119,
+          "jogo": "Cleveland Cavaliers vs Chicago Bulls",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-17T00:00:00.000Z",
+          "market": "1x2",
+          "selection": "home",
+          "jogador": null,
+          "line": null,
+          "odd": 1.282,
+          "confianca": 0.32338748337738205
+        },
+        {
+          "fixture_id": 21718122,
+          "jogo": "Miami Heat vs Houston Rockets",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-17T00:30:00.000Z",
+          "market": "player_rebounds",
+          "selection": "Reed Sheppard_under",
+          "jogador": "Reed Sheppard",
+          "line": 2.5,
+          "odd": 1.575,
+          "confianca": 0.31
+        },
+        {
+          "fixture_id": 21718124,
+          "jogo": "New Orleans Pelicans vs Golden State Warriors",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-17T01:00:00.000Z",
+          "market": "1x2",
+          "selection": "away",
+          "jogador": null,
+          "line": null,
+          "odd": 1.658,
+          "confianca": 0.32304395053554047
+        }
+      ]
+    },
     {
       "id": 14,
       "sport": "nba",
@@ -316,7 +366,7 @@
     }
   ],
   "resumo": {
-    "total": 6,
+    "total": 7,
     "liquidadas": 5,
     "ganhas": 2,
     "win_rate_pct": 40.0
