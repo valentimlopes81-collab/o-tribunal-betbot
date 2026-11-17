@@ -1,11 +1,11 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-17T10:10:54.297778+00:00",
+  "generated_at": "2026-11-17T10:43:10.124221+00:00",
   "bankroll": {
-    "current": 1028.37,
+    "current": 1008.37,
     "starting": 1000.0,
-    "profit": 28.37,
-    "roi_pct": 1.41,
+    "profit": 8.37,
+    "roi_pct": 0.42,
     "win_rate_pct": 52.74,
     "settled_count": 201,
     "won_count": 106,
@@ -314,15 +314,15 @@
       "sport": "nba"
     },
     {
-      "id": 156,
+      "id": 158,
       "date": "2026-11-17",
-      "balance": 1028.367636,
-      "bets_placed": 12,
+      "balance": 1008.367636,
+      "bets_placed": 14,
       "bets_won": 6,
-      "bets_lost": 6,
-      "staked": 120.0,
-      "profit": -7.289999999999992,
-      "created_at": "2026-11-17 09:55:55",
+      "bets_lost": 8,
+      "staked": 140.0,
+      "profit": -27.289999999999992,
+      "created_at": "2026-11-17 10:33:26",
       "sport": "nba"
     }
   ],
@@ -377,19 +377,19 @@
     "n_simulacoes": 3000,
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 201,
-    "banca_atual": 1028.37,
-    "banca_pior_caso_95": 941.1,
-    "perda_var_95": 87.27,
-    "banca_mediana_simulada": 1028.23,
-    "banca_melhor_caso_95": 1114.33,
+    "banca_atual": 1008.37,
+    "banca_pior_caso_95": 920.41,
+    "perda_var_95": 87.96,
+    "banca_mediana_simulada": 1008.61,
+    "banca_melhor_caso_95": 1094.98,
     "drawdown_mediano_pct": 5.0,
-    "drawdown_pior_caso_95_pct": 10.4,
+    "drawdown_pior_caso_95_pct": 10.6,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
-    "last_attempt_at": "2026-11-16T12:05:57.684679+00:00",
-    "ok": true,
-    "error": null
+    "last_attempt_at": "2026-11-17T10:43:10.080572+00:00",
+    "ok": false,
+    "error": "ModuleNotFoundError: No module named 'joblib'"
   },
   "aposta_do_dia_id": 503,
   "bets": [
