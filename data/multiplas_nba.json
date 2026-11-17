@@ -1,7 +1,57 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-16T12:05:47.967587+00:00",
+  "generated_at": "2026-11-17T10:14:52.506740+00:00",
   "multiplas": [
+    {
+      "id": 16,
+      "sport": "nba",
+      "date": "2026-11-17",
+      "pernas_json": "[{\"fixture_id\": 21718129, \"jogo\": \"Los Angeles Lakers vs Charlotte Hornets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-18T04:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Collin Sexton_under\", \"jogador\": \"Collin Sexton\", \"line\": 2.5, \"odd\": 1.556, \"confianca\": 0.32999999999999996}, {\"fixture_id\": 21718128, \"jogo\": \"San Antonio Spurs vs Detroit Pistons\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-18T01:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Devin Vassell_over\", \"jogador\": \"Devin Vassell\", \"line\": 3.5, \"odd\": 1.847, \"confianca\": 0.32}, {\"fixture_id\": 21718126, \"jogo\": \"Toronto Raptors vs New York Knicks\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-18T00:30:00.000Z\", \"market\": \"asian_handicap\", \"selection\": \"away\", \"jogador\": null, \"line\": -2.5, \"odd\": 1.87, \"confianca\": 0.36037499999999995}]",
+      "odd_total": 5.3742528400000005,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-17 10:14:52",
+      "pernas": [
+        {
+          "fixture_id": 21718129,
+          "jogo": "Los Angeles Lakers vs Charlotte Hornets",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-18T04:00:00.000Z",
+          "market": "player_rebounds",
+          "selection": "Collin Sexton_under",
+          "jogador": "Collin Sexton",
+          "line": 2.5,
+          "odd": 1.556,
+          "confianca": 0.32999999999999996
+        },
+        {
+          "fixture_id": 21718128,
+          "jogo": "San Antonio Spurs vs Detroit Pistons",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-18T01:00:00.000Z",
+          "market": "player_rebounds",
+          "selection": "Devin Vassell_over",
+          "jogador": "Devin Vassell",
+          "line": 3.5,
+          "odd": 1.847,
+          "confianca": 0.32
+        },
+        {
+          "fixture_id": 21718126,
+          "jogo": "Toronto Raptors vs New York Knicks",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-18T00:30:00.000Z",
+          "market": "asian_handicap",
+          "selection": "away",
+          "jogador": null,
+          "line": -2.5,
+          "odd": 1.87,
+          "confianca": 0.36037499999999995
+        }
+      ]
+    },
     {
       "id": 15,
       "sport": "nba",
@@ -9,9 +59,9 @@
       "pernas_json": "[{\"fixture_id\": 21718119, \"jogo\": \"Cleveland Cavaliers vs Chicago Bulls\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-17T00:00:00.000Z\", \"market\": \"1x2\", \"selection\": \"home\", \"jogador\": null, \"line\": null, \"odd\": 1.282, \"confianca\": 0.32338748337738205}, {\"fixture_id\": 21718122, \"jogo\": \"Miami Heat vs Houston Rockets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-17T00:30:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Reed Sheppard_under\", \"jogador\": \"Reed Sheppard\", \"line\": 2.5, \"odd\": 1.575, \"confianca\": 0.31}, {\"fixture_id\": 21718124, \"jogo\": \"New Orleans Pelicans vs Golden State Warriors\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-17T01:00:00.000Z\", \"market\": \"1x2\", \"selection\": \"away\", \"jogador\": null, \"line\": null, \"odd\": 1.658, \"confianca\": 0.32304395053554047}]",
       "odd_total": 3.3477506999999993,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-17 10:14:52",
       "created_at": "2026-11-16 12:05:47",
       "pernas": [
         {
@@ -59,9 +109,9 @@
       "pernas_json": "[{\"fixture_id\": 21718109, \"jogo\": \"Philadelphia 76ers vs Indiana Pacers\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-15T18:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Anfernee Simons_over\", \"jogador\": \"Anfernee Simons\", \"line\": 1.5, \"odd\": 1.5, \"confianca\": 0.32999999999999996}, {\"fixture_id\": 21718116, \"jogo\": \"Milwaukee Bucks vs Atlanta Hawks\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-16T01:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Nate Ament_under\", \"jogador\": \"Nate Ament\", \"line\": 3.5, \"odd\": 1.649, \"confianca\": 0.31}, {\"fixture_id\": 21718111, \"jogo\": \"LA Clippers vs Charlotte Hornets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-15T21:30:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Moussa Diabate_over\", \"jogador\": \"Moussa Diabate\", \"line\": 1.5, \"odd\": 1.649, \"confianca\": 0.3}]",
       "odd_total": 4.0788015,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-17 10:12:55",
       "created_at": "2026-11-15 09:44:22",
       "pernas": [
         {
@@ -366,9 +416,9 @@
     }
   ],
   "resumo": {
-    "total": 7,
-    "liquidadas": 5,
+    "total": 8,
+    "liquidadas": 7,
     "ganhas": 2,
-    "win_rate_pct": 40.0
+    "win_rate_pct": 28.57
   }
 }
