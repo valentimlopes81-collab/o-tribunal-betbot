@@ -1,7 +1,57 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-17T12:26:15.060386+00:00",
+  "generated_at": "2026-11-18T15:43:03.369327+00:00",
   "multiplas": [
+    {
+      "id": 17,
+      "sport": "nba",
+      "date": "2026-11-18",
+      "pernas_json": "[{\"fixture_id\": 21718137, \"jogo\": \"New Orleans Pelicans vs Detroit Pistons\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-19T01:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Saddiq Bey_over\", \"jogador\": \"Saddiq Bey\", \"line\": 1.5, \"odd\": 1.476, \"confianca\": 0.35}, {\"fixture_id\": 21718139, \"jogo\": \"Denver Nuggets vs Boston Celtics\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-19T02:30:00.000Z\", \"market\": \"1x2\", \"selection\": \"away\", \"jogador\": null, \"line\": null, \"odd\": 1.704, \"confianca\": 0.3572926348761103}, {\"fixture_id\": 21718135, \"jogo\": \"Brooklyn Nets vs Chicago Bulls\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-19T00:30:00.000Z\", \"market\": \"1x2\", \"selection\": \"home\", \"jogador\": null, \"line\": null, \"odd\": 1.704, \"confianca\": 0.3574272904623772}]",
+      "odd_total": 4.285737216,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-18 15:43:03",
+      "pernas": [
+        {
+          "fixture_id": 21718137,
+          "jogo": "New Orleans Pelicans vs Detroit Pistons",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-19T01:00:00.000Z",
+          "market": "player_assists",
+          "selection": "Saddiq Bey_over",
+          "jogador": "Saddiq Bey",
+          "line": 1.5,
+          "odd": 1.476,
+          "confianca": 0.35
+        },
+        {
+          "fixture_id": 21718139,
+          "jogo": "Denver Nuggets vs Boston Celtics",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-19T02:30:00.000Z",
+          "market": "1x2",
+          "selection": "away",
+          "jogador": null,
+          "line": null,
+          "odd": 1.704,
+          "confianca": 0.3572926348761103
+        },
+        {
+          "fixture_id": 21718135,
+          "jogo": "Brooklyn Nets vs Chicago Bulls",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-19T00:30:00.000Z",
+          "market": "1x2",
+          "selection": "home",
+          "jogador": null,
+          "line": null,
+          "odd": 1.704,
+          "confianca": 0.3574272904623772
+        }
+      ]
+    },
     {
       "id": 16,
       "sport": "nba",
@@ -9,9 +59,9 @@
       "pernas_json": "[{\"fixture_id\": 21718129, \"jogo\": \"Los Angeles Lakers vs Charlotte Hornets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-18T04:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Collin Sexton_under\", \"jogador\": \"Collin Sexton\", \"line\": 2.5, \"odd\": 1.556, \"confianca\": 0.32999999999999996}, {\"fixture_id\": 21718128, \"jogo\": \"San Antonio Spurs vs Detroit Pistons\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-18T01:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Devin Vassell_over\", \"jogador\": \"Devin Vassell\", \"line\": 3.5, \"odd\": 1.847, \"confianca\": 0.32}, {\"fixture_id\": 21718126, \"jogo\": \"Toronto Raptors vs New York Knicks\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-18T00:30:00.000Z\", \"market\": \"asian_handicap\", \"selection\": \"away\", \"jogador\": null, \"line\": -2.5, \"odd\": 1.87, \"confianca\": 0.36037499999999995}]",
       "odd_total": 5.3742528400000005,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-18 15:43:03",
       "created_at": "2026-11-17 10:14:52",
       "pernas": [
         {
@@ -416,9 +466,9 @@
     }
   ],
   "resumo": {
-    "total": 8,
-    "liquidadas": 7,
+    "total": 9,
+    "liquidadas": 8,
     "ganhas": 2,
-    "win_rate_pct": 28.57
+    "win_rate_pct": 25.0
   }
 }
