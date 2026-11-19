@@ -1,7 +1,57 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-18T15:43:03.369327+00:00",
+  "generated_at": "2026-11-19T11:03:14.967763+00:00",
   "multiplas": [
+    {
+      "id": 18,
+      "sport": "nba",
+      "date": "2026-11-19",
+      "pernas_json": "[{\"fixture_id\": 21718145, \"jogo\": \"Minnesota Timberwolves vs New York Knicks\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-20T01:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Karl-Anthony Towns_over\", \"jogador\": \"Karl-Anthony Towns\", \"line\": 3.5, \"odd\": 1.82, \"confianca\": 0.33999999999999997}, {\"fixture_id\": 21718144, \"jogo\": \"Milwaukee Bucks vs Portland Trail Blazers\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-20T01:00:00.000Z\", \"market\": \"asian_handicap\", \"selection\": \"away\", \"jogador\": null, \"line\": -9.5, \"odd\": 1.87, \"confianca\": 0.36001799999999995}, {\"fixture_id\": 21718146, \"jogo\": \"San Antonio Spurs vs LA Clippers\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-20T01:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Devin Vassell_over\", \"jogador\": \"Devin Vassell\", \"line\": 2.5, \"odd\": 1.935, \"confianca\": 0.32999999999999996}]",
+      "odd_total": 6.585579000000001,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-19 11:03:14",
+      "pernas": [
+        {
+          "fixture_id": 21718145,
+          "jogo": "Minnesota Timberwolves vs New York Knicks",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-20T01:00:00.000Z",
+          "market": "player_assists",
+          "selection": "Karl-Anthony Towns_over",
+          "jogador": "Karl-Anthony Towns",
+          "line": 3.5,
+          "odd": 1.82,
+          "confianca": 0.33999999999999997
+        },
+        {
+          "fixture_id": 21718144,
+          "jogo": "Milwaukee Bucks vs Portland Trail Blazers",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-20T01:00:00.000Z",
+          "market": "asian_handicap",
+          "selection": "away",
+          "jogador": null,
+          "line": -9.5,
+          "odd": 1.87,
+          "confianca": 0.36001799999999995
+        },
+        {
+          "fixture_id": 21718146,
+          "jogo": "San Antonio Spurs vs LA Clippers",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-20T01:00:00.000Z",
+          "market": "player_assists",
+          "selection": "Devin Vassell_over",
+          "jogador": "Devin Vassell",
+          "line": 2.5,
+          "odd": 1.935,
+          "confianca": 0.32999999999999996
+        }
+      ]
+    },
     {
       "id": 17,
       "sport": "nba",
@@ -9,9 +59,9 @@
       "pernas_json": "[{\"fixture_id\": 21718137, \"jogo\": \"New Orleans Pelicans vs Detroit Pistons\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-19T01:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Saddiq Bey_over\", \"jogador\": \"Saddiq Bey\", \"line\": 1.5, \"odd\": 1.476, \"confianca\": 0.35}, {\"fixture_id\": 21718139, \"jogo\": \"Denver Nuggets vs Boston Celtics\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-19T02:30:00.000Z\", \"market\": \"1x2\", \"selection\": \"away\", \"jogador\": null, \"line\": null, \"odd\": 1.704, \"confianca\": 0.3572926348761103}, {\"fixture_id\": 21718135, \"jogo\": \"Brooklyn Nets vs Chicago Bulls\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-19T00:30:00.000Z\", \"market\": \"1x2\", \"selection\": \"home\", \"jogador\": null, \"line\": null, \"odd\": 1.704, \"confianca\": 0.3574272904623772}]",
       "odd_total": 4.285737216,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-19 11:03:14",
       "created_at": "2026-11-18 15:43:03",
       "pernas": [
         {
@@ -466,9 +516,9 @@
     }
   ],
   "resumo": {
-    "total": 9,
-    "liquidadas": 8,
+    "total": 10,
+    "liquidadas": 9,
     "ganhas": 2,
-    "win_rate_pct": 25.0
+    "win_rate_pct": 22.22
   }
 }
