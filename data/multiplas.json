@@ -1,7 +1,69 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-20T15:36:02.627705+00:00",
+  "generated_at": "2026-11-21T12:54:08.629326+00:00",
   "multiplas": [
+    {
+      "id": 20,
+      "sport": "futebol",
+      "date": "2026-11-21",
+      "pernas_json": "[{\"fixture_id\": 560644, \"jogo\": \"Aston Villa FC vs Sunderland AFC\", \"league\": \"Premier League (Inglaterra)\", \"kickoff_utc\": \"2026-11-21T15:00:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"home\", \"line\": null, \"odd\": 1.313, \"confianca\": 0.3164551066982808, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 558833, \"jogo\": \"NEC vs PSV\", \"league\": \"Eredivisie (Países Baixos)\", \"kickoff_utc\": \"2026-11-21T15:30:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"away\", \"line\": null, \"odd\": 1.351, \"confianca\": 0.2510867331105317, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 558834, \"jogo\": \"FC Groningen vs SC Heerenveen\", \"league\": \"Eredivisie (Países Baixos)\", \"kickoff_utc\": \"2026-11-21T20:00:00Z\", \"market\": \"btts\", \"selection\": \"yes\", \"line\": null, \"odd\": 1.357, \"confianca\": 0.25198128, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 565857, \"jogo\": \"Bayer 04 Leverkusen vs SC Paderborn 07\", \"league\": \"Bundesliga (Alemanha)\", \"kickoff_utc\": \"2026-11-21T14:30:00Z\", \"market\": \"team_total_goals\", \"selection\": \"home_under\", \"line\": 3.5, \"odd\": 1.377, \"confianca\": 0.33698639999999974, \"requer_liquidacao_manual\": false}]",
+      "odd_total": 3.3146208893069997,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-21 12:54:08",
+      "pernas": [
+        {
+          "fixture_id": 560644,
+          "jogo": "Aston Villa FC vs Sunderland AFC",
+          "league": "Premier League (Inglaterra)",
+          "kickoff_utc": "2026-11-21T15:00:00Z",
+          "market": "draw_no_bet",
+          "selection": "home",
+          "line": null,
+          "odd": 1.313,
+          "confianca": 0.3164551066982808,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 558833,
+          "jogo": "NEC vs PSV",
+          "league": "Eredivisie (Países Baixos)",
+          "kickoff_utc": "2026-11-21T15:30:00Z",
+          "market": "draw_no_bet",
+          "selection": "away",
+          "line": null,
+          "odd": 1.351,
+          "confianca": 0.2510867331105317,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 558834,
+          "jogo": "FC Groningen vs SC Heerenveen",
+          "league": "Eredivisie (Países Baixos)",
+          "kickoff_utc": "2026-11-21T20:00:00Z",
+          "market": "btts",
+          "selection": "yes",
+          "line": null,
+          "odd": 1.357,
+          "confianca": 0.25198128,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 565857,
+          "jogo": "Bayer 04 Leverkusen vs SC Paderborn 07",
+          "league": "Bundesliga (Alemanha)",
+          "kickoff_utc": "2026-11-21T14:30:00Z",
+          "market": "team_total_goals",
+          "selection": "home_under",
+          "line": 3.5,
+          "odd": 1.377,
+          "confianca": 0.33698639999999974,
+          "requer_liquidacao_manual": false
+        }
+      ]
+    },
     {
       "id": 4,
       "sport": "futebol",
@@ -113,61 +175,11 @@
           "requer_liquidacao_manual": false
         }
       ]
-    },
-    {
-      "id": 2,
-      "sport": "futebol",
-      "date": "2026-11-06",
-      "pernas_json": "[{\"fixture_id\": 564740, \"jogo\": \"Sevilla FC vs Deportivo Alavés\", \"league\": \"La Liga (Espanha)\", \"kickoff_utc\": \"2026-11-06T20:00:00Z\", \"market\": \"over_under\", \"selection\": \"over\", \"line\": 2.5, \"odd\": 2.25, \"confianca\": 0.3873100599999999, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 558537, \"jogo\": \"Venezia FC vs Udinese Calcio\", \"league\": \"Serie A (Itália)\", \"kickoff_utc\": \"2026-11-06T19:45:00Z\", \"market\": \"team_total_goals\", \"selection\": \"home_under\", \"line\": 1.5, \"odd\": 1.68, \"confianca\": 0.4834324999999999, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 567353, \"jogo\": \"FC Famalicão vs FC Arouca\", \"league\": \"Primeira Liga (Portugal)\", \"kickoff_utc\": \"2026-11-06T20:45:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"away\", \"line\": null, \"odd\": 2.2, \"confianca\": 0.23607554430742764, \"requer_liquidacao_manual\": false}]",
-      "odd_total": 8.316,
-      "stake": 10.0,
-      "status": "lost",
-      "payout": 0.0,
-      "settled_at": "2026-11-07 09:09:57",
-      "created_at": "2026-11-06 09:49:00",
-      "pernas": [
-        {
-          "fixture_id": 564740,
-          "jogo": "Sevilla FC vs Deportivo Alavés",
-          "league": "La Liga (Espanha)",
-          "kickoff_utc": "2026-11-06T20:00:00Z",
-          "market": "over_under",
-          "selection": "over",
-          "line": 2.5,
-          "odd": 2.25,
-          "confianca": 0.3873100599999999,
-          "requer_liquidacao_manual": false
-        },
-        {
-          "fixture_id": 558537,
-          "jogo": "Venezia FC vs Udinese Calcio",
-          "league": "Serie A (Itália)",
-          "kickoff_utc": "2026-11-06T19:45:00Z",
-          "market": "team_total_goals",
-          "selection": "home_under",
-          "line": 1.5,
-          "odd": 1.68,
-          "confianca": 0.4834324999999999,
-          "requer_liquidacao_manual": false
-        },
-        {
-          "fixture_id": 567353,
-          "jogo": "FC Famalicão vs FC Arouca",
-          "league": "Primeira Liga (Portugal)",
-          "kickoff_utc": "2026-11-06T20:45:00Z",
-          "market": "draw_no_bet",
-          "selection": "away",
-          "line": null,
-          "odd": 2.2,
-          "confianca": 0.23607554430742764,
-          "requer_liquidacao_manual": false
-        }
-      ]
     }
   ],
   "resumo": {
     "total": 3,
-    "liquidadas": 3,
+    "liquidadas": 2,
     "ganhas": 0,
     "win_rate_pct": 0.0
   }
