@@ -1,7 +1,69 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-21T12:54:08.629326+00:00",
+  "generated_at": "2026-11-22T11:44:03.318477+00:00",
   "multiplas": [
+    {
+      "id": 22,
+      "sport": "futebol",
+      "date": "2026-11-22",
+      "pernas_json": "[{\"fixture_id\": 565863, \"jogo\": \"SV Werder Bremen vs Hamburger SV\", \"league\": \"Bundesliga (Alemanha)\", \"kickoff_utc\": \"2026-11-22T16:30:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"home\", \"line\": null, \"odd\": 1.235, \"confianca\": 0.2993941604572462, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 558522, \"jogo\": \"Bologna FC 1909 vs Udinese Calcio\", \"league\": \"Serie A (Itália)\", \"kickoff_utc\": \"2026-11-22T14:00:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"home\", \"line\": null, \"odd\": 1.278, \"confianca\": 0.306205012498227, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 559625, \"jogo\": \"Paris FC vs Angers SCO\", \"league\": \"Ligue 1 (França)\", \"kickoff_utc\": \"2026-11-22T14:00:00Z\", \"market\": \"1x2\", \"selection\": \"home\", \"line\": null, \"odd\": 1.303, \"confianca\": 0.22516576819570994, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 558830, \"jogo\": \"Sparta Rotterdam vs AZ\", \"league\": \"Eredivisie (Países Baixos)\", \"kickoff_utc\": \"2026-11-22T13:30:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"away\", \"line\": null, \"odd\": 1.313, \"confianca\": 0.39269905092517443, \"requer_liquidacao_manual\": false}]",
+      "odd_total": 2.70026851887,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-22 11:44:03",
+      "pernas": [
+        {
+          "fixture_id": 565863,
+          "jogo": "SV Werder Bremen vs Hamburger SV",
+          "league": "Bundesliga (Alemanha)",
+          "kickoff_utc": "2026-11-22T16:30:00Z",
+          "market": "draw_no_bet",
+          "selection": "home",
+          "line": null,
+          "odd": 1.235,
+          "confianca": 0.2993941604572462,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 558522,
+          "jogo": "Bologna FC 1909 vs Udinese Calcio",
+          "league": "Serie A (Itália)",
+          "kickoff_utc": "2026-11-22T14:00:00Z",
+          "market": "draw_no_bet",
+          "selection": "home",
+          "line": null,
+          "odd": 1.278,
+          "confianca": 0.306205012498227,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 559625,
+          "jogo": "Paris FC vs Angers SCO",
+          "league": "Ligue 1 (França)",
+          "kickoff_utc": "2026-11-22T14:00:00Z",
+          "market": "1x2",
+          "selection": "home",
+          "line": null,
+          "odd": 1.303,
+          "confianca": 0.22516576819570994,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 558830,
+          "jogo": "Sparta Rotterdam vs AZ",
+          "league": "Eredivisie (Países Baixos)",
+          "kickoff_utc": "2026-11-22T13:30:00Z",
+          "market": "draw_no_bet",
+          "selection": "away",
+          "line": null,
+          "odd": 1.313,
+          "confianca": 0.39269905092517443,
+          "requer_liquidacao_manual": false
+        }
+      ]
+    },
     {
       "id": 20,
       "sport": "futebol",
@@ -9,9 +71,9 @@
       "pernas_json": "[{\"fixture_id\": 560644, \"jogo\": \"Aston Villa FC vs Sunderland AFC\", \"league\": \"Premier League (Inglaterra)\", \"kickoff_utc\": \"2026-11-21T15:00:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"home\", \"line\": null, \"odd\": 1.313, \"confianca\": 0.3164551066982808, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 558833, \"jogo\": \"NEC vs PSV\", \"league\": \"Eredivisie (Países Baixos)\", \"kickoff_utc\": \"2026-11-21T15:30:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"away\", \"line\": null, \"odd\": 1.351, \"confianca\": 0.2510867331105317, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 558834, \"jogo\": \"FC Groningen vs SC Heerenveen\", \"league\": \"Eredivisie (Países Baixos)\", \"kickoff_utc\": \"2026-11-21T20:00:00Z\", \"market\": \"btts\", \"selection\": \"yes\", \"line\": null, \"odd\": 1.357, \"confianca\": 0.25198128, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 565857, \"jogo\": \"Bayer 04 Leverkusen vs SC Paderborn 07\", \"league\": \"Bundesliga (Alemanha)\", \"kickoff_utc\": \"2026-11-21T14:30:00Z\", \"market\": \"team_total_goals\", \"selection\": \"home_under\", \"line\": 3.5, \"odd\": 1.377, \"confianca\": 0.33698639999999974, \"requer_liquidacao_manual\": false}]",
       "odd_total": 3.3146208893069997,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-22 11:44:03",
       "created_at": "2026-11-21 12:54:08",
       "pernas": [
         {
@@ -122,56 +184,6 @@
           "line": 2.5,
           "odd": 1.694,
           "confianca": 0.32520515199999994,
-          "requer_liquidacao_manual": false
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "sport": "futebol",
-      "date": "2026-11-07",
-      "pernas_json": "[{\"fixture_id\": 558531, \"jogo\": \"AS Roma vs US Sassuolo Calcio\", \"league\": \"Serie A (Itália)\", \"kickoff_utc\": \"2026-11-07T19:45:00Z\", \"market\": \"over_under\", \"selection\": \"over\", \"line\": 3.5, \"odd\": 1.847, \"confianca\": 0.3795949859754329, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 565848, \"jogo\": \"RB Leipzig vs FC Augsburg\", \"league\": \"Bundesliga (Alemanha)\", \"kickoff_utc\": \"2026-11-07T14:30:00Z\", \"market\": \"team_total_goals\", \"selection\": \"home_over\", \"line\": 2.5, \"odd\": 1.787, \"confianca\": 0.34555403999999995, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 565851, \"jogo\": \"1. FSV Mainz 05 vs FC Bayern München\", \"league\": \"Bundesliga (Alemanha)\", \"kickoff_utc\": \"2026-11-07T14:30:00Z\", \"market\": \"over_under\", \"selection\": \"over\", \"line\": 3.5, \"odd\": 1.588, \"confianca\": 0.347968032, \"requer_liquidacao_manual\": false}]",
-      "odd_total": 5.241335332,
-      "stake": 10.0,
-      "status": "lost",
-      "payout": 0.0,
-      "settled_at": "2026-11-08 11:43:36",
-      "created_at": "2026-11-07 09:09:57",
-      "pernas": [
-        {
-          "fixture_id": 558531,
-          "jogo": "AS Roma vs US Sassuolo Calcio",
-          "league": "Serie A (Itália)",
-          "kickoff_utc": "2026-11-07T19:45:00Z",
-          "market": "over_under",
-          "selection": "over",
-          "line": 3.5,
-          "odd": 1.847,
-          "confianca": 0.3795949859754329,
-          "requer_liquidacao_manual": false
-        },
-        {
-          "fixture_id": 565848,
-          "jogo": "RB Leipzig vs FC Augsburg",
-          "league": "Bundesliga (Alemanha)",
-          "kickoff_utc": "2026-11-07T14:30:00Z",
-          "market": "team_total_goals",
-          "selection": "home_over",
-          "line": 2.5,
-          "odd": 1.787,
-          "confianca": 0.34555403999999995,
-          "requer_liquidacao_manual": false
-        },
-        {
-          "fixture_id": 565851,
-          "jogo": "1. FSV Mainz 05 vs FC Bayern München",
-          "league": "Bundesliga (Alemanha)",
-          "kickoff_utc": "2026-11-07T14:30:00Z",
-          "market": "over_under",
-          "selection": "over",
-          "line": 3.5,
-          "odd": 1.588,
-          "confianca": 0.347968032,
           "requer_liquidacao_manual": false
         }
       ]
