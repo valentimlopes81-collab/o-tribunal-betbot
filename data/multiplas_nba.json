@@ -1,7 +1,57 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-22T12:08:19.025101+00:00",
+  "generated_at": "2026-11-23T08:48:09.387720+00:00",
   "multiplas": [
+    {
+      "id": 25,
+      "sport": "nba",
+      "date": "2026-11-23",
+      "pernas_json": "[{\"fixture_id\": 21718175, \"jogo\": \"Minnesota Timberwolves vs Brooklyn Nets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-24T00:30:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Mikel Brown Jr._under\", \"jogador\": \"Mikel Brown Jr.\", \"line\": 2.5, \"odd\": 1.541, \"confianca\": 0.31}, {\"fixture_id\": 21718176, \"jogo\": \"Chicago Bulls vs Cleveland Cavaliers\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-24T01:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Matas Buzelis_under\", \"jogador\": \"Matas Buzelis\", \"line\": 5.5, \"odd\": 1.633, \"confianca\": 0.35}, {\"fixture_id\": 21718171, \"jogo\": \"Charlotte Hornets vs Memphis Grizzlies\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-24T00:00:00.000Z\", \"market\": \"1x2\", \"selection\": \"away\", \"jogador\": null, \"line\": null, \"odd\": 1.633, \"confianca\": 0.31216899719887947}]",
+      "odd_total": 4.109367749,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-23 08:48:09",
+      "pernas": [
+        {
+          "fixture_id": 21718175,
+          "jogo": "Minnesota Timberwolves vs Brooklyn Nets",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-24T00:30:00.000Z",
+          "market": "player_rebounds",
+          "selection": "Mikel Brown Jr._under",
+          "jogador": "Mikel Brown Jr.",
+          "line": 2.5,
+          "odd": 1.541,
+          "confianca": 0.31
+        },
+        {
+          "fixture_id": 21718176,
+          "jogo": "Chicago Bulls vs Cleveland Cavaliers",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-24T01:00:00.000Z",
+          "market": "player_rebounds",
+          "selection": "Matas Buzelis_under",
+          "jogador": "Matas Buzelis",
+          "line": 5.5,
+          "odd": 1.633,
+          "confianca": 0.35
+        },
+        {
+          "fixture_id": 21718171,
+          "jogo": "Charlotte Hornets vs Memphis Grizzlies",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-24T00:00:00.000Z",
+          "market": "1x2",
+          "selection": "away",
+          "jogador": null,
+          "line": null,
+          "odd": 1.633,
+          "confianca": 0.31216899719887947
+        }
+      ]
+    },
     {
       "id": 23,
       "sport": "nba",
@@ -9,9 +59,9 @@
       "pernas_json": "[{\"fixture_id\": 21718170, \"jogo\": \"Golden State Warriors vs Boston Celtics\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-23T01:30:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Neemias Queta_over\", \"jogador\": \"Neemias Queta\", \"line\": 1.5, \"odd\": 1.649, \"confianca\": 0.33999999999999997}, {\"fixture_id\": 21718166, \"jogo\": \"Chicago Bulls vs Denver Nuggets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-23T00:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Matas Buzelis_over\", \"jogador\": \"Matas Buzelis\", \"line\": 1.5, \"odd\": 1.8, \"confianca\": 0.35}, {\"fixture_id\": 21718162, \"jogo\": \"Atlanta Hawks vs Detroit Pistons\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-22T20:30:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Cade Cunningham_under\", \"jogador\": \"Cade Cunningham\", \"line\": 5.5, \"odd\": 1.862, \"confianca\": 0.33999999999999997}]",
       "odd_total": 5.5267884,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 55.267884,
+      "settled_at": "2026-11-23 08:48:09",
       "created_at": "2026-11-22 12:08:18",
       "pernas": [
         {
@@ -666,9 +716,9 @@
     }
   ],
   "resumo": {
-    "total": 13,
-    "liquidadas": 12,
-    "ganhas": 3,
-    "win_rate_pct": 25.0
+    "total": 14,
+    "liquidadas": 13,
+    "ganhas": 4,
+    "win_rate_pct": 30.77
   }
 }
