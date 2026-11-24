@@ -1,7 +1,57 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-23T13:06:45.308788+00:00",
+  "generated_at": "2026-11-24T10:33:10.993490+00:00",
   "multiplas": [
+    {
+      "id": 27,
+      "sport": "nba",
+      "date": "2026-11-24",
+      "pernas_json": "[{\"fixture_id\": 21718181, \"jogo\": \"Orlando Magic vs Detroit Pistons\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-25T00:00:00.000Z\", \"market\": \"1x2\", \"selection\": \"away\", \"jogador\": null, \"line\": null, \"odd\": 1.769, \"confianca\": 0.38300919618441964}, {\"fixture_id\": 21718183, \"jogo\": \"Denver Nuggets vs Dallas Mavericks\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-25T03:00:00.000Z\", \"market\": \"player_points\", \"selection\": \"Caleb Martin_over\", \"jogador\": \"Caleb Martin\", \"line\": 5.5, \"odd\": 1.909, \"confianca\": 0.32999999999999996}, {\"fixture_id\": 21718182, \"jogo\": \"Washington Wizards vs Boston Celtics\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-25T01:00:00.000Z\", \"market\": \"player_assists\", \"selection\": \"Jayson Tatum_over\", \"jogador\": \"Jayson Tatum\", \"line\": 6.5, \"odd\": 1.926, \"confianca\": 0.35}]",
+      "odd_total": 6.5041424459999995,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-24 10:33:10",
+      "pernas": [
+        {
+          "fixture_id": 21718181,
+          "jogo": "Orlando Magic vs Detroit Pistons",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-25T00:00:00.000Z",
+          "market": "1x2",
+          "selection": "away",
+          "jogador": null,
+          "line": null,
+          "odd": 1.769,
+          "confianca": 0.38300919618441964
+        },
+        {
+          "fixture_id": 21718183,
+          "jogo": "Denver Nuggets vs Dallas Mavericks",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-25T03:00:00.000Z",
+          "market": "player_points",
+          "selection": "Caleb Martin_over",
+          "jogador": "Caleb Martin",
+          "line": 5.5,
+          "odd": 1.909,
+          "confianca": 0.32999999999999996
+        },
+        {
+          "fixture_id": 21718182,
+          "jogo": "Washington Wizards vs Boston Celtics",
+          "league": "NBA",
+          "kickoff_utc": "2026-11-25T01:00:00.000Z",
+          "market": "player_assists",
+          "selection": "Jayson Tatum_over",
+          "jogador": "Jayson Tatum",
+          "line": 6.5,
+          "odd": 1.926,
+          "confianca": 0.35
+        }
+      ]
+    },
     {
       "id": 25,
       "sport": "nba",
@@ -9,9 +59,9 @@
       "pernas_json": "[{\"fixture_id\": 21718175, \"jogo\": \"Minnesota Timberwolves vs Brooklyn Nets\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-24T00:30:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Mikel Brown Jr._under\", \"jogador\": \"Mikel Brown Jr.\", \"line\": 2.5, \"odd\": 1.541, \"confianca\": 0.31}, {\"fixture_id\": 21718176, \"jogo\": \"Chicago Bulls vs Cleveland Cavaliers\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-24T01:00:00.000Z\", \"market\": \"player_rebounds\", \"selection\": \"Matas Buzelis_under\", \"jogador\": \"Matas Buzelis\", \"line\": 5.5, \"odd\": 1.633, \"confianca\": 0.35}, {\"fixture_id\": 21718171, \"jogo\": \"Charlotte Hornets vs Memphis Grizzlies\", \"league\": \"NBA\", \"kickoff_utc\": \"2026-11-24T00:00:00.000Z\", \"market\": \"1x2\", \"selection\": \"away\", \"jogador\": null, \"line\": null, \"odd\": 1.633, \"confianca\": 0.31216899719887947}]",
       "odd_total": 4.109367749,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-24 10:33:10",
       "created_at": "2026-11-23 08:48:09",
       "pernas": [
         {
@@ -716,9 +766,9 @@
     }
   ],
   "resumo": {
-    "total": 14,
-    "liquidadas": 13,
+    "total": 15,
+    "liquidadas": 14,
     "ganhas": 4,
-    "win_rate_pct": 30.77
+    "win_rate_pct": 28.57
   }
 }
