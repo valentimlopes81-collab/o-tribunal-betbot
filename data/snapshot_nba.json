@@ -1,6 +1,6 @@
 {
   "sport": "nba",
-  "generated_at": "2026-11-25T10:55:48.722440+00:00",
+  "generated_at": "2026-11-25T11:00:19.256374+00:00",
   "bankroll": {
     "current": 989.32,
     "starting": 1000.0,
@@ -474,12 +474,12 @@
     "n_apostas_futuras": 30,
     "n_apostas_historico_usado": 276,
     "banca_atual": 989.32,
-    "banca_pior_caso_95": 886.43,
-    "perda_var_95": 102.89,
-    "banca_mediana_simulada": 974.54,
-    "banca_melhor_caso_95": 1061.53,
-    "drawdown_mediano_pct": 5.9,
-    "drawdown_pior_caso_95_pct": 12.0,
+    "banca_pior_caso_95": 888.95,
+    "perda_var_95": 100.37,
+    "banca_mediana_simulada": 975.22,
+    "banca_melhor_caso_95": 1060.59,
+    "drawdown_mediano_pct": 5.7,
+    "drawdown_pior_caso_95_pct": 11.9,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
