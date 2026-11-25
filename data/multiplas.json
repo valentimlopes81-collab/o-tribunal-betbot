@@ -1,7 +1,57 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-24T09:45:23.210161+00:00",
+  "generated_at": "2026-11-25T10:17:14.737006+00:00",
   "multiplas": [
+    {
+      "id": 28,
+      "sport": "futebol",
+      "date": "2026-11-25",
+      "pernas_json": "[{\"fixture_id\": 575408, \"jogo\": \"Paris Saint-Germain FC vs AS Roma\", \"league\": \"UEFA Champions League\", \"kickoff_utc\": \"2026-11-25T20:00:00Z\", \"market\": \"team_total_goals\", \"selection\": \"home_over\", \"line\": 1.5, \"odd\": 1.336, \"confianca\": 0.43639049999999996, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 575410, \"jogo\": \"Lille OSC vs FC Bayern München\", \"league\": \"UEFA Champions League\", \"kickoff_utc\": \"2026-11-25T20:00:00Z\", \"market\": \"1x2\", \"selection\": \"away\", \"line\": null, \"odd\": 1.606, \"confianca\": 0.41387891404961263, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 575406, \"jogo\": \"FC Internazionale Milano vs VfB Stuttgart\", \"league\": \"UEFA Champions League\", \"kickoff_utc\": \"2026-11-25T20:00:00Z\", \"market\": \"team_total_goals\", \"selection\": \"home_under\", \"line\": 2.5, \"odd\": 1.926, \"confianca\": 0.264741, \"requer_liquidacao_manual\": false}]",
+      "odd_total": 4.132456416000001,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-25 10:17:14",
+      "pernas": [
+        {
+          "fixture_id": 575408,
+          "jogo": "Paris Saint-Germain FC vs AS Roma",
+          "league": "UEFA Champions League",
+          "kickoff_utc": "2026-11-25T20:00:00Z",
+          "market": "team_total_goals",
+          "selection": "home_over",
+          "line": 1.5,
+          "odd": 1.336,
+          "confianca": 0.43639049999999996,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 575410,
+          "jogo": "Lille OSC vs FC Bayern München",
+          "league": "UEFA Champions League",
+          "kickoff_utc": "2026-11-25T20:00:00Z",
+          "market": "1x2",
+          "selection": "away",
+          "line": null,
+          "odd": 1.606,
+          "confianca": 0.41387891404961263,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 575406,
+          "jogo": "FC Internazionale Milano vs VfB Stuttgart",
+          "league": "UEFA Champions League",
+          "kickoff_utc": "2026-11-25T20:00:00Z",
+          "market": "team_total_goals",
+          "selection": "home_under",
+          "line": 2.5,
+          "odd": 1.926,
+          "confianca": 0.264741,
+          "requer_liquidacao_manual": false
+        }
+      ]
+    },
     {
       "id": 26,
       "sport": "futebol",
@@ -9,9 +59,9 @@
       "pernas_json": "[{\"fixture_id\": 575402, \"jogo\": \"RB Leipzig vs Racing Club de Lens\", \"league\": \"UEFA Champions League\", \"kickoff_utc\": \"2026-11-24T20:00:00Z\", \"market\": \"1x2\", \"selection\": \"home\", \"line\": null, \"odd\": 1.364, \"confianca\": 0.419299654466077, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 575398, \"jogo\": \"Manchester City FC vs SSC Napoli\", \"league\": \"UEFA Champions League\", \"kickoff_utc\": \"2026-11-24T20:00:00Z\", \"market\": \"team_total_goals\", \"selection\": \"home_under\", \"line\": 3.5, \"odd\": 1.377, \"confianca\": 0.42706399999999994, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 575400, \"jogo\": \"Feyenoord Rotterdam vs FC Porto\", \"league\": \"UEFA Champions League\", \"kickoff_utc\": \"2026-11-24T20:00:00Z\", \"market\": \"btts\", \"selection\": \"yes\", \"line\": null, \"odd\": 1.526, \"confianca\": 0.2745945818181818, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 575397, \"jogo\": \"Real Madrid CF vs PSV\", \"league\": \"UEFA Champions League\", \"kickoff_utc\": \"2026-11-24T20:00:00Z\", \"market\": \"btts\", \"selection\": \"yes\", \"line\": null, \"odd\": 1.625, \"confianca\": 0.4096551662107803, \"requer_liquidacao_manual\": false}]",
       "odd_total": 4.657535883000001,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-25 10:17:14",
       "created_at": "2026-11-24 09:45:23",
       "pernas": [
         {
@@ -240,9 +290,9 @@
     }
   ],
   "resumo": {
-    "total": 4,
-    "liquidadas": 3,
+    "total": 5,
+    "liquidadas": 4,
     "ganhas": 1,
-    "win_rate_pct": 33.33
+    "win_rate_pct": 25.0
   }
 }
