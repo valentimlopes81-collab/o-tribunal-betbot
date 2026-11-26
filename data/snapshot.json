@@ -1,16 +1,16 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-25T10:59:48.731759+00:00",
+  "generated_at": "2026-11-26T15:37:22.717746+00:00",
   "bankroll": {
-    "current": 1092.43,
+    "current": 1106.17,
     "starting": 1000.0,
-    "profit": 92.43,
-    "roi_pct": 7.39,
-    "win_rate_pct": 60.8,
-    "settled_count": 125,
-    "won_count": 76,
-    "lost_count": 49,
-    "pending_count": 4
+    "profit": 106.17,
+    "roi_pct": 8.23,
+    "win_rate_pct": 61.24,
+    "settled_count": 129,
+    "won_count": 79,
+    "lost_count": 50,
+    "pending_count": 0
   },
   "bankroll_history": [
     {
@@ -372,53 +372,65 @@
       "profit": 49.56999999999999,
       "created_at": "2026-11-25 10:59:38",
       "sport": "futebol"
+    },
+    {
+      "id": 255,
+      "date": "2026-11-26",
+      "balance": 1106.1688616499998,
+      "bets_placed": 4,
+      "bets_won": 3,
+      "bets_lost": 1,
+      "staked": 40.0,
+      "profit": 13.740000000000002,
+      "created_at": "2026-11-26 15:29:12",
+      "sport": "futebol"
     }
   ],
   "jurados_ranking": [
     {
       "jurado": "Marquês de Pombal",
-      "acertos": 76,
-      "erros": 46,
+      "acertos": 79,
+      "erros": 47,
       "abstencoes": 0,
-      "total_votos": 122,
-      "total_votos_decisivos": 122,
-      "precisao_pct": 62.3
+      "total_votos": 126,
+      "total_votos_decisivos": 126,
+      "precisao_pct": 62.7
     },
     {
       "jurado": "Luís Godinho",
-      "acertos": 76,
-      "erros": 46,
+      "acertos": 79,
+      "erros": 47,
       "abstencoes": 0,
-      "total_votos": 122,
-      "total_votos_decisivos": 122,
-      "precisao_pct": 62.3
+      "total_votos": 126,
+      "total_votos_decisivos": 126,
+      "precisao_pct": 62.7
     },
     {
       "jurado": "D. Afonso Henriques",
-      "acertos": 76,
-      "erros": 46,
+      "acertos": 79,
+      "erros": 47,
       "abstencoes": 0,
-      "total_votos": 122,
-      "total_votos_decisivos": 122,
-      "precisao_pct": 62.3
+      "total_votos": 126,
+      "total_votos_decisivos": 126,
+      "precisao_pct": 62.7
     },
     {
       "jurado": "Padre António Vieira",
-      "acertos": 76,
-      "erros": 46,
+      "acertos": 79,
+      "erros": 47,
       "abstencoes": 0,
-      "total_votos": 122,
-      "total_votos_decisivos": 122,
-      "precisao_pct": 62.3
+      "total_votos": 126,
+      "total_votos_decisivos": 126,
+      "precisao_pct": 62.7
     },
     {
       "jurado": "Inquisidor",
-      "acertos": 75,
-      "erros": 46,
+      "acertos": 78,
+      "erros": 47,
       "abstencoes": 1,
-      "total_votos": 122,
-      "total_votos_decisivos": 121,
-      "precisao_pct": 62.0
+      "total_votos": 126,
+      "total_votos_decisivos": 125,
+      "precisao_pct": 62.4
     },
     {
       "jurado": "Jurado 1",
@@ -469,14 +481,14 @@
   "risco_var": {
     "n_simulacoes": 3000,
     "n_apostas_futuras": 30,
-    "n_apostas_historico_usado": 125,
-    "banca_atual": 1092.43,
-    "banca_pior_caso_95": 1042.55,
-    "perda_var_95": 49.88,
-    "banca_mediana_simulada": 1129.7,
-    "banca_melhor_caso_95": 1210.59,
-    "drawdown_mediano_pct": 3.5,
-    "drawdown_pior_caso_95_pct": 7.3,
+    "n_apostas_historico_usado": 129,
+    "banca_atual": 1106.17,
+    "banca_pior_caso_95": 1060.28,
+    "perda_var_95": 45.89,
+    "banca_mediana_simulada": 1144.87,
+    "banca_melhor_caso_95": 1227.59,
+    "drawdown_mediano_pct": 3.4,
+    "drawdown_pior_caso_95_pct": 7.2,
     "prob_perder_metade_banca_pct": 0.0
   },
   "ultima_corrida": {
@@ -484,7 +496,7 @@
     "ok": true,
     "error": null
   },
-  "aposta_do_dia_id": 617,
+  "aposta_do_dia_id": null,
   "bets": [
     {
       "id": 617,
@@ -502,9 +514,9 @@
       "edge": 0.34142965740218545,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 20.0,
+      "settled_at": "2026-11-26T15:27:52.717930+00:00",
       "created_at": "2026-11-25 10:16:53",
       "final_probability": 0.8414296574021854,
       "confidence": 0.46759949999999995,
@@ -516,7 +528,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +34.1% e confiança de 47% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 618,
@@ -534,9 +546,9 @@
       "edge": 0.2502904313347246,
       "bookmaker": "fanduel",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "lost",
+      "payout": 0.0,
+      "settled_at": "2026-11-26T15:27:55.039666+00:00",
       "created_at": "2026-11-25 10:16:53",
       "final_probability": 0.7807944101145655,
       "confidence": 0.43639049999999996,
@@ -548,7 +560,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Perdeu. A decisão matemática mantinha, no momento da aposta, uma margem de valor esperado de +25.0% e confiança de 44%. Uma derrota isolada é variância normal do desporto — mesmo apostas com valor genuíno perdem com frequência a curto prazo — e não prova, por si só, que a decisão foi errada. A longo prazo e repetida, este tipo de margem tende a ser lucrativa."
     },
     {
       "id": 619,
@@ -566,9 +578,9 @@
       "edge": 0.1743120432809968,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 19.09,
+      "settled_at": "2026-11-26T15:27:55.534106+00:00",
       "created_at": "2026-11-25 10:16:53",
       "final_probability": 0.6981465115890114,
       "confidence": 0.4186343662107804,
@@ -580,7 +592,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +17.4% e confiança de 42% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 620,
@@ -598,9 +610,9 @@
       "edge": 0.12593379401442073,
       "bookmaker": "draftkings",
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 14.65,
+      "settled_at": "2026-11-26T15:27:57.677360+00:00",
       "created_at": "2026-11-25 10:16:53",
       "final_probability": 0.8085276506697108,
       "confidence": 0.4186343662107803,
@@ -612,7 +624,7 @@
       "fase": "preliminar",
       "revisado_em": null,
       "sport": "futebol",
-      "post_mortem": null
+      "post_mortem": "Ganhou. A decisão tinha margem de valor esperado de +12.6% e confiança de 42% no momento da aposta — resultado consistente com o processo. Importa notar: teria sido igualmente uma boa decisão mesmo que tivesse perdido — o que validava a aposta era a margem, não o resultado."
     },
     {
       "id": 606,
