@@ -1,6 +1,6 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-26T15:37:27.193209+00:00",
+  "generated_at": "2026-11-26T15:39:30.676130+00:00",
   "candidatos": [
     {
       "id": 4496,
@@ -74,6 +74,31 @@
       "tribunal_placar": "0-0",
       "aceite": 0,
       "created_at": "2026-11-26 15:36:43",
+      "status": "pending",
+      "payout": null
+    },
+    {
+      "id": 4499,
+      "sport": "futebol",
+      "date": "2026-11-26",
+      "fixture_id": "uefa_-_europa_conference_league_freiburg_twente_2026-11-26_b3",
+      "league": "UEFA Conference League",
+      "home_team": "SC Freiburg",
+      "away_team": "FC Twente '65",
+      "kickoff_utc": "2026-11-26T20:00:00Z",
+      "market": "btts",
+      "selection": "yes",
+      "line": null,
+      "model_prob": 0.6439620683426257,
+      "final_probability": 0.6439620683426257,
+      "confidence": 0.37322319999999987,
+      "market_odds": 1.595,
+      "implied_prob": 0.6269592476489029,
+      "edge": 0.01700282069372283,
+      "bookmaker": "fanduel",
+      "tribunal_placar": "0-0",
+      "aceite": 0,
+      "created_at": "2026-11-26 15:38:47",
       "status": "pending",
       "payout": null
     }
