@@ -1,17 +1,79 @@
 {
   "sport": "futebol",
-  "generated_at": "2026-11-27T12:13:57.712612+00:00",
+  "generated_at": "2026-11-28T09:45:00.335557+00:00",
   "multiplas": [
+    {
+      "id": 32,
+      "sport": "futebol",
+      "date": "2026-11-28",
+      "pernas_json": "[{\"fixture_id\": 559612, \"jogo\": \"Angers SCO vs Racing Club de Lens\", \"league\": \"Ligue 1 (França)\", \"kickoff_utc\": \"2026-11-28T16:15:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"away\", \"line\": null, \"odd\": 1.286, \"confianca\": 0.33260300750846955, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 567362, \"jogo\": \"FC Arouca vs Rio Ave FC\", \"league\": \"Primeira Liga (Portugal)\", \"kickoff_utc\": \"2026-11-28T15:30:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"home\", \"line\": null, \"odd\": 1.313, \"confianca\": 0.32803823978665075, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 558819, \"jogo\": \"SC Cambuur-Leeuwarden vs Sparta Rotterdam\", \"league\": \"Eredivisie (Países Baixos)\", \"kickoff_utc\": \"2026-11-28T20:00:00Z\", \"market\": \"btts\", \"selection\": \"yes\", \"line\": null, \"odd\": 1.339, \"confianca\": 0.3309929519999999, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 559620, \"jogo\": \"OGC Nice vs ES Troyes AC\", \"league\": \"Ligue 1 (França)\", \"kickoff_utc\": \"2026-11-28T19:45:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"home\", \"line\": null, \"odd\": 1.345, \"confianca\": 0.2362704233491918, \"requer_liquidacao_manual\": false}]",
+      "odd_total": 3.0409449346899997,
+      "stake": 10.0,
+      "status": "pending",
+      "payout": null,
+      "settled_at": null,
+      "created_at": "2026-11-28 09:45:00",
+      "pernas": [
+        {
+          "fixture_id": 559612,
+          "jogo": "Angers SCO vs Racing Club de Lens",
+          "league": "Ligue 1 (França)",
+          "kickoff_utc": "2026-11-28T16:15:00Z",
+          "market": "draw_no_bet",
+          "selection": "away",
+          "line": null,
+          "odd": 1.286,
+          "confianca": 0.33260300750846955,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 567362,
+          "jogo": "FC Arouca vs Rio Ave FC",
+          "league": "Primeira Liga (Portugal)",
+          "kickoff_utc": "2026-11-28T15:30:00Z",
+          "market": "draw_no_bet",
+          "selection": "home",
+          "line": null,
+          "odd": 1.313,
+          "confianca": 0.32803823978665075,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 558819,
+          "jogo": "SC Cambuur-Leeuwarden vs Sparta Rotterdam",
+          "league": "Eredivisie (Países Baixos)",
+          "kickoff_utc": "2026-11-28T20:00:00Z",
+          "market": "btts",
+          "selection": "yes",
+          "line": null,
+          "odd": 1.339,
+          "confianca": 0.3309929519999999,
+          "requer_liquidacao_manual": false
+        },
+        {
+          "fixture_id": 559620,
+          "jogo": "OGC Nice vs ES Troyes AC",
+          "league": "Ligue 1 (França)",
+          "kickoff_utc": "2026-11-28T19:45:00Z",
+          "market": "draw_no_bet",
+          "selection": "home",
+          "line": null,
+          "odd": 1.345,
+          "confianca": 0.2362704233491918,
+          "requer_liquidacao_manual": false
+        }
+      ]
+    },
     {
       "id": 30,
       "sport": "futebol",
       "date": "2026-11-27",
       "pernas_json": "[{\"fixture_id\": 565869, \"jogo\": \"SV Werder Bremen vs Borussia Mönchengladbach\", \"league\": \"Bundesliga (Alemanha)\", \"kickoff_utc\": \"2026-11-27T19:30:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"home\", \"line\": null, \"odd\": 1.286, \"confianca\": 0.3496908023216489, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 564765, \"jogo\": \"Levante UD vs Real Racing Club de Santander\", \"league\": \"La Liga (Espanha)\", \"kickoff_utc\": \"2026-11-27T20:00:00Z\", \"market\": \"btts\", \"selection\": \"yes\", \"line\": null, \"odd\": 1.37, \"confianca\": 0.39555972852482313, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 560658, \"jogo\": \"Nottingham Forest FC vs Chelsea FC\", \"league\": \"Premier League (Inglaterra)\", \"kickoff_utc\": \"2026-11-27T20:00:00Z\", \"market\": \"btts\", \"selection\": \"yes\", \"line\": null, \"odd\": 1.667, \"confianca\": 0.4169454399999999, \"requer_liquidacao_manual\": false}, {\"fixture_id\": 558515, \"jogo\": \"Venezia FC vs Bologna FC 1909\", \"league\": \"Serie A (Itália)\", \"kickoff_utc\": \"2026-11-27T19:45:00Z\", \"market\": \"draw_no_bet\", \"selection\": \"away\", \"line\": null, \"odd\": 1.714, \"confianca\": 0.29465862336485343, \"requer_liquidacao_manual\": false}]",
-      "odd_total": 5.033939053160001,
+      "odd_total": 2.28379,
       "stake": 10.0,
-      "status": "pending",
-      "payout": null,
-      "settled_at": null,
+      "status": "won",
+      "payout": 22.8379,
+      "settled_at": "2026-11-28 09:45:00",
       "created_at": "2026-11-27 12:13:57",
       "pernas": [
         {
@@ -352,9 +414,9 @@
     }
   ],
   "resumo": {
-    "total": 6,
-    "liquidadas": 5,
-    "ganhas": 1,
-    "win_rate_pct": 20.0
+    "total": 7,
+    "liquidadas": 6,
+    "ganhas": 2,
+    "win_rate_pct": 33.33
   }
 }
